@@ -1,46 +1,27 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Typewriter effect
-    const typewriter = (element, speed) => {
-        const text = element.textContent;
-        element.textContent = '';
-        let i = 0;
-        const interval = setInterval(() => {
-            element.textContent += text.charAt(i);
-            i++;
-            if (i > text.length) {
-                clearInterval(interval);
-            }
-        }, speed);
+    const textElement = document.querySelector('.animate-text');
+    if (textElement) {
+        textElement.classList.add('animated');
+    }
+
+    // Scroll Animation
+    const elements = document.querySelectorAll('.fade-in, .slide-in');
+    const options = {
+        root: null,
+        threshold: 0.1,
+        rootMargin: "0px"
     };
 
-    const typewriterElement = document.querySelector('.typewriter');
-    if (typewriterElement) {
-        typewriter(typewriterElement, 100);
-    }
-
-    // Scroll animation effect
-    const elements = document.querySelectorAll('.fade-in');
-
-    function checkScroll() {
-        elements.forEach(el => {
-            const rect = el.getBoundingClientRect();
-            if (rect.top < window.innerHeight && rect.bottom > 0) {
-                el.classList.add('visible');
-            } else {
-                el.classList.remove('visible');
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
             }
         });
-    }
+    }, options);
 
-    window.addEventListener('scroll', checkScroll);
-    checkScroll();
-
-    // Parallax effect
-    document.addEventListener('scroll', function() {
-        const parallax = document.querySelector('.parallax');
-        if (parallax) {
-            const scrollPosition = window.pageYOffset;
-            parallax.style.backgroundPositionY = -(scrollPosition * 0.5) + 'px';
-        }
+    elements.forEach(el => {
+        observer.observe(el);
     });
 });
