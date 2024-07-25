@@ -1,14 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>العدالة للمحامات</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Welcome to My Website</h1>
-    <p>This is a simple web page.</p>
-    <script src="script.js"></script>
+    <header>
+        <div class="container">
+            <h1>العدالة للمحامات</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">من نحن</a></li>
+                    <li><a href="#services">خدماتنا</a></li>
+                    <li><a href="#contact">اتصل بنا</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="about">
+            <div class="container">
+                <h2>من نحن</h2>
+                <p class="animate-text">نحن مكتب محاماة ملتزم بتقديم أفضل خدمات القانون لمساعدتك في تحقيق العدالة.</p>
+            </div>
+        </section>
+
+        <section id="services">
+            <div class="container">
+                <h2>خدماتنا</h2>
+                <ul>
+                    <li>الاستشارات القانونية</li>
+                    <li>التقاضي أمام المحاكم</li>
+                    <li>إعداد الوثائق القانونية</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>اتصل بنا</h2>
+                <form>
+                    <label for="name">الاسم:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">البريد الإلكتروني:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">الرسالة:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    
+                    <button type="submit">إرسال</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 العدالة للمحامات. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
