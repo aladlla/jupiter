@@ -1,64 +1,112 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>العدالة للمحامات</title>
+    <title>العدالة للمحامات - خدمات قانونية متميزة</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>العدالة للمحامات</h1>
+            <h1><i class="fas fa-balance-scale"></i> العدالة للمحامات</h1>
             <nav>
                 <ul>
-                    <li><a href="#about">من نحن</a></li>
-                    <li><a href="#services">خدماتنا</a></li>
-                    <li><a href="#team">فريق العمل</a></li>
-                    <li><a href="#contact">اتصل بنا</a></li>
+                    <li><a href="#about"><i class="fas fa-info-circle"></i> من نحن</a></li>
+                    <li><a href="#services"><i class="fas fa-gavel"></i> خدماتنا</a></li>
+                    <li><a href="#team"><i class="fas fa-users"></i> فريق العمل</a></li>
+                    <li><a href="#contact"><i class="fas fa-envelope"></i> اتصل بنا</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <section id="about">
+        <section id="about" class="section-padding">
             <div class="container">
-                <h2 class="fade-in">من نحن</h2>
-                <p class="animate-text typewriter">نحن مكتب محاماة ملتزم بتقديم أفضل خدمات القانون لمساعدتك في تحقيق العدالة.</p>
-                <p>نحن فريق من المحامين ذوي الخبرة العالية والمتخصصين في مجالات متعددة من القانون. نحن نقدم استشارات قانونية متكاملة ونساعد عملائنا في التعامل مع القضايا القانونية المعقدة بفعالية وكفاءة. فريقنا يضم محامين مؤهلين ومكرسين لتقديم أعلى مستوى من الخدمة القانونية لضمان حقوق عملائنا وتحقيق أهدافهم.</p>
-                <p>تأسس مكتبنا وقد حققنا سمعة ممتازة بفضل العمل الجاد والتفاني في خدمتنا. نحن نقدم خدمات قانونية متنوعة تشمل الاستشارات، الترافع، وإعداد الوثائق القانونية.</p>
+                <h2 class="section-title">من نحن</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p class="animate-text typewriter">نحن مكتب محاماة ملتزم بتقديم أفضل خدمات القانون لمساعدتك في تحقيق العدالة.</p>
+                        <p>نحن فريق من المحامين ذوي الخبرة العالية والمتخصصين في مجالات متعددة من القانون. نحن نقدم استشارات قانونية متكاملة ونساعد عملائنا في التعامل مع القضايا القانونية المعقدة بفعالية وكفاءة.</p>
+                        <p>تأسس مكتبنا وقد حققنا سمعة ممتازة بفضل العمل الجاد والتفاني في خدمتنا. نحن نقدم خدمات قانونية متنوعة تشمل الاستشارات، الترافع، وإعداد الوثائق القانونية.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="lawyer-team.jpg" alt="فريق المحامين" class="rounded-image">
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="services" class="parallax">
+        <section id="services" class="parallax section-padding">
             <div class="container">
-                <h2 class="fade-in">خدماتنا</h2>
-                <ul class="fade-in">
-                    <li>الاستشارات القانونية: نقدم مشورة قانونية متخصصة لمساعدتك في فهم حقوقك والتخطيط لإجراءاتك القانونية.</li>
-                    <li>التقاضي أمام المحاكم: نحن نرافع عنك في جميع أنواع القضايا، من القضايا المدنية إلى القضايا الجنائية.</li>
-                    <li>إعداد الوثائق القانونية: نساعدك في إعداد وصياغة العقود والاتفاقيات والوثائق القانونية الأخرى.</li>
-                    <li>حل النزاعات: نقدم حلولاً فعالة لحل النزاعات وتسوية القضايا خارج نطاق المحاكم عند الإمكان.</li>
-                    <li>الاستشارات التجارية: نقدم نصائح قانونية للشركات فيما يتعلق بالتشريعات التجارية وحماية الأعمال.</li>
-                </ul>
+                <h2 class="section-title">خدماتنا</h2>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <i class="fas fa-comments"></i>
+                        <h3>الاستشارات القانونية</h3>
+                        <p>نقدم مشورة قانونية متخصصة لمساعدتك في فهم حقوقك والتخطيط لإجراءاتك القانونية.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-balance-scale"></i>
+                        <h3>التقاضي أمام المحاكم</h3>
+                        <p>نحن نرافع عنك في جميع أنواع القضايا، من القضايا المدنية إلى القضايا الجنائية.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-file-contract"></i>
+                        <h3>إعداد الوثائق القانونية</h3>
+                        <p>نساعدك في إعداد وصياغة العقود والاتفاقيات والوثائق القانونية الأخرى.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-handshake"></i>
+                        <h3>حل النزاعات</h3>
+                        <p>نقدم حلولاً فعالة لحل النزاعات وتسوية القضايا خارج نطاق المحاكم عند الإمكان.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-briefcase"></i>
+                        <h3>الاستشارات التجارية</h3>
+                        <p>نقدم نصائح قانونية للشركات فيما يتعلق بالتشريعات التجارية وحماية الأعمال.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="contact">
+        <section id="team" class="section-padding">
             <div class="container">
-                <h2 class="fade-in">اتصل بنا</h2>
-                <form>
-                    <label for="name">الاسم:</label>
-                    <input type="text" id="name" name="name" required>
-                    
-                    <label for="email">البريد الإلكتروني:</label>
-                    <input type="email" id="email" name="email" required>
-                    
-                    <label for="message">الرسالة:</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
-                    
-                    <button type="submit">إرسال</button>
-                </form>
+                <h2 class="section-title">فريق العمل</h2>
+                <div class="team-grid">
+                    <!-- Add team members here -->
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section-padding">
+            <div class="container">
+                <h2 class="section-title">اتصل بنا</h2>
+                <div class="contact-wrapper">
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">الاسم:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">البريد الإلكتروني:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">الرسالة:</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">إرسال</button>
+                    </form>
+                    <div class="contact-info">
+                        <h3>معلومات الاتصال</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> العنوان: شارع الرئيسي، المدينة</p>
+                        <p><i class="fas fa-phone"></i> الهاتف: 123-456-7890</p>
+                        <p><i class="fas fa-envelope"></i> البريد الإلكتروني: info@adalalaw.com</p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -66,6 +114,11 @@
     <footer>
         <div class="container">
             <p>&copy; 2024 العدالة للمحامات. جميع الحقوق محفوظة.</p>
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
         </div>
     </footer>
 
