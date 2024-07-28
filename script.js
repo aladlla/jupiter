@@ -60,4 +60,9 @@ document.addEventListener('DOMContentLoaded', function() {
             parallax.style.backgroundPositionY = scrollPosition * 0.5 + 'px';
         }
     });
+
+    // Initialize Particles.js
+    particlesJS.load('particles-js', 'particles-config.json', function() {
+        console.log('particles.js loaded - callback');
+    });
 });
