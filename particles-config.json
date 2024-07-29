@@ -1,7 +1,7 @@
 {
   "particles": {
     "number": {
-      "value": 650,  /* Increase the number of particles */
+      "value": 100,
       "density": {
         "enable": true,
         "value_area": 800
