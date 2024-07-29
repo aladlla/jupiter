@@ -129,6 +129,23 @@ nav ul li a:hover {
     height: auto;
 }
 
+.animate-text {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: .15em solid orange; /* The cursor */
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+}
+
 /* Services Section */
 .services-grid {
     display: grid;
@@ -153,6 +170,34 @@ nav ul li a:hover {
     font-size: 3em;
     color: var(--primary-color);
     margin-bottom: 20px;
+}
+
+/* Team Section */
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.team-member {
+    flex: 1 1 calc(33.333% - 20px);
+    margin: 10px;
+    background: var(--white);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.team-member img {
+    border-radius: 50%;
+    max-width: 100px;
+    margin-bottom: 15px;
 }
 
 /* Contact Form */
@@ -203,7 +248,38 @@ nav ul li a:hover {
     flex: 1;
 }
 
+/* Parallax Effect */
+.parallax {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Particle.js */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
 /* Footer */
 footer {
     background: var(--secondary-color);
-    color: var(
+    color: var(--white);
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer .social-icons a {
+    color: var(--white);
+    margin: 0 10px;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+footer .social-icons a:hover {
+    color: var(--accent-color);
+}
