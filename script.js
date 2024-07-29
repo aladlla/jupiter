@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Initialize Particles.js
+    // Initialize particles.js
     particlesJS.load('particles-js', 'particles-config.json', function() {
         console.log('particles.js loaded - callback');
     });
