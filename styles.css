@@ -11,8 +11,8 @@
     --secondary-color: #2c3e50;
     --accent-color: #e74c3c;
     --text-color: #333;
-    --bg-color: #ecf0f1;
-    --white: #ffffff;
+    --bg-color: rgba(236, 240, 241, 0.9); /* Changed to semi-transparent */
+    --white: rgba(255, 255, 255, 0.9); /* Changed to semi-transparent */
 }
 
 /* Body and Layout */
@@ -23,6 +23,7 @@ body {
     background-color: var(--bg-color);
     font-size: 16px;
     direction: rtl;
+    background: transparent; /* Ensure the background is transparent */
 }
 
 .container {
@@ -30,6 +31,8 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    background-color: var(--white); /* Background of containers semi-transparent */
+    border-radius: 10px; /* Optional: for better aesthetics */
 }
 
 /* Header */
@@ -235,7 +238,7 @@ footer .social-icons a:hover {
 
 /* Particle.js */
 #particles-js {
-    position: fixed; /* Change from absolute to fixed */
+    position: fixed; /* Ensure particles are fixed */
     width: 100%;
     height: 100%;
     z-index: -1;
