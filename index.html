@@ -3,109 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>العدالة للمحامات - خدمات قانونية</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js" defer></script>
+    <title>الخدمات القانونية المتقدمة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <div class="scale">العدالة للمحامات</div>
+    <div id="loading-page">
+        <div class="loading-content">
+            <i class="fas fa-balance-scale fa-3x"></i>
+            <p>جاري التحميل...</p>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#home">الرئيسية</a></li>
-                <li><a href="#about">من نحن</a></li>
-                <li><a href="#services">الخدمات</a></li>
-                <li><a href="#insights">التحليلات القانونية</a></li>
-                <li><a href="#case-studies">دراسات الحالة</a></li>
-                <li><a href="#resources">الموارد</a></li>
-                <li><a href="#contact">اتصل بنا</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="home" class="hero-section">
-        <div class="hero-content">
-            <h1 class="typing-animation">مرحباً بكم في العدالة للمحامات</h1>
-            <p>نحن هنا لتقديم أفضل الخدمات القانونية والدعم القانوني لمساعدتك في قضاياك.</p>
-            <a href="#contact" class="cta-button">تواصل معنا</a>
-        </div>
-    </section>
+    </div>
 
-    <section id="about">
-        <h2>من نحن</h2>
-        <p>العدالة للمحامات هي شركة رائدة في تقديم الخدمات القانونية. نحن ملتزمون بتقديم المشورة والدعم القانوني لأفراد وشركات في جميع أنحاء العالم. فريقنا يتألف من محامين ذوي خبرة متخصصين في مختلف المجالات القانونية. نحن نقدم استشارات قانونية، تمثيل قانوني، وتوثيق قانوني لضمان حماية حقوق عملائنا.</p>
-    </section>
+    <div id="main-content" style="display: none;">
+        <header>
+            <nav>
+                <div class="logo">
+                    <h1><i class="fas fa-balance-scale"></i> الخدمات القانونية المتقدمة</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#hero">الرئيسية</a></li>
+                    <li><a href="#about">عن الشركة</a></li>
+                    <li><a href="#services">خدماتنا</a></li>
+                    <li><a href="#contact">اتصل بنا</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <section id="services">
-        <h2>الخدمات</h2>
-        <div class="services-list">
-            <div class="service">
-                <h3>استشارات قانونية</h3>
-                <p>نقدم استشارات قانونية شاملة لمساعدتك في فهم حقوقك وواجباتك.</p>
-            </div>
-            <div class="service">
-                <h3>تمثيل قانوني</h3>
-                <p>نمثل العملاء في المحاكم ونقدم الدفاع القانوني في القضايا الجنائية والمدنية.</p>
-            </div>
-            <div class="service">
-                <h3>التوثيق القانوني</h3>
-                <p>نوفر خدمات توثيق العقود والمستندات القانونية الأخرى لضمان حقوقك القانونية.</p>
-            </div>
-        </div>
-    </section>
+        <main>
+            <section id="hero">
+                <h2 class="glitch" data-text="الخدمات القانونية المتقدمة">الخدمات القانونية المتقدمة</h2>
+                <p class="subtitle">نجمع بين الخبرة القانونية والتكنولوجيا الحديثة لتقديم خدمات قانونية فعالة</p>
+                <div class="cta-container">
+                    <a href="#contact" class="cta-button">احصل على استشارة مجانية</a>
+                </div>
+            </section>
 
-    <section id="insights">
-        <h2>التحليلات القانونية</h2>
-        <div class="insight">
-            <h3>أحدث التطورات القانونية</h3>
-            <p>تابع أحدث التطورات في القوانين المحلية والدولية وكيفية تأثيرها على الشركات والأفراد.</p>
-        </div>
-        <div class="insight">
-            <h3>مقالات تعليمية</h3>
-            <p>اقرأ مقالات متعمقة حول مجموعة متنوعة من الموضوعات القانونية لتوسيع معرفتك القانونية.</p>
-        </div>
-    </section>
+            <section id="about">
+                <h2 class="section-title">عن الشركة</h2>
+                <p class="neon-text">نحن شركة قانونية رائدة تجمع بين الخبرة القانونية والتكنولوجيا المتقدمة لتقديم خدمات قانونية فعالة وحديثة لعملائنا.</p>
+            </section>
 
-    <section id="case-studies">
-        <h2>دراسات الحالة</h2>
-        <div class="case-study">
-            <h3>قضية ناجحة في محكمة العمل</h3>
-            <p>قضية تمثل فيها العدالة للمحامات أحد العملاء في محكمة العمل، حيث تم تحقيق نتيجة مرضية ومهمة للعميل.</p>
-        </div>
-        <div class="case-study">
-            <h3>الدفاع عن حقوق الملكية الفكرية</h3>
-            <p>نمثل عملائنا في قضايا تتعلق بالدفاع عن حقوق الملكية الفكرية وضمان حمايتها.</p>
-        </div>
-    </section>
+            <section id="services" class="parallax">
+                <h2 class="section-title">خدماتنا</h2>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <i class="fas fa-paragraph"></i>
+                        <h3>صياغة العقود</h3>
+                        <p>نقدم خدمات صياغة العقود القانونية بدقة وكفاءة.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-user-tie"></i>
+                        <h3>التمثيل القانوني</h3>
+                        <p>نمثل عملائنا في المحاكم والهيئات القانونية المختلفة.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>الاستشارات القانونية</h3>
+                        <p>نقدم استشارات قانونية متخصصة في مختلف المجالات.</p>
+                    </div>
+                </div>
+            </section>
 
-    <section id="resources">
-        <h2>الموارد</h2>
-        <p>استفد من مجموعة واسعة من الموارد القانونية بما في ذلك المستندات القابلة للتنزيل، وأدلة شاملة حول الإجراءات القانونية، ونماذج العقود.</p>
-        <ul>
-            <li><a href="#">نموذج عقد إيجار</a></li>
-            <li><a href="#">دليل الإجراءات القانونية للمحاكم</a></li>
-            <li><a href="#">أسئلة شائعة حول الحقوق القانونية</a></li>
-        </ul>
-    </section>
+            <section id="contact">
+                <h2 class="section-title">اتصل بنا</h2>
+                <form class="contact-form">
+                    <input type="text" placeholder="الاسم" required>
+                    <input type="email" placeholder="البريد الإلكتروني" required>
+                    <textarea placeholder="رسالتك" required></textarea>
+                    <button type="submit" class="neon-button">إرسال</button>
+                </form>
+            </section>
+        </main>
 
-    <section id="contact">
-        <h2>اتصل بنا</h2>
-        <p>للاتصال بنا، يرجى استخدام النموذج أدناه أو الاتصال عبر الهاتف أو البريد الإلكتروني.</p>
-        <form action="path_to_backend_script" method="POST">
-            <label for="name">الاسم:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">البريد الإلكتروني:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">رسالتك:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">إرسال</button>
-        </form>
-    </section>
+        <footer>
+            <p>&copy; 2024 الخدمات القانونية المتقدمة. جميع الحقوق محفوظة.</p>
+        </footer>
+    </div>
 
-    <footer>
-        <p>&copy; 2024 العدالة للمحامات. جميع الحقوق محفوظة.</p>
-    </footer>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
