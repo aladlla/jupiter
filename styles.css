@@ -5,7 +5,7 @@
     --secondary-color: #ff00ff;
     --background-color: #0a0a0a;
     --text-color: #ffffff;
-    --feature-color: rgba(255, 0, 255, 0.1); /* Purple-like background for feature boxes */
+    --feature-color: rgba(255, 0, 255, 0.1);
     --glow-color: #00ff00;
 }
 
@@ -49,9 +49,6 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
 }
 
 .logo h1 {
@@ -61,28 +58,9 @@ nav {
     text-shadow: 0 0 10px var(--primary-color);
 }
 
+/* Navigation links have been removed */
 .nav-links {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-links li {
-    margin-left: 1rem;
-}
-
-.nav-links a {
-    color: var(--text-color);
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-    white-space: nowrap;
-}
-
-.nav-links a:hover {
-    color: var(--primary-color);
-    text-shadow: 0 0 10px var(--primary-color);
+    display: none; /* Hide the navigation links */
 }
 
 main {
@@ -321,7 +299,6 @@ footer {
     .nav-links {
         display: none; /* Hide on small screens, can use JS to toggle */
     }
-    /* Add styles for a hamburger menu or alternative mobile nav here */
     
     .glitch {
         font-size: 2rem;
