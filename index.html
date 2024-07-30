@@ -9,78 +9,66 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="loading-page">
-        <div class="loading-content">
-            <i class="fas fa-balance-scale fa-3x"></i>
-            <p>جاري التحميل...</p>
-        </div>
-    </div>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1><i class="fas fa-balance-scale"></i> الخدمات القانونية المتقدمة</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#hero">الرئيسية</a></li>
+                <li><a href="#about">عن الشركة</a></li>
+                <li><a href="#services">خدماتنا</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div id="main-content" style="display: none;">
-        <header>
-            <nav>
-                <div class="logo">
-                    <h1><i class="fas fa-balance-scale"></i> الخدمات القانونية المتقدمة</h1>
+    <main>
+        <section id="hero">
+            <h2 class="glitch" data-text="الخدمات القانونية المتقدمة">الخدمات القانونية المتقدمة</h2>
+            <p class="subtitle">نجمع بين الخبرة القانونية والتكنولوجيا الحديثة لتقديم خدمات قانونية فعالة</p>
+        </section>
+
+        <section id="about">
+            <h2 class="section-title">عن الشركة</h2>
+            <p class="neon-text">نحن شركة قانونية رائدة تجمع بين الخبرة القانونية والتكنولوجيا المتقدمة لتقديم خدمات قانونية فعالة وحديثة لعملائنا.</p>
+        </section>
+
+        <section id="services" class="parallax">
+            <h2 class="section-title">خدماتنا</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <i class="fas fa-paragraph"></i>
+                    <h3>صياغة العقود</h3>
+                    <p>نقدم خدمات صياغة العقود القانونية بدقة وكفاءة.</p>
                 </div>
-                <ul class="nav-links">
-                    <li><a href="#hero">الرئيسية</a></li>
-                    <li><a href="#about">عن الشركة</a></li>
-                    <li><a href="#services">خدماتنا</a></li>
-                    <li><a href="#contact">اتصل بنا</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <main>
-            <section id="hero">
-                <h2 class="glitch" data-text="الخدمات القانونية المتقدمة">الخدمات القانونية المتقدمة</h2>
-                <p class="subtitle">نجمع بين الخبرة القانونية والتكنولوجيا الحديثة لتقديم خدمات قانونية فعالة</p>
-                <div class="cta-container">
-                    <a href="#contact" class="cta-button">احصل على استشارة مجانية</a>
+                <div class="service-item">
+                    <i class="fas fa-user-tie"></i>
+                    <h3>التمثيل القانوني</h3>
+                    <p>نمثل عملائنا في المحاكم والهيئات القانونية المختلفة.</p>
                 </div>
-            </section>
-
-            <section id="about">
-                <h2 class="section-title">عن الشركة</h2>
-                <p class="neon-text">نحن شركة قانونية رائدة تجمع بين الخبرة القانونية والتكنولوجيا المتقدمة لتقديم خدمات قانونية فعالة وحديثة لعملائنا.</p>
-            </section>
-
-            <section id="services" class="parallax">
-                <h2 class="section-title">خدماتنا</h2>
-                <div class="services-grid">
-                    <div class="service-item">
-                        <i class="fas fa-paragraph"></i>
-                        <h3>صياغة العقود</h3>
-                        <p>نقدم خدمات صياغة العقود القانونية بدقة وكفاءة.</p>
-                    </div>
-                    <div class="service-item">
-                        <i class="fas fa-user-tie"></i>
-                        <h3>التمثيل القانوني</h3>
-                        <p>نمثل عملائنا في المحاكم والهيئات القانونية المختلفة.</p>
-                    </div>
-                    <div class="service-item">
-                        <i class="fas fa-shield-alt"></i>
-                        <h3>الاستشارات القانونية</h3>
-                        <p>نقدم استشارات قانونية متخصصة في مختلف المجالات.</p>
-                    </div>
+                <div class="service-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>الاستشارات القانونية</h3>
+                    <p>نقدم استشارات قانونية متخصصة في مختلف المجالات.</p>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="contact">
-                <h2 class="section-title">اتصل بنا</h2>
-                <form class="contact-form">
-                    <input type="text" placeholder="الاسم" required>
-                    <input type="email" placeholder="البريد الإلكتروني" required>
-                    <textarea placeholder="رسالتك" required></textarea>
-                    <button type="submit" class="neon-button">إرسال</button>
-                </form>
-            </section>
-        </main>
+        <section id="contact">
+            <h2 class="section-title">اتصل بنا</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="الاسم" required>
+                <input type="email" placeholder="البريد الإلكتروني" required>
+                <textarea placeholder="رسالتك" required></textarea>
+                <button type="submit" class="neon-button">إرسال</button>
+            </form>
+        </section>
+    </main>
 
-        <footer>
-            <p>&copy; 2024 الخدمات القانونية المتقدمة. جميع الحقوق محفوظة.</p>
-        </footer>
-    </div>
+    <footer>
+        <p>&copy; 2024 الخدمات القانونية المتقدمة. جميع الحقوق محفوظة.</p>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
