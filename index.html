@@ -1,95 +1,46 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>العدالة القانونية للخدمات و الإستشارات القانونية</title>
+    <title>العدالة للمحامات</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="cyberpunk-overlay"></div>
     <header>
         <nav>
-            <div class="logo">
-                <h1><i class="fas fa-balance-scale"></i> العدالة للمحامات</h1>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#about"><i class="fas fa-info-circle"></i> من نحن</a></li>
-                <li><a href="#services"><i class="fas fa-gavel"></i> خدماتنا</a></li>
-                <li><a href="#contact"><i class="fas fa-envelope"></i> اتصل بنا</a></li>
+            <div class="logo">العدالة للمحامات</div>
+            <button class="menu-button">☰</button>
+            <ul>
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#features">مميزاتنا</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+                <li><a href="#about">عنّا</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section id="hero">
-            <h2 class="glitch" data-text="العدالة القانونية للخدمات و الإستشارات القانونية">العدالة القانونية للخدمات و الإستشارات القانونية</h2>
-            <p class="subtitle">نحن نلتزم بتقديم أعلى مستويات الجودة في الخدمات القانونية والاستشارية لعملائنا</p>
-            <a href="#services" class="button">اكتشف المزيد</a>
-        </section>
+    <section id="hero">
+        <div class="hero-text">
+            <h1>مرحبًا بكم في العدالة للمحامات</h1>
+            <p>نحن هنا لنقدم لكم أفضل الخدمات القانونية والاستشارات.</p>
+        </div>
+    </section>
 
-        <section id="about">
-            <h2 class="section-title">من نحن</h2>
-            <div class="about-content">
-                <p class="neon-text">
-                    شركة العدالة للمحامات هي شركة رائدة في تقديم الخدمات القانونية الشاملة والمتخصصة. نحن نؤمن بأهمية 
-                    بناء علاقة وثيقة مع عملائنا، تقوم على الثقة والاحترام المتبادل. يتمتع فريقنا بخبرة واسعة في مجالات 
-                    القانون المختلفة، ونلتزم بتقديم استشارات قانونية دقيقة وفعالة تساعد عملائنا على تحقيق أهدافهم القانونية 
-                    وحماية مصالحهم. نحن نتعامل مع القضايا القانونية بأقصى درجات الاحترافية والالتزام، ونوفر حلاً شاملاً 
-                    يتماشى مع احتياجات كل عميل. نسعى دائماً لتقديم خدمات عالية الجودة، تركز على التفاصيل وتضمن 
-                    حصول عملائنا على أفضل النتائج.
-                </p>
-            </div>
-        </section>
+    <section id="features">
+        <h2>مميزاتنا</h2>
+        <!-- Placeholder for features -->
+        <div class="features-list">
+            <div class="feature">الميزة الأولى</div>
+            <div class="feature">الميزة الثانية</div>
+            <div class="feature">الميزة الثالثة</div>
+        </div>
+    </section>
 
-        <section id="services">
-            <h2 class="section-title">خدماتنا</h2>
-            <div class="services-grid">
-                <div class="service-item">
-                    <i class="fas fa-comments"></i>
-                    <h3>الاستشارات القانونية الذكية</h3>
-                    <p>نوفر استشارات قانونية متميزة ودقيقة تناسب احتياجاتك.</p>
-                </div>
-                <div class="service-item">
-                    <i class="fas fa-balance-scale"></i>
-                    <h3>التقاضي</h3>
-                    <p>خدمات التقاضي عن بعد لتوفير الوقت والجهد لعملائنا.</p>
-                </div>
-                <div class="service-item">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>حماية البيانات المتقدمة</h3>
-                    <p>نضمن حماية بياناتك باستخدام أفضل الممارسات الأمنية.</p>
-                </div>
-                <!-- Additional Feature Boxes -->
-                <div class="service-item">
-                    <i class="fas fa-file-contract"></i>
-                    <h3>إعداد العقود</h3>
-                    <p>نقوم بإعداد العقود القانونية بمهنية واحترافية عالية.</p>
-                </div>
-                <div class="service-item">
-                    <i class="fas fa-briefcase"></i>
-                    <h3>التمثيل القانوني</h3>
-                    <p>نوفر خدمات التمثيل القانوني في المحاكم بمختلف أنواعها.</p>
-                </div>
-                <div class="service-item">
-                    <i class="fas fa-user-shield"></i>
-                    <h3>خدمات الوساطة</h3>
-                    <p>نسعى إلى حل النزاعات بطرق ودية وفعالة من خلال الوساطة.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact">
-            <h2 class="section-title">اتصل بنا</h2>
-            <form class="contact-form">
-                <input type="text" placeholder="الاسم" required>
-                <input type="email" placeholder="البريد الإلكتروني" required>
-                <textarea placeholder="رسالتك" required></textarea>
-                <button type="submit" class="neon-button">إرسال</button>
-            </form>
-        </section>
-    </main>
+    <section id="contact">
+        <h2>اتصل بنا</h2>
+        <!-- Placeholder for contact form -->
+    </section>
 
     <footer>
         <p>&copy; 2024 العدالة للمحامات. جميع الحقوق محفوظة.</p>
