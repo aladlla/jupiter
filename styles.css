@@ -70,9 +70,7 @@ section {
 }
 
 .section h2 {
-    font-size: 3em; /* Increased font size */
-    font-weight: bold; /* Made the text bold */
-    font-family: 'Cairo', sans-serif; /* Ensured consistent font style */
+    font-size: 2em;
     margin-bottom: 20px;
     text-align: center;
     position: relative;
