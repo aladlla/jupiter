@@ -13,6 +13,9 @@ header {
     color: #fff;
     padding: 10px 0;
     text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 nav {
@@ -63,7 +66,7 @@ nav ul li a:hover {
     background: url('hero-image.jpg') no-repeat center center;
     background-size: cover;
     color: #fff;
-    padding: 60px 20px;
+    padding: 80px 20px;
     text-align: center;
 }
 
@@ -72,32 +75,81 @@ nav ul li a:hover {
     margin: 0 auto;
 }
 
-#features {
+#hero .cta-button {
+    background-color: #00aaff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+#hero .cta-button:hover {
+    background-color: #0088cc;
+}
+
+#services, #features, #contact {
     background-color: #fff;
     padding: 40px 20px;
     text-align: center;
 }
 
-#features h2 {
+#services h2, #features h2, #contact h2 {
     margin-bottom: 20px;
 }
 
-.features-list {
+.services-list, .features-list {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-.feature {
+.service, .feature {
     background-color: #f1f1f1;
     padding: 20px;
     border-radius: 10px;
     width: 30%;
+    margin: 10px 0;
+    text-align: center;
 }
 
-#contact {
-    background-color: #eaeaea;
-    padding: 40px 20px;
-    text-align: center;
+.service i, .feature i {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #0056b3;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#contact form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+#contact form input, #contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contact form button {
+    background-color: #0056b3;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#contact form button:hover {
+    background-color: #004494;
 }
 
 footer {
@@ -105,6 +157,12 @@ footer {
     color: #fff;
     padding: 10px 0;
     text-align: center;
+}
+
+.social-media a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.2em;
 }
 
 @media (max-width: 768px) {
@@ -117,5 +175,11 @@ footer {
     }
     nav ul.show {
         display: flex;
+    }
+    .services-list, .features-list {
+        flex-direction: column;
+    }
+    .service, .feature {
+        width: 80%;
     }
 }
