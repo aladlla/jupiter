@@ -9,7 +9,6 @@ body {
     padding: 0;
     overflow-x: hidden;
     position: relative;
-    transition: background 0.5s ease-in-out;
 }
 
 #particles-js {
@@ -28,29 +27,15 @@ body {
 
 h1, h2, h3, h4 {
     font-family: 'Cairo', sans-serif;
-    text-transform: uppercase;
 }
 
 /* Header Styles */
 .header {
-    background: linear-gradient(135deg, #34495e, #2c3e50);
+    background: #2c3e50;
     color: #fff;
     padding: 40px 0;
     text-align: center;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    position: relative;
-    overflow: hidden;
-}
-
-.header::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('header-bg.png') no-repeat center center / cover;
-    opacity: 0.5;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .navbar ul {
@@ -69,12 +54,11 @@ h1, h2, h3, h4 {
     color: #fff;
     text-decoration: none;
     font-size: 1.2em;
-    transition: color 0.3s ease, transform 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 .navbar ul li a:hover {
     color: #18bc9c;
-    transform: scale(1.1);
 }
 
 /* Section Styles */
@@ -82,13 +66,12 @@ section {
     padding: 60px 0;
     background: #fff;
     margin-top: 20px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
-    position: relative;
-    transition: background 0.5s ease-in-out;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .section h2 {
-    font-size: 2.5em;
+    font-size: 3em; /* Increased font size */
+    font-family: 'Cairo', sans-serif; /* Ensured consistent font style */
     margin-bottom: 20px;
     text-align: center;
     position: relative;
@@ -97,24 +80,18 @@ section {
 
 .section h2:after {
     content: '';
-    width: 150px;
-    height: 6px;
+    width: 100px;
+    height: 4px;
     background: #18bc9c;
     display: block;
     margin: 10px auto 0;
-    border-radius: 3px;
-    transition: width 0.3s ease;
-}
-
-.section:hover h2:after {
-    width: 200px;
+    border-radius: 2px;
 }
 
 .section p {
-    font-size: 1.2em;
+    font-size: 1.1em;
     line-height: 1.8;
     color: #555;
-    margin-bottom: 20px;
 }
 
 /* Services Section */
@@ -122,62 +99,36 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 20px;
-    padding: 20px 0;
 }
 
 .service {
     flex: 1 1 calc(33.333% - 40px);
     background: #ecf0f1;
     padding: 20px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    margin-bottom: 20px;
     text-align: center;
-    transition: transform 0.5s ease, box-shadow 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.service::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.5);
-    transition: opacity 0.5s ease;
-    opacity: 0;
-    z-index: 1;
-}
-
-.service:hover::before {
-    opacity: 1;
+    transition: transform 0.3s ease;
 }
 
 .service:hover {
-    transform: translateY(-15px);
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
 }
 
 .service i {
-    font-size: 4em;
+    font-size: 3em;
     color: #18bc9c;
     margin-bottom: 10px;
-    transition: color 0.3s ease;
 }
 
 .service h3 {
-    font-size: 1.7em;
-    margin-bottom: 15px;
+    font-size: 1.5em;
+    margin-bottom: 10px;
 }
 
 .service p {
-    font-size: 1.1em;
-}
-
-.service:hover i {
-    color: #333;
+    font-size: 1em;
 }
 
 /* Contact Section */
@@ -188,7 +139,7 @@ section {
 }
 
 .contact-section label {
-    font-size: 1.2em;
+    font-size: 1.1em;
     margin-bottom: 5px;
     color: #333;
 }
@@ -196,31 +147,24 @@ section {
 .contact-section input,
 .contact-section textarea {
     width: 100%;
-    padding: 15px;
+    padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    transition: border-color 0.3s ease;
-}
-
-.contact-section input:focus,
-.contact-section textarea:focus {
-    border-color: #18bc9c;
 }
 
 .contact-section button {
     background: #18bc9c;
     color: #fff;
     border: none;
-    padding: 15px 30px;
+    padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
-    transition: background 0.3s ease, transform 0.3s ease;
+    transition: background 0.3s ease;
 }
 
 .contact-section button:hover {
     background: #16a085;
-    transform: translateY(-3px);
 }
 
 /* Footer Styles */
@@ -230,31 +174,10 @@ section {
     text-align: center;
     padding: 20px 0;
     margin-top: 20px;
-    position: relative;
-    overflow: hidden;
-}
-
-.footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%;
-    height: 2px;
-    background: #18bc9c;
-    animation: footerLine 2s infinite;
-}
-
-@keyframes footerLine {
-    0% { width: 0; }
-    100% { width: 80%; }
 }
 
 .footer p {
     margin: 0;
-    z-index: 1;
-    position: relative;
 }
 
 @media (max-width: 768px) {
