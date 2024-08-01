@@ -2,14 +2,13 @@
 body {
     font-family: 'Arial, sans-serif';
     line-height: 1.6;
-    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
     color: #333;
     direction: rtl;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
     position: relative;
-    transition: background 0.5s ease-in-out;
 }
 
 #particles-js {
@@ -28,7 +27,6 @@ body {
 
 h1, h2, h3, h4 {
     font-family: 'Cairo', sans-serif;
-    color: #34495e;
 }
 
 /* Header Styles */
@@ -37,9 +35,7 @@ h1, h2, h3, h4 {
     color: #fff;
     padding: 40px 0;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .navbar ul {
@@ -62,7 +58,7 @@ h1, h2, h3, h4 {
 }
 
 .navbar ul li a:hover {
-    color: #76c7c0;
+    color: #18bc9c;
 }
 
 /* Section Styles */
@@ -70,30 +66,24 @@ section {
     padding: 60px 0;
     background: #fff;
     margin-top: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    transition: background 0.5s ease-in-out, transform 0.3s ease;
-}
-
-.section:hover {
-    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .section h2 {
-    font-size: 3em;
-    font-weight: bold;
-    font-family: 'Cairo', sans-serif;
+    font-size: 3em; /* Increased font size */
+    font-weight: bold; /* Made the text bold */
+    font-family: 'Cairo', sans-serif; /* Ensured consistent font style */
     margin-bottom: 20px;
     text-align: center;
     position: relative;
-    color: #34495e;
+    color: #333;
 }
 
 .section h2:after {
     content: '';
     width: 100px;
     height: 4px;
-    background: #76c7c0;
+    background: #18bc9c;
     display: block;
     margin: 10px auto 0;
     border-radius: 2px;
@@ -103,7 +93,6 @@ section {
     font-size: 1.1em;
     line-height: 1.8;
     color: #555;
-    margin-bottom: 20px;
 }
 
 /* Services Section */
@@ -115,23 +104,22 @@ section {
 
 .service {
     flex: 1 1 calc(33.333% - 40px);
-    background: #f8f9fa;
+    background: #ecf0f1;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
     margin-bottom: 20px;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .service:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .service i {
     font-size: 3em;
-    color: #76c7c0;
+    color: #18bc9c;
     margin-bottom: 10px;
 }
 
@@ -164,16 +152,10 @@ section {
     margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    transition: border-color 0.3s ease;
-}
-
-.contact-section input:focus,
-.contact-section textarea:focus {
-    border-color: #76c7c0;
 }
 
 .contact-section button {
-    background: #76c7c0;
+    background: #18bc9c;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -183,7 +165,7 @@ section {
 }
 
 .contact-section button:hover {
-    background: #5bb5b1;
+    background: #16a085;
 }
 
 /* Footer Styles */
@@ -193,8 +175,6 @@ section {
     text-align: center;
     padding: 20px 0;
     margin-top: 20px;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
 }
 
 .footer p {
