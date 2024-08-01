@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>العدالة للمحامات</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
         <nav>
             <div class="logo">العدالة للمحامات</div>
-            <button class="menu-button">☰</button>
+            <button class="menu-button"><i class="fas fa-bars"></i></button>
             <ul>
                 <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#services">خدماتنا</a></li>
                 <li><a href="#features">مميزاتنا</a></li>
                 <li><a href="#contact">اتصل بنا</a></li>
                 <li><a href="#about">عنّا</a></li>
@@ -24,25 +26,74 @@
         <div class="hero-text">
             <h1>مرحبًا بكم في العدالة للمحامات</h1>
             <p>نحن هنا لنقدم لكم أفضل الخدمات القانونية والاستشارات.</p>
+            <a href="#services" class="cta-button">استكشاف خدماتنا</a>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2>خدماتنا</h2>
+        <div class="services-list">
+            <div class="service">
+                <i class="fas fa-gavel"></i>
+                <h3>الاستشارات القانونية</h3>
+                <p>نوفر لكم استشارات قانونية في جميع المجالات.</p>
+            </div>
+            <div class="service">
+                <i class="fas fa-balance-scale"></i>
+                <h3>التمثيل القانوني</h3>
+                <p>نمثل عملائنا في جميع القضايا القانونية.</p>
+            </div>
+            <div class="service">
+                <i class="fas fa-file-contract"></i>
+                <h3>إعداد العقود</h3>
+                <p>نساعدكم في إعداد ومراجعة العقود القانونية.</p>
+            </div>
         </div>
     </section>
 
     <section id="features">
         <h2>مميزاتنا</h2>
-        <!-- Placeholder for features -->
         <div class="features-list">
-            <div class="feature">الميزة الأولى</div>
-            <div class="feature">الميزة الثانية</div>
-            <div class="feature">الميزة الثالثة</div>
+            <div class="feature">
+                <i class="fas fa-award"></i>
+                <h3>خبرة عالية</h3>
+                <p>فريقنا يتمتع بخبرة واسعة في المجال القانوني.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-user-shield"></i>
+                <h3>ثقة وموثوقية</h3>
+                <p>نعمل بكل شفافية وموثوقية للحفاظ على ثقتكم.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-headset"></i>
+                <h3>دعم متواصل</h3>
+                <p>نوفر دعم متواصل لجميع استفساراتكم واحتياجاتكم.</p>
+            </div>
         </div>
     </section>
 
     <section id="contact">
         <h2>اتصل بنا</h2>
-        <!-- Placeholder for contact form -->
+        <form>
+            <label for="name">الاسم</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">البريد الإلكتروني</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">الرسالة</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            
+            <button type="submit">إرسال</button>
+        </form>
     </section>
 
     <footer>
+        <div class="social-media">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
         <p>&copy; 2024 العدالة للمحامات. جميع الحقوق محفوظة.</p>
     </footer>
 
