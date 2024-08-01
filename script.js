@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Initialize AOS (Animate on Scroll)
     AOS.init({
-        duration: 1500,
+        duration: 1200,
         once: true,
         mirror: true,
     });
@@ -9,16 +9,16 @@ document.addEventListener('DOMContentLoaded', function () {
     // Initialize Particles
     particlesJS('particles-js', {
         particles: {
-            number: { value: 250, density: { enable: true, value_area: 800 } },
+            number: { value: 200, density: { enable: true, value_area: 800 } },
             color: { value: "#ffffff" },
             shape: {
                 type: "circle",
                 stroke: { width: 0, color: "#000000" },
                 polygon: { nb_sides: 5 }
             },
-            opacity: { value: 0.6, random: false, anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false } },
+            opacity: { value: 0.5, random: false, anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false } },
             size: { value: 3, random: true, anim: { enable: false, speed: 40, size_min: 0.1, sync: false } },
-            line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.5, width: 1 },
+            line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.4, width: 1 },
             move: { enable: true, speed: 6, direction: "none", random: false, straight: false, out_mode: "out", bounce: false, attract: { enable: false, rotateX: 600, rotateY: 1200 } }
         },
         interactivity: {
@@ -34,16 +34,4 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         retina_detect: true
     });
-    
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
-
-    // Additional interactive elements can be added here
 });
