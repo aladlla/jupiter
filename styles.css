@@ -42,11 +42,12 @@ h1, h2, h3, h4 {
 .header .logo {
     position: absolute;
     top: 10px;
-    right: 10px;
+    right: 0; /* Aligns the logo completely to the right */
+    transform: translateX(-10%); /* Slightly shifts the logo left to ensure it stays within the viewport */
 }
 
 .header .logo img {
-    width: 600px; /* Increased width by three times */
+    width: 600px; /* Keeps the increased width */
     height: auto;
 }
 
