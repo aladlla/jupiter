@@ -47,11 +47,29 @@ h1, h2, h3, h4 {
     font-family: var(--font-primary);
     font-weight: var(--font-weight-bold);
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Subtle text shadow */
+    opacity: 0; /* Start hidden for animation */
+    transform: translateY(20px); /* Start slightly lower for slide-up effect */
+    animation: fadeSlideIn 1s ease-out forwards; /* Apply animation */
+}
+
+@keyframes fadeSlideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 p {
     font-weight: var(--font-weight-regular);
     line-height: 1.8;
+    opacity: 0; /* Start hidden for animation */
+    animation: fadeIn 1s ease-out forwards; /* Apply animation */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
 }
 
 /* Header Styles */
@@ -62,6 +80,8 @@ p {
     text-align: center;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     position: relative;
+    opacity: 0; /* Start hidden for animation */
+    animation: fadeIn 1s ease-out 0.5s forwards; /* Delay for entrance */
 }
 
 .header .logo {
@@ -106,6 +126,8 @@ section {
     margin-top: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     transition: background 0.3s;
+    opacity: 0; /* Start hidden for animation */
+    animation: fadeIn 1s ease-out 0.5s forwards; /* Delay for entrance */
 }
 
 section h2 {
@@ -144,6 +166,19 @@ button {
 button:hover {
     background: var(--button-hover-bg);
     transform: scale(1.05);
+    animation: pulse 1s infinite; /* Pulse effect */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 /* Services Section */
@@ -162,11 +197,26 @@ button:hover {
     margin-bottom: 20px;
     text-align: center;
     transition: transform 0.3s ease, background 0.3s;
+    animation: bounceIn 0.5s ease-out; /* Bounce animation */
 }
 
 .service:hover {
     transform: translateY(-10px);
     background: #333; /* Slight background change on hover */
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 .service i {
@@ -193,6 +243,14 @@ button:hover {
     background: var(--secondary-color);
     margin: 40px 0;
     opacity: 0.7;
+    transform: scaleX(0); /* Start with zero width */
+    animation: slideIn 1s ease-out forwards; /* Slide-in effect */
+}
+
+@keyframes slideIn {
+    to {
+        transform: scaleX(1);
+    }
 }
 
 /* Contact Section */
