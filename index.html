@@ -12,7 +12,10 @@
     <div id="particles-js"></div>
     <header class="header" role="banner">
         <div class="container">
-            <h1 data-aos="fade-down"><i class="fas fa-balance-scale-left"></i> العدالة للمحاماة</h1>
+            <h1 data-aos="fade-down">
+                <i class="fas fa-balance-scale-left" id="justice-icon"></i> 
+                العدالة للمحاماة
+            </h1>
             <nav class="navbar" role="navigation" data-aos="fade-up">
                 <ul>
                     <li><a href="#about">من نحن</a></li>
@@ -38,7 +41,7 @@
 
     <section id="services" class="services-section">
         <div class="container">
-            <h2 data-aos="fade-up"><i class="fas fa-concierge-bell"></i> الخدمات</h2>
+            <h2 data-aos="fade-up"><i class="fas fa-gavel"></i> الخدمات</h2>
             <div class="services-grid">
                 <div class="service" data-aos="fade-right">
                     <i class="fas fa-gavel"></i>
@@ -51,7 +54,7 @@
                     <p>نمثل عملائنا في المحاكم والقضايا المختلفة لضمان حقوقهم والدفاع عن مصالحهم.</p>
                 </div>
                 <div class="service" data-aos="fade-right">
-                    <i class="fas fa-handshake"></i>
+                    <i class="fas fa-university"></i>
                     <h3>الوساطة والتحكيم</h3>
                     <p>نوفر حلولاً بديلة للنزاعات من خلال الوساطة والتحكيم لتجنب النزاعات القضائية الطويلة.</p>
                 </div>
@@ -69,26 +72,6 @@
                     <i class="fas fa-globe"></i>
                     <h3>الاستثمارات الأجنبية</h3>
                     <p>نساعد الشركات الأجنبية في تأسيس الأعمال في المنطقة وتقديم الاستشارات القانونية اللازمة.</p>
-                </div>
-                <div class="service" data-aos="fade-right">
-                    <i class="fas fa-dollar-sign"></i>
-                    <h3>التخطيط الضريبي</h3>
-                    <p>نقدم استشارات ضريبية لمساعدة الشركات على الامتثال للضرائب المحلية والدولية.</p>
-                </div>
-                <div class="service" data-aos="fade-left">
-                    <i class="fas fa-ban"></i>
-                    <h3>الإفلاس والتصفية</h3>
-                    <p>نوفر خدمات إدارة حالات الإفلاس والتصفية للشركات التي تواجه صعوبات مالية.</p>
-                </div>
-                <div class="service" data-aos="fade-right">
-                    <i class="fas fa-leaf"></i>
-                    <h3>الاستشارات البيئية</h3>
-                    <p>نقدم استشارات قانونية في الأمور البيئية والامتثال للقوانين البيئية.</p>
-                </div>
-                <div class="service" data-aos="fade-left">
-                    <i class="fas fa-balance-scale-left"></i>
-                    <h3>القانون الجنائي</h3>
-                    <p>نمثل العملاء في القضايا الجنائية وندافع عن حقوقهم في المحاكم.</p>
                 </div>
             </div>
         </div>
@@ -118,6 +101,94 @@
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize AOS (Animate on Scroll)
+            AOS.init({
+                duration: 1200,
+                once: true,
+                mirror: false, // Prevents repeated animation
+            });
+
+            // Initialize Particles.js with the original roaming lines configuration
+            particlesJS('particles-js', {
+                particles: {
+                    number: {
+                        value: 100, // Adjusted for a smooth performance
+                        density: { enable: true, value_area: 800 }
+                    },
+                    color: { value: "#ffffff" }, // Lines will be white
+                    shape: {
+                        type: "line", // Changed to line for the roaming lines effect
+                        stroke: { width: 2, color: "#ffffff" }, // White lines
+                        polygon: { nb_sides: 5 }
+                    },
+                    opacity: {
+                        value: 0.6,
+                        random: false,
+                        anim: { enable: false, speed: 1, opacity_min: 0.3, sync: false }
+                    },
+                    size: {
+                        value: 2,
+                        random: true,
+                        anim: { enable: false, speed: 40, size_min: 0.1, sync: false }
+                    },
+                    line_linked: {
+                        enable: true,
+                        distance: 150,
+                        color: "#ffffff",
+                        opacity: 0.4,
+                        width: 1
+                    },
+                    move: {
+                        enable: true,
+                        speed: 1,
+                        direction: "none",
+                        random: true,
+                        straight: false,
+                        out_mode: "out",
+                        bounce: false,
+                        attract: { enable: false, rotateX: 600, rotateY: 1200 }
+                    }
+                },
+                interactivity: {
+                    detect_on: "canvas",
+                    events: {
+                        onhover: { enable: true, mode: "repulse" },
+                        onclick: { enable: true, mode: "push" },
+                        resize: true
+                    },
+                    modes: {
+                        grab: { distance: 400, line_linked: { opacity: 1 } },
+                        bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 },
+                        repulse: { distance: 200, duration: 0.4 },
+                        push: { particles_nb: 4 },
+                        remove: { particles_nb: 2 }
+                    }
+                },
+                retina_detect: true
+            });
+
+            // Scales of Justice Icon Animation
+            const justiceIcon = document.getElementById('justice-icon');
+            justiceIcon.addEventListener('mouseover', () => {
+                justiceIcon.style.transform = 'rotate(-10deg)';
+                justiceIcon.style.transition = 'transform 0.2s ease-in-out';
+            });
+            justiceIcon.addEventListener('mouseout', () => {
+                justiceIcon.style.transform = 'rotate(0deg)';
+            });
+
+            // Smooth Scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
