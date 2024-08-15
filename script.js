@@ -64,4 +64,24 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         retina_detect: true
     });
+
+    // Scales of Justice Icon Animation
+    const justiceIcon = document.getElementById('justice-icon');
+    justiceIcon.addEventListener('mouseover', () => {
+        justiceIcon.style.transform = 'rotate(-10deg)';
+        justiceIcon.style.transition = 'transform 0.2s ease-in-out';
+    });
+    justiceIcon.addEventListener('mouseout', () => {
+        justiceIcon.style.transform = 'rotate(0deg)';
+    });
+
+    // Smooth Scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
 });
