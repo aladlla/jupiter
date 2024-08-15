@@ -3,13 +3,13 @@ document.addEventListener('DOMContentLoaded', function () {
     AOS.init({
         duration: 1200,
         once: true,
-        mirror: true,
+        mirror: false, // Prevents repeated animation
     });
 
     // Initialize Particles
     particlesJS('particles-js', {
         particles: {
-            number: { value: 200, density: { enable: true, value_area: 800 } },
+            number: { value: 150, density: { enable: true, value_area: 800 } }, // Slightly reduced number for performance
             color: { value: "#ffffff" },
             shape: {
                 type: "circle",
