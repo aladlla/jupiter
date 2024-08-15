@@ -1,15 +1,5 @@
-/* Root Variables for Light and Dark Modes */
+/* Root Variables for Dark Mode */
 :root {
-    --primary-color: #2c3e50;
-    --secondary-color: #18bc9c;
-    --background-color: #f5f7fa;
-    --text-color: #333;
-    --header-background: var(--primary-color);
-    --button-hover-bg: #16a085;
-    --section-background: #fff;
-}
-
-[data-theme="dark"] {
     --primary-color: #181818;
     --secondary-color: #00aaff;
     --background-color: #1a1a1a;
@@ -72,17 +62,6 @@ h1, h2, h3, h4 {
 .header .logo img {
     width: 200px;
     height: auto;
-}
-
-#dark-mode-toggle {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background: none;
-    border: none;
-    font-size: 1.5em;
-    cursor: pointer;
-    color: #fff;
 }
 
 .navbar ul {
@@ -150,7 +129,7 @@ section p {
 
 .service {
     flex: 1 1 calc(33.333% - 40px);
-    background: #ecf0f1;
+    background: var(--section-background);
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -161,11 +140,6 @@ section p {
 
 .service:hover {
     transform: translateY(-10px);
-}
-
-[data-theme="dark"] .service {
-    background: #2a2a2a;
-    color: #ddd;
 }
 
 .service i {
@@ -201,21 +175,16 @@ section p {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ddd;
+    border: 1px solid #555;
     border-radius: 5px;
+    background: #333;
+    color: #ddd;
     transition: border 0.3s;
 }
 
 .contact-section input:focus,
 .contact-section textarea:focus {
     border-color: var(--secondary-color);
-}
-
-[data-theme="dark"] .contact-section input,
-[data-theme="dark"] .contact-section textarea {
-    background: #333;
-    color: #ddd;
-    border-color: #555;
 }
 
 .contact-section button {
