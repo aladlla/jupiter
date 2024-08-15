@@ -1,14 +1,36 @@
+/* Root Variables for Light and Dark Modes */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #18bc9c;
+    --background-color: #f5f7fa;
+    --text-color: #333;
+    --header-background: var(--primary-color);
+    --button-hover-bg: #16a085;
+    --section-background: #fff;
+}
+
+[data-theme="dark"] {
+    --primary-color: #181818;
+    --secondary-color: #00aaff;
+    --background-color: #1a1a1a;
+    --text-color: #eee;
+    --header-background: var(--primary-color);
+    --button-hover-bg: #005577;
+    --section-background: #2a2a2a;
+}
+
 /* General Styles */
 body {
     font-family: 'Cairo', sans-serif;
     line-height: 1.6;
-    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-    color: #333;
+    background: var(--background-color);
+    color: var(--text-color);
     direction: rtl;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
     position: relative;
+    transition: background 0.3s, color 0.3s;
 }
 
 #particles-js {
@@ -32,7 +54,7 @@ h1, h2, h3, h4 {
 
 /* Header Styles */
 .header {
-    background: #2c3e50;
+    background: var(--header-background);
     color: #fff;
     padding: 40px 0;
     text-align: center;
@@ -48,8 +70,19 @@ h1, h2, h3, h4 {
 }
 
 .header .logo img {
-    width: 200px; /* Adjusted for responsiveness */
+    width: 200px;
     height: auto;
+}
+
+#dark-mode-toggle {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #fff;
 }
 
 .navbar ul {
@@ -72,15 +105,16 @@ h1, h2, h3, h4 {
 }
 
 .navbar ul li a:hover {
-    color: #18bc9c;
+    color: var(--secondary-color);
 }
 
 /* Section Styles */
 section {
     padding: 60px 0;
-    background: #fff;
+    background: var(--section-background);
     margin-top: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s;
 }
 
 section h2 {
@@ -88,14 +122,14 @@ section h2 {
     margin-bottom: 20px;
     text-align: center;
     position: relative;
-    color: #333;
+    color: var(--text-color);
 }
 
 section h2:after {
     content: '';
     width: 100px;
     height: 4px;
-    background: #18bc9c;
+    background: var(--secondary-color);
     display: block;
     margin: 10px auto 0;
     border-radius: 2px;
@@ -104,7 +138,7 @@ section h2:after {
 section p {
     font-size: 1.1em;
     line-height: 1.8;
-    color: #555;
+    color: var(--text-color);
 }
 
 /* Services Section */
@@ -122,16 +156,21 @@ section p {
     border-radius: 8px;
     margin-bottom: 20px;
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, background 0.3s;
 }
 
 .service:hover {
     transform: translateY(-10px);
 }
 
+[data-theme="dark"] .service {
+    background: #2a2a2a;
+    color: #ddd;
+}
+
 .service i {
     font-size: 3em;
-    color: #18bc9c;
+    color: var(--secondary-color);
     margin-bottom: 10px;
 }
 
@@ -154,7 +193,7 @@ section p {
 .contact-section label {
     font-size: 1.1em;
     margin-bottom: 5px;
-    color: #333;
+    color: var(--text-color);
 }
 
 .contact-section input,
@@ -164,10 +203,23 @@ section p {
     margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    transition: border 0.3s;
+}
+
+.contact-section input:focus,
+.contact-section textarea:focus {
+    border-color: var(--secondary-color);
+}
+
+[data-theme="dark"] .contact-section input,
+[data-theme="dark"] .contact-section textarea {
+    background: #333;
+    color: #ddd;
+    border-color: #555;
 }
 
 .contact-section button {
-    background: #18bc9c;
+    background: var(--secondary-color);
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -177,12 +229,12 @@ section p {
 }
 
 .contact-section button:hover {
-    background: #16a085;
+    background: var(--button-hover-bg);
 }
 
 /* Footer Styles */
 .footer {
-    background: #2c3e50;
+    background: var(--header-background);
     color: #fff;
     text-align: center;
     padding: 20px 0;
@@ -203,6 +255,6 @@ section p {
     }
 
     .header .logo img {
-        width: 150px; /* Adjusted for smaller screens */
+        width: 150px;
     }
 }
