@@ -1,23 +1,23 @@
-/* Root Variables for Dark Mode */
+/* Root Variables for Legal Theme */
 :root {
-    --primary-color: #181818;
-    --secondary-color: #00aaff;
-    --background-color: #000000; /* Set the background to black */
-    --text-color: #eee;
-    --header-background: var(--primary-color);
-    --button-hover-bg: #005577;
-    --section-background: #2a2a2a;
-    --font-primary: 'Cairo', sans-serif;
-    --font-weight-light: 300;
-    --font-weight-regular: 400;
-    --font-weight-bold: 700;
+    --primary-color: #1a1a1a; /* Darker background */
+    --secondary-color: #004080; /* Deep navy blue accent */
+    --accent-color: #b5b5b5; /* Subtle gray accent */
+    --text-color: #ddd; /* Slightly lighter text color */
+    --heading-font: 'Merriweather', serif; /* Serif font for headings */
+    --body-font: 'Arial', sans-serif; /* Sans-serif font for body */
+    --section-background: #1f1f1f; /* Darker section background */
+    --border-color: #404040; /* Subtle border color */
+    --button-bg: #004080; /* Navy blue button background */
+    --button-text: #fff; /* White button text */
+    --button-hover-bg: #002b5c; /* Darker navy on hover */
 }
 
 /* General Styles */
 body {
-    font-family: var(--font-primary);
+    font-family: var(--body-font);
     line-height: 1.6;
-    background: var(--background-color); /* Ensure the background is black */
+    background-color: var(--primary-color);
     color: var(--text-color);
     direction: rtl;
     margin: 0;
@@ -31,8 +31,8 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Keep the particles behind the content */
-    background: var(--background-color); /* Background remains black */
+    z-index: -1;
+    background-color: var(--primary-color); /* Ensure particles background is consistent */
 }
 
 .container {
@@ -44,55 +44,38 @@ body {
 
 /* Typography */
 h1, h2, h3, h4 {
-    font-family: var(--font-primary);
-    font-weight: var(--font-weight-bold);
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Subtle text shadow */
-    opacity: 0; /* Start hidden for animation */
-    transform: translateY(20px); /* Start slightly lower for slide-up effect */
-    animation: fadeSlideIn 1s ease-out forwards; /* Apply animation */
-}
-
-@keyframes fadeSlideIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    font-family: var(--heading-font); /* Use serif font for headings */
+    font-weight: bold;
+    color: var(--text-color);
+    text-shadow: none; /* Remove text shadows for a cleaner look */
+    margin-bottom: 20px;
 }
 
 p {
-    font-weight: var(--font-weight-regular);
+    font-family: var(--body-font);
+    font-weight: normal;
     line-height: 1.8;
-    opacity: 0; /* Start hidden for animation */
-    animation: fadeIn 1s ease-out forwards; /* Apply animation */
-}
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
+    margin-bottom: 20px;
 }
 
 /* Header Styles */
 .header {
-    background: var(--header-background);
-    color: #fff;
-    padding: 40px 0;
+    background: var(--primary-color);
+    color: var(--text-color);
+    padding: 30px 0;
     text-align: center;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid var(--border-color);
     position: relative;
-    opacity: 0; /* Start hidden for animation */
-    animation: fadeIn 1s ease-out 0.5s forwards; /* Delay for entrance */
 }
 
 .header .logo {
     position: absolute;
-    top: 10px;
-    right: 0;
-    transform: translateX(-10%);
+    top: 15px;
+    right: 15px;
 }
 
 .header .logo img {
-    width: 200px;
+    width: 180px;
     height: auto;
 }
 
@@ -105,80 +88,68 @@ p {
 
 .navbar ul li {
     display: inline;
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 .navbar ul li a {
-    color: #fff;
+    color: var(--text-color);
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1.1em;
     transition: color 0.3s ease;
+    border-bottom: 2px solid transparent; /* Underline effect */
 }
 
 .navbar ul li a:hover {
     color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
 }
 
 /* Section Styles */
 section {
     padding: 60px 0;
     background: var(--section-background);
+    border: 1px solid var(--border-color); /* Add subtle borders */
     margin-top: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    transition: background 0.3s;
-    opacity: 0; /* Start hidden for animation */
-    animation: fadeIn 1s ease-out 0.5s forwards; /* Delay for entrance */
 }
 
 section h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+    font-size: 2.2em;
     text-align: center;
-    position: relative;
-    color: var(--text-color);
+    color: var(--secondary-color);
     text-transform: uppercase;
+    margin-bottom: 30px;
 }
 
 section h2:after {
     content: '';
-    width: 120px;
-    height: 4px;
+    width: 80px;
+    height: 3px;
     background: var(--secondary-color);
     display: block;
     margin: 10px auto 0;
     border-radius: 2px;
 }
 
-/* Button Styles */
-.contact-section button,
-button {
-    background: linear-gradient(135deg, var(--secondary-color), #0077cc);
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background 0.3s ease, transform 0.3s;
-    font-weight: var(--font-weight-bold);
+section p {
+    font-size: 1.1em;
+    color: var(--text-color);
 }
 
-.contact-section button:hover,
+/* Button Styles */
+button {
+    background: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 3px; /* Sharper corners */
+    transition: background 0.3s ease, transform 0.3s;
+    font-weight: bold;
+}
+
 button:hover {
     background: var(--button-hover-bg);
-    transform: scale(1.05);
-    animation: pulse 1s infinite; /* Pulse effect */
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
-    100% {
-        transform: scale(1);
-    }
+    transform: translateY(-2px);
 }
 
 /* Services Section */
@@ -192,65 +163,34 @@ button:hover {
     flex: 1 1 calc(33.333% - 40px);
     background: var(--section-background);
     padding: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Deeper shadow */
-    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
     margin-bottom: 20px;
     text-align: center;
     transition: transform 0.3s ease, background 0.3s;
-    animation: bounceIn 0.5s ease-out; /* Bounce animation */
 }
 
 .service:hover {
-    transform: translateY(-10px);
-    background: #333; /* Slight background change on hover */
-}
-
-@keyframes bounceIn {
-    0% {
-        transform: scale(0.9);
-        opacity: 0;
-    }
-    50% {
-        transform: scale(1.05);
-        opacity: 1;
-    }
-    100% {
-        transform: scale(1);
-    }
+    transform: translateY(-5px);
+    background: #333;
 }
 
 .service i {
-    font-size: 3em;
+    font-size: 2.5em;
     color: var(--secondary-color);
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .service h3 {
-    font-size: 1.7em;
-    margin-bottom: 10px;
-    font-weight: var(--font-weight-bold);
+    font-size: 1.5em;
+    color: var(--text-color);
+    margin-bottom: 15px;
 }
 
 .service p {
     font-size: 1em;
-    font-weight: var(--font-weight-light);
-}
-
-/* Decorative Section Dividers */
-.section-divider {
-    width: 100%;
-    height: 1px;
-    background: var(--secondary-color);
-    margin: 40px 0;
-    opacity: 0.7;
-    transform: scaleX(0); /* Start with zero width */
-    animation: slideIn 1s ease-out forwards; /* Slide-in effect */
-}
-
-@keyframes slideIn {
-    to {
-        transform: scaleX(1);
-    }
+    font-weight: normal;
+    color: var(--text-color);
 }
 
 /* Contact Section */
@@ -271,8 +211,8 @@ button:hover {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #555;
-    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
     background: #333;
     color: #ddd;
     transition: border 0.3s;
@@ -285,11 +225,11 @@ button:hover {
 
 /* Footer Styles */
 .footer {
-    background: var(--header-background);
-    color: #fff;
+    background: var(--primary-color);
+    color: var(--text-color);
     text-align: center;
     padding: 20px 0;
-    margin-top: 20px;
+    border-top: 1px solid var(--border-color);
 }
 
 .footer p {
