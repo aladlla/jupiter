@@ -10,10 +10,10 @@
 </head>
 <body>
     <div id="particles-js"></div>
-    <header class="header" role="banner">
+    <header class="header">
         <div class="container">
-            <h1 data-aos="fade-down"><i class="fas fa-balance-scale-left" id="justice-icon"></i> العدالة للمحاماة</h1>
-            <nav class="navbar" role="navigation" data-aos="fade-up">
+            <h1 data-aos="fade-down"><i class="fas fa-balance-scale-left"></i> العدالة للمحاماة</h1>
+            <nav class="navbar" data-aos="fade-up">
                 <ul>
                     <li><a href="#about">من نحن</a></li>
                     <li><a href="#services">الخدمات</a></li>
@@ -89,7 +89,7 @@
         </div>
     </section>
 
-    <footer class="footer" data-aos="fade-up" role="contentinfo">
+    <footer class="footer" data-aos="fade-up">
         <div class="container">
             <p>جميع الحقوق محفوظة &copy; 2024 العدالة للمحاماة</p>
         </div>
@@ -105,39 +105,39 @@
                 mirror: false, // Prevents repeated animation
             });
 
-            // Initialize Particles.js with the original roaming lines configuration
+            // Initialize Particles.js with enhanced gray particles on a white background
             particlesJS('particles-js', {
                 particles: {
                     number: {
-                        value: 100, // Adjusted for a smooth performance
+                        value: 80, // Adjusted for a smooth performance
                         density: { enable: true, value_area: 800 }
                     },
-                    color: { value: "#ffffff" }, // Lines will be white
+                    color: { value: "#cccccc" }, // Subtle gray particles
                     shape: {
-                        type: "line", // Changed to line for the roaming lines effect
-                        stroke: { width: 2, color: "#ffffff" }, // White lines
+                        type: "circle", // Softer shape for a more elegant look
+                        stroke: { width: 0, color: "#000000" },
                         polygon: { nb_sides: 5 }
                     },
                     opacity: {
-                        value: 0.6,
+                        value: 0.3,
                         random: false,
-                        anim: { enable: false, speed: 1, opacity_min: 0.3, sync: false }
+                        anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false }
                     },
                     size: {
-                        value: 2,
+                        value: 3,
                         random: true,
                         anim: { enable: false, speed: 40, size_min: 0.1, sync: false }
                     },
                     line_linked: {
                         enable: true,
                         distance: 150,
-                        color: "#ffffff",
-                        opacity: 0.4,
+                        color: "#cccccc",
+                        opacity: 0.2,
                         width: 1
                     },
                     move: {
                         enable: true,
-                        speed: 1,
+                        speed: 2,
                         direction: "none",
                         random: true,
                         straight: false,
@@ -149,29 +149,19 @@
                 interactivity: {
                     detect_on: "canvas",
                     events: {
-                        onhover: { enable: true, mode: "repulse" },
+                        onhover: { enable: true, mode: "grab" },
                         onclick: { enable: true, mode: "push" },
                         resize: true
                     },
                     modes: {
-                        grab: { distance: 400, line_linked: { opacity: 1 } },
-                        bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 },
+                        grab: { distance: 200, line_linked: { opacity: 0.5 } },
+                        bubble: { distance: 400, size: 10, duration: 2, opacity: 1, speed: 3 },
                         repulse: { distance: 200, duration: 0.4 },
                         push: { particles_nb: 4 },
                         remove: { particles_nb: 2 }
                     }
                 },
                 retina_detect: true
-            });
-
-            // Scales of Justice Icon Animation
-            const justiceIcon = document.getElementById('justice-icon');
-            justiceIcon.addEventListener('mouseover', () => {
-                justiceIcon.style.transform = 'rotate(-10deg)';
-                justiceIcon.style.transition = 'transform 0.2s ease-in-out';
-            });
-            justiceIcon.addEventListener('mouseout', () => {
-                justiceIcon.style.transform = 'rotate(0deg)';
             });
 
             // Smooth Scroll
