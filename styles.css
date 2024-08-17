@@ -1,16 +1,16 @@
-/* Root Variables for a Court/Legal Theme */
+/* Root Variables for a Softer Legal Theme */
 :root {
-    --primary-color: #ffffff; /* White background */
+    --primary-color: #f7f7f7; /* Soft gray background */
     --secondary-color: #004080; /* Deep navy blue for accents */
     --accent-color: #b5b5b5; /* Subtle gray accent */
-    --text-color: #333333; /* Dark gray text color */
+    --text-color: #4d4d4d; /* Darker gray text color */
     --heading-font: 'Merriweather', serif; /* Serif font for headings */
     --body-font: 'Arial', sans-serif; /* Sans-serif font for body */
-    --section-background: #f5f5f5; /* Light gray for section backgrounds */
-    --border-color: #dddddd; /* Light border color */
+    --section-background: #ebebeb; /* Light gray for section backgrounds */
+    --border-color: #cccccc; /* Light border color */
     --button-bg: #004080; /* Navy blue button background */
     --button-text: #ffffff; /* White button text */
-    --button-hover-bg: #002b5c; /* Darker navy on hover */
+    --button-hover-bg: #003366; /* Darker navy on hover */
 }
 
 /* General Styles */
@@ -171,7 +171,7 @@ button:hover {
 
 .service:hover {
     transform: translateY(-5px);
-    background: #e0e0e0;
+    background: #d9d9d9;
 }
 
 .service i {
