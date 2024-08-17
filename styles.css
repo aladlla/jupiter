@@ -1,16 +1,16 @@
-/* Root Variables for a Softer Legal Theme */
+/* Root Variables for a Softer, Professional Theme */
 :root {
-    --primary-color: #f7f7f7; /* Soft gray background */
-    --secondary-color: #004080; /* Deep navy blue for accents */
-    --accent-color: #b5b5b5; /* Subtle gray accent */
-    --text-color: #4d4d4d; /* Darker gray text color */
+    --primary-color: #e0d6d0; /* Soft taupe background */
+    --secondary-color: #345c63; /* Muted teal for accents */
+    --accent-color: #bfa07a; /* Warm gold for highlights */
+    --text-color: #2e2e2e; /* Deep charcoal gray text color */
     --heading-font: 'Merriweather', serif; /* Serif font for headings */
     --body-font: 'Arial', sans-serif; /* Sans-serif font for body */
-    --section-background: #ebebeb; /* Light gray for section backgrounds */
-    --border-color: #cccccc; /* Light border color */
-    --button-bg: #004080; /* Navy blue button background */
+    --section-background: #f4ece1; /* Warm beige for section backgrounds */
+    --border-color: #bfb3a9; /* Soft border color */
+    --button-bg: #345c63; /* Muted teal button background */
     --button-text: #ffffff; /* White button text */
-    --button-hover-bg: #003366; /* Darker navy on hover */
+    --button-hover-bg: #2b4b52; /* Darker teal on hover */
 }
 
 /* General Styles */
@@ -171,7 +171,7 @@ button:hover {
 
 .service:hover {
     transform: translateY(-5px);
-    background: #d9d9d9;
+    background: #ded3c9;
 }
 
 .service i {
