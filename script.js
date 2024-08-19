@@ -1,33 +1,35 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Initialize AOS (Animate on Scroll)
     AOS.init({
-        duration: 1200,
+        duration: 1500, // Increased duration for smoother animations
         once: true,
         mirror: false,
+        easing: 'ease-in-out',
     });
 
-    // Initialize Particles.js with the optimized roaming lines configuration
-    const particleSettings = {
+    // Initialize Particles.js with a dynamic configuration
+    particlesJS('particles-js', {
         particles: {
             number: {
-                value: 80, // Adjusted to 80 for smoother performance
+                value: 120, // Increased particles for a denser effect
                 density: { enable: true, value_area: 800 }
             },
             color: { value: "#ffffff" },
             shape: {
-                type: "line",
-                stroke: { width: 2, color: "#ffffff" },
-                polygon: { nb_sides: 5 }
+                type: "circle", // Switched to circles for a more modern look
+                stroke: { width: 0, color: "#ffffff" },
+                polygon: { nb_sides: 6 },
+                image: { src: "", width: 100, height: 100 }
             },
             opacity: {
-                value: 0.6,
-                random: false,
-                anim: { enable: false, speed: 1, opacity_min: 0.3, sync: false }
+                value: 0.5,
+                random: true, // Random opacity for a more dynamic effect
+                anim: { enable: true, speed: 1, opacity_min: 0.3, sync: false }
             },
             size: {
-                value: 2,
+                value: 3,
                 random: true,
-                anim: { enable: false, speed: 40, size_min: 0.1, sync: false }
+                anim: { enable: true, speed: 10, size_min: 0.5, sync: false } // Added subtle size animation
             },
             line_linked: {
                 enable: true,
@@ -38,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             move: {
                 enable: true,
-                speed: 1,
+                speed: 2, // Increased speed for more movement
                 direction: "none",
                 random: true,
                 straight: false,
@@ -50,53 +52,137 @@ document.addEventListener('DOMContentLoaded', function () {
         interactivity: {
             detect_on: "canvas",
             events: {
-                onhover: { enable: true, mode: "repulse" },
-                onclick: { enable: true, mode: "push" },
+                onhover: { enable: true, mode: "bubble" }, // Switched to bubble effect on hover
+                onclick: { enable: true, mode: "repulse" }, // Repulse particles on click
                 resize: true
             },
             modes: {
                 grab: { distance: 400, line_linked: { opacity: 1 } },
-                bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 },
-                repulse: { distance: 200, duration: 0.4 },
+                bubble: { distance: 250, size: 5, duration: 2, opacity: 0.8, speed: 3 }, // Enhanced bubble mode
+                repulse: { distance: 400, duration: 0.8 }, // Enhanced repulse mode
                 push: { particles_nb: 4 },
                 remove: { particles_nb: 2 }
             }
         },
         retina_detect: true
+    });
+
+    // Scales of Justice Icon Animation with additional effects
+    const justiceIcon = document.getElementById('justice-icon');
+    justiceIcon.addEventListener('mouseover', () => {
+        justiceIcon.style.transform = 'rotate(-10deg) scale(1.1)';
+        justiceIcon.style.transition = 'transform 0.3s ease-in-out';
+        justiceIcon.style.filter = 'drop-shadow(0 5px 5px rgba(0, 0, 0, 0.5))'; // Added shadow effect
+    });
+    justiceIcon.addEventListener('mouseout', () => {
+        justiceIcon.style.transform = 'rotate(0deg) scale(1)';
+        justiceIcon.style.filter = 'none'; // Remove shadow on mouse out
+    });
+
+    // Smooth Scroll with Debounce for optimized performance
+    const debounce = (func, wait = 20, immediate = true) => {
+        let timeout;
+        return function () {
+            const context = this, args = arguments;
+            const later = function () {
+                timeout = null;
+                if (!immediate) func.apply(context, args);
+            };
+            const callNow = immediate && !timeout;
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+            if (callNow) func.apply(context, args);
+        };
     };
 
-    particlesJS('particles-js', particleSettings);
-
-    // Scales of Justice Icon Animation with DRY principle
-    const justiceIcon = document.getElementById('justice-icon');
-    justiceIcon.addEventListener('mouseover', handleJusticeIconHover);
-    justiceIcon.addEventListener('mouseout', handleJusticeIconHover);
-
-    function handleJusticeIconHover(event) {
-        const rotateDegree = event.type === 'mouseover' ? '-10deg' : '0deg';
-        justiceIcon.style.transform = `rotate(${rotateDegree})`;
-        justiceIcon.style.transition = 'transform 0.2s ease-in-out';
-    }
-
-    // Smooth Scroll with passive event listener
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
+        anchor.addEventListener('click', debounce(function (e) {
             e.preventDefault();
             document.querySelector(this.getAttribute('href')).scrollIntoView({
                 behavior: 'smooth'
             });
-        }, { passive: true });
+        }));
     });
 
-    // Polyfill for scrollIntoView (if needed)
-    if (!('scrollBehavior' in document.documentElement.style)) {
-        loadScript('https://polyfill.io/v3/polyfill.min.js?features=smoothscroll');
-    }
+    // Dynamic Header: Shrink on Scroll and Change Background
+    const header = document.querySelector('.header');
+    const headerHeight = header.offsetHeight;
+    let lastScrollTop = 0;
 
-    function loadScript(src) {
-        const script = document.createElement('script');
-        script.src = src;
-        script.async = true;
-        document.head.appendChild(script);
-    }
+    window.addEventListener('scroll', debounce(function () {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > headerHeight) {
+            header.classList.add('shrink');
+            header.style.background = 'rgba(44, 62, 80, 0.9)'; // Slight transparency on scroll
+        } else {
+            header.classList.remove('shrink');
+            header.style.background = ''; // Revert background
+        }
+
+        if (scrollTop > lastScrollTop) {
+            header.style.transform = 'translateY(-100%)'; // Hide header on scroll down
+        } else {
+            header.style.transform = 'translateY(0)'; // Show header on scroll up
+        }
+        lastScrollTop = scrollTop;
+    }));
+
+    // Animated Scroll Progress Bar
+    const progressBar = document.createElement('div');
+    progressBar.classList.add('scroll-progress');
+    document.body.appendChild(progressBar);
+
+    window.addEventListener('scroll', debounce(function () {
+        const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const progress = (scrollTop / scrollHeight) * 100;
+        progressBar.style.width = progress + '%';
+    }));
+
+    // Dark Mode Toggle
+    const darkModeToggle = document.createElement('button');
+    darkModeToggle.classList.add('dark-mode-toggle');
+    darkModeToggle.textContent = 'Toggle Dark Mode';
+    document.body.appendChild(darkModeToggle);
+
+    darkModeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+    });
+
+    // Lightbox Feature for Images
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+        img.addEventListener('click', () => {
+            const lightbox = document.createElement('div');
+            lightbox.classList.add('lightbox');
+            document.body.appendChild(lightbox);
+
+            const lightboxImg = document.createElement('img');
+            lightboxImg.src = img.src;
+            lightbox.appendChild(lightboxImg);
+
+            lightbox.addEventListener('click', () => {
+                lightbox.remove();
+            });
+        });
+    });
+
+    // Lazy Loading Images for Performance Improvement
+    const lazyLoadImages = document.querySelectorAll('img[data-src]');
+    const lazyLoad = debounce(function () {
+        lazyLoadImages.forEach(img => {
+            if (img.getBoundingClientRect().top < window.innerHeight && img.getBoundingClientRect().bottom > 0) {
+                img.src = img.getAttribute('data-src');
+                img.removeAttribute('data-src');
+            }
+        });
+
+        if (lazyLoadImages.length === 0) {
+            document.removeEventListener('scroll', lazyLoad);
+        }
+    });
+
+    document.addEventListener('scroll', lazyLoad);
+    lazyLoad(); // Trigger loading on DOMContentLoaded
 });
