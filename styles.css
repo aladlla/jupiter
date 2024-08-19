@@ -1,16 +1,17 @@
 /* Root Variables for a Professional Legal Theme */
 :root {
-    --primary-color: #2C3E50; /* Dark slate blue background */
-    --secondary-color: #BDC3C7; /* Light silver for text and accents */
-    --accent-color: #D4AF37; /* Muted gold for highlights */
-    --text-color: #ECF0F1; /* Lighter silver for body text */
-    --heading-font: 'Merriweather', serif; /* Serif font for headings */
-    --body-font: 'Arial', sans-serif; /* Sans-serif font for body */
-    --section-background: #34495E; /* Slightly lighter dark blue for sections */
-    --border-color: #7F8C8D; /* Subtle border color */
-    --button-bg: #D4AF37; /* Muted gold button background */
-    --button-text: #2C3E50; /* Dark slate blue button text */
-    --button-hover-bg: #B8860B; /* Darker gold on hover */
+    --primary-color: #2C3E50;
+    --secondary-color: #BDC3C7;
+    --accent-color: #D4AF37;
+    --text-color: #ECF0F1;
+    --heading-font: 'Merriweather', serif;
+    --body-font: 'Arial', sans-serif;
+    --section-background: #34495E;
+    --border-color: #7F8C8D;
+    --button-bg: #D4AF37;
+    --button-text: #2C3E50;
+    --button-hover-bg: #B8860B;
+    --focus-color: #FFDD44; /* New: High contrast focus color */
 }
 
 /* General Styles */
@@ -32,7 +33,7 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1;
-    background-color: var(--primary-color); /* Ensure particles background is consistent */
+    background-color: var(--primary-color);
 }
 
 .container {
@@ -44,11 +45,12 @@ body {
 
 /* Typography */
 h1, h2, h3, h4 {
-    font-family: var(--heading-font); /* Use serif font for headings */
+    font-family: var(--heading-font);
     font-weight: bold;
     color: var(--secondary-color);
     margin-bottom: 20px;
     text-transform: uppercase;
+    transition: color 0.3s ease;
 }
 
 p {
@@ -67,6 +69,7 @@ p {
     text-align: center;
     border-bottom: 1px solid var(--border-color);
     position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* New: Added subtle shadow for depth */
 }
 
 .header .logo {
@@ -96,22 +99,26 @@ p {
     color: var(--secondary-color);
     text-decoration: none;
     font-size: 1.1em;
-    transition: color 0.3s ease;
-    border-bottom: 2px solid transparent; /* Underline effect */
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 2px solid transparent;
 }
 
-.navbar ul li a:hover {
+.navbar ul li a:hover,
+.navbar ul li a:focus { /* New: Added focus state */
     color: var(--accent-color);
     border-bottom: 2px solid var(--accent-color);
+    outline: none;
 }
 
 /* Section Styles */
 section {
     padding: 60px 0;
     background: var(--section-background);
-    border: 1px solid var(--border-color); /* Add subtle borders */
+    border: 1px solid var(--border-color);
     margin-top: 20px;
     border-radius: 5px;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* New: Added shadow for sections */
 }
 
 section h2 {
@@ -119,6 +126,8 @@ section h2 {
     text-align: center;
     color: var(--accent-color);
     margin-bottom: 30px;
+    position: relative;
+    animation: fadeIn 1s ease; /* New: Subtle fade-in animation */
 }
 
 section h2:after {
@@ -144,13 +153,17 @@ button {
     padding: 12px 24px;
     cursor: pointer;
     border-radius: 3px;
-    transition: background 0.3s ease, transform 0.3s;
+    transition: background 0.3s ease, transform 0.3s, box-shadow 0.3s ease; /* New: Added shadow transition */
     font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* New: Added shadow for buttons */
 }
 
-button:hover {
+button:hover,
+button:focus { /* New: Added focus state */
     background: var(--button-hover-bg);
     transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    outline: none;
 }
 
 /* Services Section */
@@ -168,12 +181,14 @@ button:hover {
     border-radius: 5px;
     margin-bottom: 20px;
     text-align: center;
-    transition: transform 0.3s ease, background 0.3s;
+    transition: transform 0.3s ease, background 0.3s, box-shadow 0.3s ease; /* New: Added shadow transition */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* New: Added shadow for service boxes */
 }
 
 .service:hover {
     transform: translateY(-5px);
     background: #3b4b5f;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2); /* New: Darker shadow on hover */
 }
 
 .service i {
@@ -216,12 +231,15 @@ button:hover {
     border-radius: 3px;
     background: #3b4b5f;
     color: var(--text-color);
-    transition: border 0.3s;
+    transition: border 0.3s, box-shadow 0.3s ease; /* New: Added shadow transition */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* New: Added shadow for input fields */
 }
 
 .contact-section input:focus,
 .contact-section textarea:focus {
     border-color: var(--accent-color);
+    outline: none;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2); /* New: Darker shadow on focus */
 }
 
 /* Footer Styles */
@@ -231,12 +249,14 @@ button:hover {
     text-align: center;
     padding: 20px 0;
     border-top: 1px solid var(--border-color);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* New: Added shadow for footer */
 }
 
 .footer p {
     margin: 0;
 }
 
+/* Media Queries */
 @media (max-width: 768px) {
     .services-grid {
         flex-direction: column;
@@ -249,4 +269,18 @@ button:hover {
     .header .logo img {
         width: 150px;
     }
+
+    section {
+        padding: 40px 20px; /* New: Adjusted padding for mobile */
+    }
+
+    button {
+        padding: 10px 20px; /* New: Adjusted button padding for mobile */
+    }
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
