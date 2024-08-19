@@ -3,20 +3,20 @@ document.addEventListener('DOMContentLoaded', function () {
     AOS.init({
         duration: 1200,
         once: true,
-        mirror: false, // Prevents repeated animation
+        mirror: false,
     });
 
-    // Initialize Particles.js with the original roaming lines configuration
-    particlesJS('particles-js', {
+    // Initialize Particles.js with the optimized roaming lines configuration
+    const particleSettings = {
         particles: {
             number: {
-                value: 100, // Adjusted for a smooth performance
+                value: 80, // Adjusted to 80 for smoother performance
                 density: { enable: true, value_area: 800 }
             },
-            color: { value: "#ffffff" }, // Lines will be white
+            color: { value: "#ffffff" },
             shape: {
-                type: "line", // Changed to line for the roaming lines effect
-                stroke: { width: 2, color: "#ffffff" }, // White lines
+                type: "line",
+                stroke: { width: 2, color: "#ffffff" },
                 polygon: { nb_sides: 5 }
             },
             opacity: {
@@ -63,25 +63,40 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         },
         retina_detect: true
-    });
+    };
 
-    // Scales of Justice Icon Animation
+    particlesJS('particles-js', particleSettings);
+
+    // Scales of Justice Icon Animation with DRY principle
     const justiceIcon = document.getElementById('justice-icon');
-    justiceIcon.addEventListener('mouseover', () => {
-        justiceIcon.style.transform = 'rotate(-10deg)';
-        justiceIcon.style.transition = 'transform 0.2s ease-in-out';
-    });
-    justiceIcon.addEventListener('mouseout', () => {
-        justiceIcon.style.transform = 'rotate(0deg)';
-    });
+    justiceIcon.addEventListener('mouseover', handleJusticeIconHover);
+    justiceIcon.addEventListener('mouseout', handleJusticeIconHover);
 
-    // Smooth Scroll
+    function handleJusticeIconHover(event) {
+        const rotateDegree = event.type === 'mouseover' ? '-10deg' : '0deg';
+        justiceIcon.style.transform = `rotate(${rotateDegree})`;
+        justiceIcon.style.transition = 'transform 0.2s ease-in-out';
+    }
+
+    // Smooth Scroll with passive event listener
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             document.querySelector(this.getAttribute('href')).scrollIntoView({
                 behavior: 'smooth'
             });
-        });
+        }, { passive: true });
     });
+
+    // Polyfill for scrollIntoView (if needed)
+    if (!('scrollBehavior' in document.documentElement.style)) {
+        loadScript('https://polyfill.io/v3/polyfill.min.js?features=smoothscroll');
+    }
+
+    function loadScript(src) {
+        const script = document.createElement('script');
+        script.src = src;
+        script.async = true;
+        document.head.appendChild(script);
+    }
 });
