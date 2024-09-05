@@ -77,15 +77,23 @@
             <h2>اتصل بنا</h2>
             <form>
                 <label for="name">الاسم:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" placeholder="ادخل اسمك" required>
+                
                 <label for="email">البريد الإلكتروني:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" placeholder="ادخل بريدك الإلكتروني" required>
+                
                 <label for="message">الرسالة:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">إرسال</button>
+                <textarea id="message" name="message" placeholder="اكتب رسالتك هنا" required></textarea>
+                
+                <button type="submit" class="contact-button">إرسال</button>
             </form>
-            <p>07725559926</p>
-            <p>07712533365</p>
+            <div class="contact-info">
+                <div class="phone-icon">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <p>07725559926</p>
+                <p>07712533365</p>
+            </div>
         </div>
     </section>
 
@@ -94,84 +102,36 @@
             <p>جميع الحقوق محفوظة &copy; 2024 العدالة للمحاماة</p>
         </div>
     </footer>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Initialize AOS (Animate on Scroll)
             AOS.init({
                 duration: 1200,
                 once: true,
-                mirror: false, // Prevents repeated animation
+                mirror: false,
             });
 
-            // Initialize Particles.js with enhanced gray particles on a white background
             particlesJS('particles-js', {
                 particles: {
-                    number: {
-                        value: 80, // Adjusted for a smooth performance
-                        density: { enable: true, value_area: 800 }
-                    },
-                    color: { value: "#cccccc" }, // Subtle gray particles
+                    number: { value: 80, density: { enable: true, value_area: 800 } },
+                    color: { value: "#cccccc" },
                     shape: {
-                        type: "circle", // Softer shape for a more elegant look
+                        type: "circle",
                         stroke: { width: 0, color: "#000000" },
                         polygon: { nb_sides: 5 }
                     },
-                    opacity: {
-                        value: 0.3,
-                        random: false,
-                        anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false }
-                    },
-                    size: {
-                        value: 3,
-                        random: true,
-                        anim: { enable: false, speed: 40, size_min: 0.1, sync: false }
-                    },
-                    line_linked: {
-                        enable: true,
-                        distance: 150,
-                        color: "#cccccc",
-                        opacity: 0.2,
-                        width: 1
-                    },
-                    move: {
-                        enable: true,
-                        speed: 2,
-                        direction: "none",
-                        random: true,
-                        straight: false,
-                        out_mode: "out",
-                        bounce: false,
-                        attract: { enable: false, rotateX: 600, rotateY: 1200 }
-                    }
+                    opacity: { value: 0.3, random: false },
+                    size: { value: 3, random: true },
+                    line_linked: { enable: true, distance: 150, color: "#cccccc", opacity: 0.2, width: 1 },
+                    move: { enable: true, speed: 2, direction: "none", random: true }
                 },
                 interactivity: {
                     detect_on: "canvas",
-                    events: {
-                        onhover: { enable: true, mode: "grab" },
-                        onclick: { enable: true, mode: "push" },
-                        resize: true
-                    },
-                    modes: {
-                        grab: { distance: 200, line_linked: { opacity: 0.5 } },
-                        bubble: { distance: 400, size: 10, duration: 2, opacity: 1, speed: 3 },
-                        repulse: { distance: 200, duration: 0.4 },
-                        push: { particles_nb: 4 },
-                        remove: { particles_nb: 2 }
-                    }
+                    events: { onhover: { enable: true, mode: "grab" }, onclick: { enable: true, mode: "push" } }
                 },
                 retina_detect: true
-            });
-
-            // Smooth Scroll
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                });
             });
         });
     </script>
