@@ -1,28 +1,93 @@
+// GSAP Animations
 document.addEventListener('DOMContentLoaded', function () {
-    AOS.init({
-        duration: 1200,
-        once: true,
-        mirror: false,
+
+    // Header Text Animation
+    gsap.from("header h1", {
+        duration: 2,
+        opacity: 0,
+        y: -50,
+        ease: "power4.out"
     });
 
-    particlesJS('background-animation', {
-        particles: {
-            number: { value: 150, density: { enable: true, value_area: 1000 } },
-            color: { value: ["#ff007a", "#007aff", "#ff8e71", "#ffcc70"] },
-            shape: {
-                type: "circle",
-                stroke: { width: 0, color: "#000000" },
-                polygon: { nb_sides: 5 }
-            },
-            opacity: { value: 0.5, random: true },
-            size: { value: 4, random: true },
-            line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.2, width: 1 },
-            move: { enable: true, speed: 3, direction: "none", random: true }
-        },
-        interactivity: {
-            detect_on: "canvas",
-            events: { onhover: { enable: true, mode: "grab" }, onclick: { enable: true, mode: "push" } }
-        },
-        retina_detect: true
+    gsap.from("header nav ul li", {
+        duration: 1,
+        opacity: 0,
+        y: 30,
+        stagger: 0.2,
+        ease: "power4.out",
+        delay: 1
     });
+
+    // About Section Animation
+    gsap.from("#about h2", {
+        scrollTrigger: {
+            trigger: "#about",
+            start: "top center",
+        },
+        duration: 1.5,
+        opacity: 0,
+        y: 50,
+        ease: "power4.out"
+    });
+
+    gsap.from("#about p", {
+        scrollTrigger: {
+            trigger: "#about",
+            start: "top center",
+        },
+        duration: 1.5,
+        opacity: 0,
+        y: 30,
+        ease: "power4.out",
+        stagger: 0.3
+    });
+
+    // Services Section Animation
+    gsap.from("#services h2", {
+        scrollTrigger: {
+            trigger: "#services",
+            start: "top center",
+        },
+        duration: 1.5,
+        opacity: 0,
+        y: 50,
+        ease: "power4.out"
+    });
+
+    gsap.from(".service", {
+        scrollTrigger: {
+            trigger: ".services-grid",
+            start: "top 80%",
+        },
+        duration: 1,
+        opacity: 0,
+        y: 30,
+        stagger: 0.3,
+        ease: "power4.out"
+    });
+
+    // Contact Section Animation
+    gsap.from("#contact h2", {
+        scrollTrigger: {
+            trigger: "#contact",
+            start: "top center",
+        },
+        duration: 1.5,
+        opacity: 0,
+        y: 50,
+        ease: "power4.out"
+    });
+
+    gsap.from("#contact form input, #contact form textarea, #contact form button", {
+        scrollTrigger: {
+            trigger: "#contact",
+            start: "top center",
+        },
+        duration: 1,
+        opacity: 0,
+        y: 30,
+        stagger: 0.2,
+        ease: "power4.out"
+    });
+
 });
