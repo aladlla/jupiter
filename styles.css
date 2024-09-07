@@ -1,13 +1,13 @@
-/* Root Variables for a Balanced Legal Theme */
+/* Root Variables for a Warmer Legal Theme */
 :root {
-    --primary-background: #ECECEC; /* Warm gray background */
-    --secondary-background: #F5F2E7; /* Soft beige for sections */
-    --accent-color: #4A6C6F; /* Muted teal for accents */
-    --text-color: #333333; /* Charcoal text color */
-    --button-color: #B5A580; /* Muted gold for buttons */
-    --button-text-color: #ECECEC; /* Warm gray for button text */
-    --button-hover-color: #9E8E6D; /* Darker muted gold on hover */
-    --border-color: #D0CFCF; /* Light border color */
+    --primary-background: #F5E6D3; /* Warm beige background */
+    --secondary-background: #FAF3E0; /* Light beige for sections */
+    --accent-color: #A0522D; /* Muted terracotta for accents */
+    --text-color: #3E3E3E; /* Dark charcoal for text */
+    --button-color: #A0522D; /* Muted terracotta for buttons */
+    --button-text-color: #FAF3E0; /* Light beige for button text */
+    --button-hover-color: #8B4513; /* Darker terracotta on hover */
+    --border-color: #D8C2B2; /* Warm border color */
     --heading-font: 'Merriweather', serif; /* Serif font for headings */
     --body-font: 'Arial', sans-serif; /* Sans-serif font for body */
 }
@@ -31,7 +31,7 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1;
-    background-color: var(--primary-background);
+    background-color: var(--primary-background); /* Ensure particles background is consistent */
 }
 
 .container {
