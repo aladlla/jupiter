@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-    <div id="particles-js"></div>
+    <div id="background-animation"></div>
+
     <header class="header">
         <div class="container">
             <h1 data-aos="fade-down"><i class="fas fa-balance-scale-left"></i> العدالة للمحاماة</h1>
@@ -29,8 +30,8 @@
     <section id="about" class="about-section" data-aos="fade-up">
         <div class="container">
             <h2><i class="fas fa-info-circle"></i> من نحن</h2>
-            <p>العدالة للمحامات هي مؤسسة قانونية متخصصة تقدم مجموعة متنوعة من الخدمات القانونية للقطاعين الخاص والعام. تأسست الشركة على مبادئ النزاهة والمهنية والالتزام بخدمة العملاء. لدينا فريق من المحامين المتخصصين الذين يتمتعون بخبرة واسعة في مختلف مجالات القانون.</p>
-            <p>نحن نؤمن بأهمية تقديم استشارات قانونية شاملة ومحدثة لعملائنا، مع التركيز على تحقيق أفضل النتائج بأعلى مستوى من الاحترافية. تشمل مجالات خبرتنا القانون الجنائي، القانون التجاري، قانون العقارات، قانون العمل، قانون الملكية الفكرية، والعديد من المجالات الأخرى.</p>
+            <p>العدالة للمحامات هي مؤسسة قانونية متخصصة تقدم مجموعة متنوعة من الخدمات القانونية للقطاعين الخاص والعام. تأسست الشركة على مبادئ النزاهة والمهنية والالتزام بخدمة العملاء.</p>
+            <p>نحن نؤمن بأهمية تقديم استشارات قانونية شاملة ومحدثة لعملائنا.</p>
         </div>
     </section>
 
@@ -84,8 +85,6 @@
                 <textarea id="message" name="message" required></textarea>
                 <button type="submit">إرسال</button>
             </form>
-            <p>07725559926</p>
-            <p>07712533365</p>
         </div>
     </section>
 
@@ -105,18 +104,18 @@
                 mirror: false,
             });
 
-            particlesJS('particles-js', {
+            particlesJS('background-animation', {
                 particles: {
                     number: { value: 80, density: { enable: true, value_area: 800 } },
-                    color: { value: "#cccccc" },
+                    color: { value: "#ffffff" },
                     shape: {
                         type: "circle",
                         stroke: { width: 0, color: "#000000" },
                         polygon: { nb_sides: 5 }
                     },
-                    opacity: { value: 0.3, random: false },
+                    opacity: { value: 0.5, random: true },
                     size: { value: 3, random: true },
-                    line_linked: { enable: true, distance: 150, color: "#cccccc", opacity: 0.2, width: 1 },
+                    line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.2, width: 1 },
                     move: { enable: true, speed: 2, direction: "none", random: true }
                 },
                 interactivity: {
