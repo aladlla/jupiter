@@ -5,75 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>العدالة للمحاماة - خدمات قانونية شاملة</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
 </head>
 <body>
-    <div id="background-animation"></div>
 
     <header class="header">
         <div class="container">
-            <h1 data-aos="fade-down"><i class="fas fa-balance-scale-left"></i> العدالة للمحاماة</h1>
-            <nav class="navbar" data-aos="fade-up">
+            <h1><i class="fas fa-balance-scale-left"></i> العدالة للمحاماة</h1>
+            <nav class="navbar">
                 <ul>
                     <li><a href="#about">من نحن</a></li>
                     <li><a href="#services">الخدمات</a></li>
                     <li><a href="#contact">اتصل بنا</a></li>
                 </ul>
             </nav>
-            <div class="logo">
-                <img src="Adalla'slogo.png" alt="العدالة للمحاماة">
-            </div>
         </div>
     </header>
 
-    <section id="about" class="about-section" data-aos="fade-up">
+    <section id="about" class="about-section">
         <div class="container">
-            <h2><i class="fas fa-info-circle"></i> من نحن</h2>
-            <p>العدالة للمحامات هي مؤسسة قانونية متخصصة تقدم مجموعة متنوعة من الخدمات القانونية للقطاعين الخاص والعام. تأسست الشركة على مبادئ النزاهة والمهنية والالتزام بخدمة العملاء.</p>
-            <p>نحن نؤمن بأهمية تقديم استشارات قانونية شاملة ومحدثة لعملائنا.</p>
+            <h2>من نحن</h2>
+            <p>العدالة للمحامات هي مؤسسة قانونية متخصصة تقدم مجموعة متنوعة من الخدمات القانونية للقطاعين الخاص والعام.</p>
         </div>
     </section>
 
     <section id="services" class="services-section">
         <div class="container">
-            <h2 data-aos="fade-up"><i class="fas fa-gavel"></i> الخدمات</h2>
+            <h2>الخدمات</h2>
             <div class="services-grid">
-                <div class="service" data-aos="fade-right">
+                <div class="service">
                     <i class="fas fa-gavel"></i>
                     <h3>الاستشارات القانونية</h3>
-                    <p>نقدم خدمات الاستشارات القانونية المتخصصة في مختلف المجالات مثل الشركات والعقارات والعمل.</p>
+                    <p>نقدم خدمات الاستشارات القانونية المتخصصة.</p>
                 </div>
-                <div class="service" data-aos="fade-left">
+                <div class="service">
                     <i class="fas fa-balance-scale"></i>
                     <h3>التقاضي</h3>
-                    <p>نمثل عملائنا في المحاكم والقضايا المختلفة لضمان حقوقهم والدفاع عن مصالحهم.</p>
+                    <p>نمثل عملائنا في المحاكم.</p>
                 </div>
-                <div class="service" data-aos="fade-right">
+                <div class="service">
                     <i class="fas fa-university"></i>
                     <h3>الوساطة والتحكيم</h3>
-                    <p>نوفر حلولاً بديلة للنزاعات من خلال الوساطة والتحكيم لتجنب النزاعات القضائية الطويلة.</p>
-                </div>
-                <div class="service" data-aos="fade-left">
-                    <i class="fas fa-file-contract"></i>
-                    <h3>إعداد العقود</h3>
-                    <p>نقوم بإعداد ومراجعة العقود القانونية لضمان وضوح الشروط وحماية حقوق الأطراف.</p>
-                </div>
-                <div class="service" data-aos="fade-right">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>الملكية الفكرية</h3>
-                    <p>نقدم خدمات حماية الملكية الفكرية وتسجيل العلامات التجارية وبراءات الاختراع.</p>
-                </div>
-                <div class="service" data-aos="fade-left">
-                    <i class="fas fa-globe"></i>
-                    <h3>الاستثمارات الأجنبية</h3>
-                    <p>نساعد الشركات الأجنبية في تأسيس الأعمال في المنطقة وتقديم الاستشارات القانونية اللازمة.</p>
+                    <p>نوفر حلولاً بديلة للنزاعات.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="contact-section" data-aos="fade-up">
+    <section id="contact" class="contact-section">
         <div class="container">
             <h2>اتصل بنا</h2>
             <form>
@@ -88,14 +69,12 @@
         </div>
     </section>
 
-    <footer class="footer" data-aos="fade-up">
+    <footer class="footer">
         <div class="container">
             <p>جميع الحقوق محفوظة &copy; 2024 العدالة للمحاماة</p>
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
