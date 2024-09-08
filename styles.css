@@ -1,13 +1,13 @@
-/* Root Variables for a Warmer Legal Theme */
+/* Root Variables for the Dark Navy Legal Theme */
 :root {
-    --primary-background: #F5E6D3; /* Warm beige background */
-    --secondary-background: #FAF3E0; /* Light beige for sections */
-    --accent-color: #A0522D; /* Muted terracotta for accents */
-    --text-color: #3E3E3E; /* Dark charcoal for text */
-    --button-color: #A0522D; /* Muted terracotta for buttons */
-    --button-text-color: #FAF3E0; /* Light beige for button text */
-    --button-hover-color: #8B4513; /* Darker terracotta on hover */
-    --border-color: #D8C2B2; /* Warm border color */
+    --primary-background: #2C3E50; /* Dark navy blue background */
+    --secondary-background: #34495E; /* Slightly lighter navy blue for sections */
+    --accent-color: #FFD700; /* Warm yellow-gold for accents */
+    --text-color: #BDC3C7; /* Soft silver-gray for text */
+    --button-color: #FFD700; /* Warm yellow-gold for buttons */
+    --button-text-color: #2C3E50; /* Dark navy blue for button text */
+    --button-hover-color: #FFA500; /* Darker gold on hover */
+    --border-color: #1B2B3A; /* Subtle dark border */
     --heading-font: 'Merriweather', serif; /* Serif font for headings */
     --body-font: 'Arial', sans-serif; /* Sans-serif font for body */
 }
