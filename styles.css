@@ -1,19 +1,19 @@
-/* Root Variables for the New Theme */
+/* Root Variables for Vibrant Colors */
 :root {
-    --primary-background: #2C3E50;
-    --accent-color: #FFD700;
-    --text-color: #BDC3C7;
-    --button-color: #FFD700;
-    --button-text-color: #2C3E50;
-    --button-hover-color: #FFA500;
-    --heading-font: 'Merriweather', serif;
+    --primary-bg: #FFEB3B; /* Bright yellow */
+    --secondary-bg: #4CAF50; /* Bright green */
+    --accent-color: #F44336; /* Bright red for accents */
+    --text-color: #333; /* Dark text */
+    --button-bg: #FFC107; /* Soft yellow for buttons */
+    --button-hover-bg: #FF9800; /* Darker yellow for hover */
+    --heading-font: 'Poppins', sans-serif;
     --body-font: 'Arial', sans-serif;
 }
 
 /* General Styles */
 body {
     font-family: var(--body-font);
-    background-color: var(--primary-background);
+    background-color: var(--primary-bg);
     color: var(--text-color);
     direction: rtl;
     margin: 0;
@@ -26,69 +26,96 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px 50px;
-    background-color: var(--primary-background);
+    background-color: var(--secondary-bg);
+    color: white;
 }
 
 .navbar ul {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 20px;
 }
 
 .navbar ul li a {
-    color: var(--accent-color);
+    color: white;
+    font-weight: 600;
     text-decoration: none;
     font-size: 1.2em;
 }
 
+.navbar ul li a:hover {
+    color: var(--accent-color);
+}
+
 /* Hero Section */
 .hero {
-    background: url('hero-bg.jpg') no-repeat center center/cover;
     height: 80vh;
+    background: linear-gradient(to right, var(--primary-bg), var(--secondary-bg));
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 .hero-content h1 {
     font-size: 4em;
+    font-family: var(--heading-font);
     color: var(--accent-color);
+    margin-bottom: 20px;
 }
 
 .hero-content p {
     font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    padding: 12px 24px;
+    background-color: var(--button-bg);
     color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--button-hover-bg);
 }
 
 /* Services Section */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     padding: 50px 0;
 }
 
 .service {
-    background-color: var(--primary-background);
+    background-color: white;
     text-align: center;
     padding: 20px;
     border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.service:hover {
+    transform: translateY(-10px);
 }
 
 .service i {
     font-size: 3em;
     color: var(--accent-color);
-}
-
-.service:hover {
-    transform: translateY(-10px);
-    transition: 0.3s;
+    margin-bottom: 15px;
 }
 
 /* Footer */
 .footer {
-    background-color: var(--primary-background);
-    color: var(--text-color);
+    background-color: var(--secondary-bg);
+    color: white;
     text-align: center;
     padding: 20px 0;
 }
