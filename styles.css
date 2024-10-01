@@ -1,11 +1,11 @@
-/* Root Variables for Vibrant Colors */
+/* Root Variables for Calm Colors */
 :root {
-    --primary-bg: #FFEB3B; /* Bright yellow */
-    --secondary-bg: #4CAF50; /* Bright green */
-    --accent-color: #F44336; /* Bright red for accents */
-    --text-color: #333; /* Dark text */
-    --button-bg: #FFC107; /* Soft yellow for buttons */
-    --button-hover-bg: #FF9800; /* Darker yellow for hover */
+    --primary-bg: #F3F7F9; /* Light gray/white for background */
+    --secondary-bg: #4CAF50; /* Soft green */
+    --accent-color: #2196F3; /* Calming blue for accents */
+    --text-color: #333; /* Dark text for readability */
+    --button-bg: #FF9800; /* Eye-catching orange for buttons */
+    --button-hover-bg: #FF5722; /* Darker orange for hover */
     --heading-font: 'Poppins', sans-serif;
     --body-font: 'Arial', sans-serif;
 }
@@ -50,7 +50,7 @@ body {
 /* Hero Section */
 .hero {
     height: 80vh;
-    background: linear-gradient(to right, var(--primary-bg), var(--secondary-bg));
+    background: url('hero-bg.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -58,21 +58,21 @@ body {
 }
 
 .hero-content h1 {
-    font-size: 4em;
+    font-size: 3.5em;
     font-family: var(--heading-font);
     color: var(--accent-color);
     margin-bottom: 20px;
 }
 
 .hero-content p {
-    font-size: 1.5em;
+    font-size: 1.3em;
     margin-bottom: 30px;
 }
 
 .cta-button {
     padding: 12px 24px;
     background-color: var(--button-bg);
-    color: var(--text-color);
+    color: white;
     border: none;
     border-radius: 5px;
     font-size: 1.2em;
