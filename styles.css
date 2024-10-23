@@ -1,250 +1,193 @@
-/* Root Variables for the Dark Navy Legal Theme */
-:root {
-    --primary-background: #2C3E50; /* Dark navy blue background */
-    --secondary-background: #34495E; /* Slightly lighter navy blue for sections */
-    --accent-color: #FFD700; /* Warm yellow-gold for accents */
-    --text-color: #BDC3C7; /* Soft silver-gray for text */
-    --button-color: #FFD700; /* Warm yellow-gold for buttons */
-    --button-text-color: #2C3E50; /* Dark navy blue for button text */
-    --button-hover-color: #FFA500; /* Darker gold on hover */
-    --border-color: #1B2B3A; /* Subtle dark border */
-    --heading-font: 'Merriweather', serif; /* Serif font for headings */
-    --body-font: 'Arial', sans-serif; /* Sans-serif font for body */
-}
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>العدالة للمحاماة - خدمات قانونية شاملة</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background-color: #132026;
+        }
+        .header, .footer {
+            background-color: #132026;
+            color: #ffffff;
+        }
+        .navbar ul li a {
+            color: #ffffff;
+        }
+        .about-section, .services-section, .contact-section {
+            background-color: rgba(19, 32, 38, 1);
+            color: #ffffff;
+        }
+        button {
+            background-color: #FFD700;
+            color: #132026;
+        }
+        button:hover {
+            background-color: #FFA500;
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <header class="header">
+        <div class="container">
+            <h1 data-aos="fade-down"><i class="fas fa-balance-scale-left"></i> العدالة للمحاماة</h1>
+            <nav class="navbar" data-aos="fade-up">
+                <ul>
+                    <li><a href="#about">من نحن</a></li>
+                    <li><a href="#services">الخدمات</a></li>
+                    <li><a href="#contact">اتصل بنا</a></li>
+                </ul>
+            </nav>
+            <div class="logo">
+                <img src="Adalla'slogo.png" alt="العدالة للمحاماة">
+            </div>
+        </div>
+    </header>
 
-/* General Styles */
-body {
-    font-family: var(--body-font);
-    line-height: 1.6;
-    background-color: var(--primary-background);
-    color: var(--text-color);
-    direction: rtl;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    position: relative;
-    transition: background 0.3s, color 0.3s;
-}
+    <section id="about" class="about-section" data-aos="fade-up">
+        <div class="container">
+            <h2><i class="fas fa-info-circle"></i> من نحن</h2>
+            <p>العدالة للمحامات هي مؤسسة قانونية متخصصة تقدم مجموعة متنوعة من الخدمات القانونية للقطاعين الخاص والعام. تأسست الشركة على مبادئ النزاهة والمهنية والالتزام بخدمة العملاء. لدينا فريق من المحامين المتخصصين الذين يتمتعون بخبرة واسعة في مختلف مجالات القانون.</p>
+            <p>نحن نؤمن بأهمية تقديم استشارات قانونية شاملة ومحدثة لعملائنا، مع التركيز على تحقيق أفضل النتائج بأعلى مستوى من الاحترافية. تشمل مجالات خبرتنا القانون الجنائي، القانون التجاري، قانون العقارات، قانون العمل، قانون الملكية الفكرية، والعديد من المجالات الأخرى.</p>
+        </div>
+    </section>
 
-#particles-js {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background-color: var(--primary-background); /* Ensure particles background is consistent */
-}
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 data-aos="fade-up"><i class="fas fa-gavel"></i> الخدمات</h2>
+            <div class="services-grid">
+                <div class="service" data-aos="fade-right">
+                    <i class="fas fa-gavel"></i>
+                    <h3>الاستشارات القانونية</h3>
+                    <p>نقدم خدمات الاستشارات القانونية المتخصصة في مختلف المجالات مثل الشركات والعقارات والعمل.</p>
+                </div>
+                <div class="service" data-aos="fade-left">
+                    <i class="fas fa-balance-scale"></i>
+                    <h3>التقاضي</h3>
+                    <p>نمثل عملائنا في المحاكم والقضايا المختلفة لضمان حقوقهم والدفاع عن مصالحهم.</p>
+                </div>
+                <div class="service" data-aos="fade-right">
+                    <i class="fas fa-university"></i>
+                    <h3>الوساطة والتحكيم</h3>
+                    <p>نوفر حلولاً بديلة للنزاعات من خلال الوساطة والتحكيم لتجنب النزاعات القضائية الطويلة.</p>
+                </div>
+                <div class="service" data-aos="fade-left">
+                    <i class="fas fa-file-contract"></i>
+                    <h3>إعداد العقود</h3>
+                    <p>نقوم بإعداد ومراجعة العقود القانونية لضمان وضوح الشروط وحماية حقوق الأطراف.</p>
+                </div>
+                <div class="service" data-aos="fade-right">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>الملكية الفكرية</h3>
+                    <p>نقدم خدمات حماية الملكية الفكرية وتسجيل العلامات التجارية وبراءات الاختراع.</p>
+                </div>
+                <div class="service" data-aos="fade-left">
+                    <i class="fas fa-globe"></i>
+                    <h3>الاستثمارات الأجنبية</h3>
+                    <p>نساعد الشركات الأجنبية في تأسيس الأعمال في المنطقة وتقديم الاستشارات القانونية اللازمة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-    padding: 20px;
-}
+    <section id="contact" class="contact-section" data-aos="fade-up">
+        <div class="container">
+            <h2>اتصل بنا</h2>
+            <form>
+                <label for="name">الاسم:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">البريد الإلكتروني:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">الرسالة:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">إرسال</button>
+            </form>
+            <p>07725559926</p>
+            <p>07712533365</p>
+        </div>
+    </section>
 
-/* Typography */
-h1, h2, h3, h4 {
-    font-family: var(--heading-font);
-    font-weight: bold;
-    color: var(--accent-color);
-    margin-bottom: 20px;
-}
+    <footer class="footer" data-aos="fade-up">
+        <div class="container">
+            <p>جميع الحقوق محفوظة &copy; 2024 العدالة للمحاماة</p>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize AOS (Animate on Scroll)
+            AOS.init({
+                duration: 1200,
+                once: true,
+                mirror: false,
+            });
 
-p {
-    font-family: var(--body-font);
-    font-weight: normal;
-    line-height: 1.8;
-    margin-bottom: 20px;
-    color: var(--text-color);
-}
+            // Initialize Particles.js with enhanced settings
+            particlesJS('particles-js', {
+                particles: {
+                    number: {
+                        value: 80,
+                        density: { enable: true, value_area: 800 }
+                    },
+                    color: { value: "#BDC3C7" },
+                    shape: {
+                        type: "circle",
+                        stroke: { width: 0, color: "#000000" },
+                    },
+                    opacity: {
+                        value: 0.5,
+                        random: false,
+                    },
+                    size: {
+                        value: 3,
+                        random: true,
+                    },
+                    line_linked: {
+                        enable: true,
+                        distance: 150,
+                        color: "#BDC3C7",
+                        opacity: 0.2,
+                        width: 1
+                    },
+                    move: {
+                        enable: true,
+                        speed: 2,
+                        direction: "none",
+                        random: true,
+                    }
+                },
+                interactivity: {
+                    detect_on: "canvas",
+                    events: {
+                        onhover: { enable: true, mode: "grab" },
+                        onclick: { enable: true, mode: "push" },
+                        resize: true
+                    },
+                    modes: {
+                        grab: { distance: 200, line_linked: { opacity: 0.5 } },
+                        repulse: { distance: 200, duration: 0.4 },
+                        push: { particles_nb: 4 },
+                    }
+                },
+                retina_detect: true
+            });
 
-/* Header Styles */
-.header {
-    background: var(--primary-background);
-    color: var(--text-color);
-    padding: 30px 0;
-    text-align: center;
-    border-bottom: 1px solid var(--border-color);
-    position: relative;
-}
-
-.header .logo {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-}
-
-.header .logo img {
-    width: 180px;
-    height: auto;
-}
-
-.navbar ul {
-    padding: 0;
-    list-style: none;
-    text-align: center;
-    margin: 0;
-}
-
-.navbar ul li {
-    display: inline;
-    margin: 0 20px;
-}
-
-.navbar ul li a {
-    color: var(--accent-color);
-    text-decoration: none;
-    font-size: 1.1em;
-    transition: color 0.3s ease;
-    border-bottom: 2px solid transparent;
-}
-
-.navbar ul li a:hover {
-    color: var(--button-color);
-    border-bottom: 2px solid var(--button-color);
-}
-
-/* Section Styles */
-section {
-    padding: 60px 0;
-    background: var(--secondary-background);
-    border: 1px solid var(--border-color);
-    margin-top: 20px;
-    border-radius: 5px;
-}
-
-section h2 {
-    font-size: 2.2em;
-    text-align: center;
-    color: var(--accent-color);
-    margin-bottom: 30px;
-}
-
-section h2:after {
-    content: '';
-    width: 80px;
-    height: 3px;
-    background: var(--accent-color);
-    display: block;
-    margin: 10px auto 0;
-    border-radius: 2px;
-}
-
-section p {
-    font-size: 1.1em;
-    color: var(--text-color);
-}
-
-/* Button Styles */
-button {
-    background: var(--button-color);
-    color: var(--button-text-color);
-    border: none;
-    padding: 12px 24px;
-    cursor: pointer;
-    border-radius: 3px;
-    transition: background 0.3s ease, transform 0.3s;
-    font-weight: bold;
-}
-
-button:hover {
-    background: var(--button-hover-color);
-    transform: translateY(-2px);
-}
-
-/* Services Section */
-.services-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.service {
-    flex: 1 1 calc(33.333% - 40px);
-    background: var(--secondary-background);
-    padding: 20px;
-    border: 1px solid var(--border-color);
-    border-radius: 5px;
-    margin-bottom: 20px;
-    text-align: center;
-    transition: transform 0.3s ease, background 0.3s;
-}
-
-.service:hover {
-    transform: translateY(-5px);
-    background: var(--primary-background);
-}
-
-.service i {
-    font-size: 2.5em;
-    color: var(--accent-color);
-    margin-bottom: 15px;
-}
-
-.service h3 {
-    font-size: 1.5em;
-    color: var(--accent-color);
-    margin-bottom: 15px;
-}
-
-.service p {
-    font-size: 1em;
-    font-weight: normal;
-    color: var(--text-color);
-}
-
-/* Contact Section */
-.contact-section form {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.contact-section label {
-    font-size: 1.1em;
-    margin-bottom: 5px;
-    color: var(--accent-color);
-}
-
-.contact-section input,
-.contact-section textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid var(--border-color);
-    border-radius: 3px;
-    background: var(--primary-background);
-    color: var(--text-color);
-    transition: border 0.3s;
-}
-
-.contact-section input:focus,
-.contact-section textarea:focus {
-    border-color: var(--accent-color);
-}
-
-/* Footer Styles */
-.footer {
-    background: var(--primary-background);
-    color: var(--text-color);
-    text-align: center;
-    padding: 20px 0;
-    border-top: 1px solid var(--border-color);
-}
-
-.footer p {
-    margin: 0;
-}
-
-@media (max-width: 768px) {
-    .services-grid {
-        flex-direction: column;
-    }
-
-    .service {
-        flex: 1 1 100%;
-    }
-
-    .header .logo img {
-        width: 150px;
-    }
-}
+            // Smooth Scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
