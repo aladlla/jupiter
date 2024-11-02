@@ -10,7 +10,7 @@
 </head>
 <body>
     <div id="particles-js"></div>
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
             <h1 data-aos="fade-down"><i class="fas fa-balance-scale-left"></i> العدالة للمحاماة</h1>
             <nav class="navbar" data-aos="fade-up">
@@ -96,6 +96,12 @@
     <footer class="footer" data-aos="fade-up">
         <div class="container">
             <p>جميع الحقوق محفوظة &copy; 2024 العدالة للمحاماة</p>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
         </div>
     </footer>
     
@@ -103,6 +109,15 @@
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 0) {
+                    header.classList.add('sticky');
+                } else {
+                    header.classList.remove('sticky');
+                }
+            });
+
             AOS.init({
                 duration: 1200,
                 once: true,
