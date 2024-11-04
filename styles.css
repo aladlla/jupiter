@@ -59,11 +59,12 @@ body {
     color: var(--highlight-color);
     text-decoration: none;
     font-size: 1.1em;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .navbar ul li a:hover {
     color: var(--button-hover-bg);
+    transform: scale(1.05); /* Scale effect on hover */
 }
 
 /* Hero Section */
@@ -72,11 +73,13 @@ body {
     color: var(--text-color-light);
     padding: 100px 0; /* Padding for hero section */
     text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Shadow for hero section */
 }
 
 .hero-section h2 {
     font-size: 3em; /* Large font for hero title */
     margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out; /* Fade-in animation */
 }
 
 .hero-section p {
@@ -157,6 +160,7 @@ section h2 {
     width: 100%; /* Responsive image for services */
     max-width: 100%; /* Ensure it fits */
     border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for service images */
 }
 
 .team-section {
@@ -244,11 +248,12 @@ section h2 {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.3s;
 }
 
 .contact-section button:hover {
     background: var(--button-hover-bg);
+    transform: scale(1.05); /* Scale effect on hover */
 }
 
 /* Footer Styles */
