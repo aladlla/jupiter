@@ -11,7 +11,10 @@
 <body>
     <header class="header">
         <div class="container">
-            <h1><i class="fas fa-gavel"></i> العدالة للمحاماة</h1>
+            <div class="logo">
+                <img src="Adalla'slogo.png" alt="العدالة للمحاماة">
+            </div>
+            <h1>العدالة للمحاماة</h1>
             <nav class="navbar">
                 <ul>
                     <li><a href="#about">من نحن</a></li>
@@ -19,27 +22,23 @@
                     <li><a href="#contact">اتصل بنا</a></li>
                 </ul>
             </nav>
-            <div class="logo">
-                <img src="Adalla'slogo.png" alt="العدالة للمحاماة">
-            </div>
         </div>
     </header>
 
     <main>
         <section id="about" class="about-section" data-aos="fade-up">
             <div class="container">
-                <h2><i class="fas fa-info-circle"></i> من نحن</h2>
+                <h2>من نحن</h2>
                 <div class="about-content">
                     <img src="https://via.placeholder.com/600x400" alt="About Us" class="about-image">
                     <p>العدالة للمحامات هي مؤسسة قانونية متخصصة تقدم مجموعة متنوعة من الخدمات القانونية للقطاعين الخاص والعام. تأسست الشركة على مبادئ النزاهة والمهنية والالتزام بخدمة العملاء.</p>
-                    <p>نحن نؤمن بأهمية تقديم استشارات قانونية شاملة ومحدثة لعملائنا، مع التركيز على تحقيق أفضل النتائج بأعلى مستوى من الاحترافية.</p>
                 </div>
             </div>
         </section>
 
         <section id="services" class="services-section" data-aos="fade-up">
             <div class="container">
-                <h2><i class="fas fa-gavel"></i> الخدمات</h2>
+                <h2>خدماتنا</h2>
                 <div class="services-grid">
                     <div class="service" data-aos="fade-right">
                         <img src="https://via.placeholder.com/300" alt="استشارات قانونية" class="service-image">
@@ -91,39 +90,12 @@
             </div>
         </div>
     </footer>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Initialize AOS
             AOS.init({ duration: 1200 });
-
-            // Initialize particles.js
-            particlesJS('particles-js', {
-                particles: {
-                    number: { value: 80, density: { enable: true, value_area: 800 } },
-                    color: { value: "#BDC3C7" },
-                    shape: { type: "circle", stroke: { width: 0 } },
-                    opacity: { value: 0.5, random: false },
-                    size: { value: 3, random: true },
-                    line_linked: { enable: true, distance: 150, color: "#BDC3C7", opacity: 0.2, width: 1 },
-                    move: { enable: true, speed: 2, direction: "none", random: true }
-                },
-                interactivity: {
-                    detect_on: "canvas",
-                    events: {
-                        onhover: { enable: true, mode: "grab" },
-                        onclick: { enable: true, mode: "push" },
-                        resize: true
-                    },
-                    modes: {
-                        grab: { distance: 200, line_linked: { opacity: 0.5 } },
-                        push: { particles_nb: 4 }
-                    }
-                },
-                retina_detect: true
-            });
 
             // Smooth Scroll for navigation links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -135,7 +107,6 @@
                 });
             });
 
-            // Handle form submission
             document.getElementById('contact-form').addEventListener('submit', function(e) {
                 e.preventDefault();
                 alert('تم إرسال رسالتك بنجاح! شكراً لتواصلكم معنا.');
