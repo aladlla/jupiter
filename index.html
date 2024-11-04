@@ -10,10 +10,10 @@
 </head>
 <body>
     <div id="particles-js"></div>
-    <header class="header" id="header">
+    <header class="header">
         <div class="container">
-            <h1 data-aos="fade-down"><i class="fas fa-balance-scale-left"></i> العدالة للمحاماة</h1>
-            <nav class="navbar" data-aos="fade-up">
+            <h1><i class="fas fa-gavel"></i> العدالة للمحاماة</h1>
+            <nav class="navbar">
                 <ul>
                     <li><a href="#about">من نحن</a></li>
                     <li><a href="#services">الخدمات</a></li>
@@ -30,44 +30,31 @@
         <section id="about" class="about-section" data-aos="fade-up">
             <div class="container">
                 <h2><i class="fas fa-info-circle"></i> من نحن</h2>
-                <p>العدالة للمحامات هي مؤسسة قانونية متخصصة تقدم مجموعة متنوعة من الخدمات القانونية للقطاعين الخاص والعام. تأسست الشركة على مبادئ النزاهة والمهنية والالتزام بخدمة العملاء. لدينا فريق من المحامين المتخصصين الذين يتمتعون بخبرة واسعة في مختلف مجالات القانون.</p>
-                <p>نحن نؤمن بأهمية تقديم استشارات قانونية شاملة ومحدثة لعملائنا، مع التركيز على تحقيق أفضل النتائج بأعلى مستوى من الاحترافية. تشمل مجالات خبرتنا القانون الجنائي، القانون التجاري، قانون العقارات، قانون العمل، قانون الملكية الفكرية، والعديد من المجالات الأخرى.</p>
+                <div class="about-content">
+                    <img src="https://via.placeholder.com/600x400" alt="About Us">
+                    <p>العدالة للمحامات هي مؤسسة قانونية متخصصة تقدم مجموعة متنوعة من الخدمات القانونية للقطاعين الخاص والعام. تأسست الشركة على مبادئ النزاهة والمهنية والالتزام بخدمة العملاء. لدينا فريق من المحامين المتخصصين الذين يتمتعون بخبرة واسعة في مختلف مجالات القانون.</p>
+                </div>
             </div>
         </section>
 
         <section id="services" class="services-section">
             <div class="container">
-                <h2 data-aos="fade-up"><i class="fas fa-gavel"></i> الخدمات</h2>
+                <h2><i class="fas fa-gavel"></i> الخدمات</h2>
                 <div class="services-grid">
                     <div class="service" data-aos="fade-right">
-                        <i class="fas fa-gavel"></i>
+                        <img src="https://via.placeholder.com/300" alt="استشارات قانونية">
                         <h3>الاستشارات القانونية</h3>
                         <p>نقدم خدمات الاستشارات القانونية المتخصصة في مختلف المجالات مثل الشركات والعقارات والعمل.</p>
                     </div>
                     <div class="service" data-aos="fade-left">
-                        <i class="fas fa-balance-scale"></i>
+                        <img src="https://via.placeholder.com/300" alt="تقاضي">
                         <h3>التقاضي</h3>
                         <p>نمثل عملائنا في المحاكم والقضايا المختلفة لضمان حقوقهم والدفاع عن مصالحهم.</p>
                     </div>
                     <div class="service" data-aos="fade-right">
-                        <i class="fas fa-university"></i>
+                        <img src="https://via.placeholder.com/300" alt="وساطة وتحكيم">
                         <h3>الوساطة والتحكيم</h3>
                         <p>نوفر حلولاً بديلة للنزاعات من خلال الوساطة والتحكيم لتجنب النزاعات القضائية الطويلة.</p>
-                    </div>
-                    <div class="service" data-aos="fade-left">
-                        <i class="fas fa-file-contract"></i>
-                        <h3>إعداد العقود</h3>
-                        <p>نقوم بإعداد ومراجعة العقود القانونية لضمان وضوح الشروط وحماية حقوق الأطراف.</p>
-                    </div>
-                    <div class="service" data-aos="fade-right">
-                        <i class="fas fa-shield-alt"></i>
-                        <h3>الملكية الفكرية</h3>
-                        <p>نقدم خدمات حماية الملكية الفكرية وتسجيل العلامات التجارية وبراءات الاختراع.</p>
-                    </div>
-                    <div class="service" data-aos="fade-left">
-                        <i class="fas fa-globe"></i>
-                        <h3>الاستثمارات الأجنبية</h3>
-                        <p>نساعد الشركات الأجنبية في تأسيس الأعمال في المنطقة وتقديم الاستشارات القانونية اللازمة.</p>
                     </div>
                 </div>
             </div>
@@ -109,55 +96,18 @@
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const header = document.getElementById('header');
-            window.addEventListener('scroll', function() {
-                if (window.scrollY > 0) {
-                    header.classList.add('sticky');
-                } else {
-                    header.classList.remove('sticky');
-                }
-            });
-
-            // Initialize AOS (Animate on Scroll) for smooth animations
-            AOS.init({
-                duration: 1200,
-                once: true,
-                mirror: false,
-            });
-
-            // Initialize Particles.js for subtle background particles effect
+            // Initialize AOS
+            AOS.init({ duration: 1200 });
+            // Initialize particles.js
             particlesJS('particles-js', {
                 particles: {
-                    number: {
-                        value: 80,
-                        density: { enable: true, value_area: 800 }
-                    },
+                    number: { value: 80, density: { enable: true, value_area: 800 } },
                     color: { value: "#BDC3C7" },
-                    shape: {
-                        type: "circle",
-                        stroke: { width: 0 },
-                    },
-                    opacity: {
-                        value: 0.5,
-                        random: false,
-                    },
-                    size: {
-                        value: 3,
-                        random: true,
-                    },
-                    line_linked: {
-                        enable: true,
-                        distance: 150,
-                        color: "#BDC3C7",
-                        opacity: 0.2,
-                        width: 1
-                    },
-                    move: {
-                        enable: true,
-                        speed: 2,
-                        direction: "none",
-                        random: true,
-                    }
+                    shape: { type: "circle", stroke: { width: 0 } },
+                    opacity: { value: 0.5, random: false },
+                    size: { value: 3, random: true },
+                    line_linked: { enable: true, distance: 150, color: "#BDC3C7", opacity: 0.2, width: 1 },
+                    move: { enable: true, speed: 2, direction: "none", random: true }
                 },
                 interactivity: {
                     detect_on: "canvas",
@@ -168,8 +118,7 @@
                     },
                     modes: {
                         grab: { distance: 200, line_linked: { opacity: 0.5 } },
-                        repulse: { distance: 200, duration: 0.4 },
-                        push: { particles_nb: 4 },
+                        push: { particles_nb: 4 }
                     }
                 },
                 retina_detect: true
@@ -189,7 +138,7 @@
             document.getElementById('contact-form').addEventListener('submit', function(e) {
                 e.preventDefault();
                 alert('تم إرسال رسالتك بنجاح! شكراً لتواصلكم معنا.');
-                this.reset(); // Reset form fields
+                this.reset();
             });
         });
     </script>
