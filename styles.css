@@ -66,6 +66,40 @@ body {
     color: var(--button-hover-bg);
 }
 
+/* Hero Section */
+.hero-section {
+    background: url('https://via.placeholder.com/1200x600') no-repeat center center/cover; /* Background image */
+    color: var(--text-color-light);
+    padding: 100px 0; /* Padding for hero section */
+    text-align: center;
+}
+
+.hero-section h2 {
+    font-size: 3em; /* Large font for hero title */
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.2em; /* Size of the hero description */
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background: var(--button-bg-color);
+    color: var(--text-color-light);
+    padding: 15px 30px; /* Padding for button */
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    text-decoration: none; /* Remove underline */
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background: var(--button-hover-bg);
+}
+
 /* Section Styles */
 section {
     padding: 60px 0; /* Uniform padding */
@@ -93,6 +127,7 @@ section h2 {
     width: 100%; /* Responsive image */
     max-width: 600px; /* Limit max width */
     border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .services-grid {
@@ -122,6 +157,50 @@ section h2 {
     border-radius: 10px; /* Rounded corners */
 }
 
+.team-section {
+    background: var(--main-bg-color);
+    padding: 40px 0; /* Padding for team section */
+}
+
+.team-member {
+    text-align: center;
+    margin: 20px; /* Margin for team members */
+}
+
+.team-member img {
+    width: 100%; /* Responsive image */
+    max-width: 200px; /* Limit max width */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.testimonials-section {
+    background: var(--section-bg-color);
+    padding: 40px 0; /* Padding for testimonials section */
+}
+
+.testimonials-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.testimonial {
+    flex: 1 1 calc(30% - 20px); /* Responsive testimonial cards */
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Shadow for testimonials */
+    margin: 10px; /* Margin for spacing */
+    text-align: center;
+}
+
+.testimonial h4 {
+    margin-top: 10px;
+    font-weight: normal;
+    color: var(--main-bg-color);
+}
+
+/* Contact Section */
 .contact-section {
     background: var(--main-bg-color);
     border-radius: 10px;
@@ -193,7 +272,11 @@ section h2 {
         flex: 1 1 100%; /* Full width on small screens */
     }
 
-    .header .logo img {
-        width: 150px; /* Adjusted logo size */
+    .about-content {
+        flex-direction: column; /* Stack on small screens */
+    }
+
+    .about-image {
+        margin-bottom: 20px; /* Margin for bottom on small screens */
     }
 }
