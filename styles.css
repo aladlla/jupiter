@@ -1,23 +1,23 @@
-/* Root Variables for the Dark Navy Legal Theme */
+/* Root Variables for the Elegant Legal Theme */
 :root {
-    --primary-background: #2C3E50; /* Dark navy blue background */
-    --secondary-background: #34495E; /* Slightly lighter navy blue for sections */
-    --accent-color: #FFD700; /* Warm yellow-gold for accents */
-    --text-color: #BDC3C7; /* Soft silver-gray for text */
-    --button-color: #FFD700; /* Warm yellow-gold for buttons */
-    --button-text-color: #2C3E50; /* Dark navy blue for button text */
-    --button-hover-color: #FFA500; /* Darker gold on hover */
-    --border-color: #1B2B3A; /* Subtle dark border */
-    --heading-font: 'Merriweather', serif; /* Serif font for headings */
-    --body-font: 'Arial', sans-serif; /* Sans-serif font for body */
+    --main-bg-color: #283593; /* Deep blue background */
+    --section-bg-color: #3E5B99; /* Slightly lighter blue for sections */
+    --highlight-color: #FFCA28; /* Bright gold for highlights */
+    --text-color-light: #E1F5FE; /* Soft light blue for text */
+    --button-bg-color: #FFCA28; /* Bright gold for buttons */
+    --button-font-color: #283593; /* Deep blue for button text */
+    --button-hover-bg: #FFB300; /* Darker gold on hover */
+    --border-shade: #1A237E; /* Subtle dark border */
+    --title-font: 'Georgia', serif; /* Serif font for titles */
+    --content-font: 'Helvetica', sans-serif; /* Sans-serif font for body text */
 }
 
 /* General Styles */
 body {
-    font-family: var(--body-font);
+    font-family: var(--content-font);
     line-height: 1.6;
-    background-color: var(--primary-background);
-    color: var(--text-color);
+    background-color: var(--main-bg-color);
+    color: var(--text-color-light);
     direction: rtl;
     margin: 0;
     padding: 0;
@@ -31,50 +31,50 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1;
-    background-color: var(--primary-background); /* Ensure particles background is consistent */
+    background-color: var(--main-bg-color); /* Ensure particles background is consistent */
 }
 
 .container {
-    width: 80%;
+    width: 85%; /* Slightly wider container */
     margin: auto;
     overflow: hidden;
-    padding: 20px;
+    padding: 25px; /* Increased padding */
 }
 
 /* Typography */
 h1, h2, h3, h4 {
-    font-family: var(--heading-font);
+    font-family: var(--title-font);
     font-weight: bold;
-    color: var(--accent-color);
-    margin-bottom: 20px;
+    color: var(--highlight-color);
+    margin-bottom: 25px; /* Increased bottom margin */
 }
 
 p {
-    font-family: var(--body-font);
+    font-family: var(--content-font);
     font-weight: normal;
     line-height: 1.8;
-    margin-bottom: 20px;
-    color: var(--text-color);
+    margin-bottom: 25px; /* Increased bottom margin */
+    color: var(--text-color-light);
 }
 
 /* Header Styles */
 .header {
-    background: var(--primary-background);
-    color: var(--text-color);
-    padding: 30px 0;
+    background: var(--main-bg-color);
+    color: var(--text-color-light);
+    padding: 35px 0; /* Increased padding */
     text-align: center;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-shade);
     position: relative;
 }
 
 .header .logo {
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 20px; /* Increased top position */
+    right: 20px; /* Increased right position */
 }
 
 .header .logo img {
-    width: 180px;
+    width: 200px; /* Increased logo size */
     height: auto;
 }
 
@@ -87,68 +87,68 @@ p {
 
 .navbar ul li {
     display: inline;
-    margin: 0 20px;
+    margin: 0 25px; /* Increased margin */
 }
 
 .navbar ul li a {
-    color: var(--accent-color);
+    color: var(--highlight-color);
     text-decoration: none;
-    font-size: 1.1em;
+    font-size: 1.2em; /* Increased font size */
     transition: color 0.3s ease;
     border-bottom: 2px solid transparent;
 }
 
 .navbar ul li a:hover {
-    color: var(--button-color);
-    border-bottom: 2px solid var(--button-color);
+    color: var(--button-bg-color);
+    border-bottom: 2px solid var(--button-bg-color);
 }
 
 /* Section Styles */
 section {
-    padding: 60px 0;
-    background: var(--secondary-background);
-    border: 1px solid var(--border-color);
+    padding: 70px 0; /* Increased padding */
+    background: var(--section-bg-color);
+    border: 1px solid var(--border-shade);
     margin-top: 20px;
     border-radius: 5px;
 }
 
 section h2 {
-    font-size: 2.2em;
+    font-size: 2.4em; /* Increased title size */
     text-align: center;
-    color: var(--accent-color);
-    margin-bottom: 30px;
+    color: var(--highlight-color);
+    margin-bottom: 35px; /* Increased bottom margin */
 }
 
 section h2:after {
     content: '';
-    width: 80px;
-    height: 3px;
-    background: var(--accent-color);
+    width: 90px; /* Increased line width */
+    height: 4px; /* Increased line height */
+    background: var(--highlight-color);
     display: block;
-    margin: 10px auto 0;
-    border-radius: 2px;
+    margin: 12px auto 0; /* Adjusted margins */
+    border-radius: 3px; /* Rounded edges */
 }
 
 section p {
     font-size: 1.1em;
-    color: var(--text-color);
+    color: var(--text-color-light);
 }
 
 /* Button Styles */
 button {
-    background: var(--button-color);
-    color: var(--button-text-color);
+    background: var(--button-bg-color);
+    color: var(--button-font-color);
     border: none;
-    padding: 12px 24px;
+    padding: 14px 28px; /* Increased padding */
     cursor: pointer;
-    border-radius: 3px;
+    border-radius: 5px; /* Increased border radius */
     transition: background 0.3s ease, transform 0.3s;
     font-weight: bold;
 }
 
 button:hover {
-    background: var(--button-hover-color);
-    transform: translateY(-2px);
+    background: var(--button-hover-bg);
+    transform: translateY(-3px); /* Slightly increased lift */
 }
 
 /* Services Section */
@@ -159,37 +159,37 @@ button:hover {
 }
 
 .service {
-    flex: 1 1 calc(33.333% - 40px);
-    background: var(--secondary-background);
-    padding: 20px;
-    border: 1px solid var(--border-color);
+    flex: 1 1 calc(33.333% - 45px); /* Increased margin calculation */
+    background: var(--section-bg-color);
+    padding: 25px; /* Increased padding */
+    border: 1px solid var(--border-shade);
     border-radius: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 25px; /* Increased bottom margin */
     text-align: center;
     transition: transform 0.3s ease, background 0.3s;
 }
 
 .service:hover {
-    transform: translateY(-5px);
-    background: var(--primary-background);
+    transform: translateY(-7px); /* Increased hover effect */
+    background: var(--main-bg-color);
 }
 
 .service i {
-    font-size: 2.5em;
-    color: var(--accent-color);
-    margin-bottom: 15px;
+    font-size: 3em; /* Increased icon size */
+    color: var(--highlight-color);
+    margin-bottom: 20px; /* Increased bottom margin */
 }
 
 .service h3 {
-    font-size: 1.5em;
-    color: var(--accent-color);
-    margin-bottom: 15px;
+    font-size: 1.6em; /* Increased title size */
+    color: var(--highlight-color);
+    margin-bottom: 20px; /* Increased bottom margin */
 }
 
 .service p {
     font-size: 1em;
     font-weight: normal;
-    color: var(--text-color);
+    color: var(--text-color-light);
 }
 
 /* Contact Section */
@@ -200,39 +200,50 @@ button:hover {
 }
 
 .contact-section label {
-    font-size: 1.1em;
+    font-size: 1.2em; /* Increased label size */
     margin-bottom: 5px;
-    color: var(--accent-color);
+    color: var(--highlight-color);
 }
 
 .contact-section input,
 .contact-section textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px; /* Increased padding */
     margin-bottom: 15px;
-    border: 1px solid var(--border-color);
-    border-radius: 3px;
-    background: var(--primary-background);
-    color: var(--text-color);
+    border: 1px solid var(--border-shade);
+    border-radius: 5px; /* Increased border radius */
+    background: var(--main-bg-color);
+    color: var(--text-color-light);
     transition: border 0.3s;
 }
 
 .contact-section input:focus,
 .contact-section textarea:focus {
-    border-color: var(--accent-color);
+    border-color: var(--highlight-color);
 }
 
 /* Footer Styles */
 .footer {
-    background: var(--primary-background);
-    color: var(--text-color);
+    background: var(--main-bg-color);
+    color: var(--text-color-light);
     text-align: center;
-    padding: 20px 0;
-    border-top: 1px solid var(--border-color);
+    padding: 25px 0; /* Increased padding */
+    border-top: 1px solid var(--border-shade);
 }
 
 .footer p {
     margin: 0;
+}
+
+.social-icons a {
+    color: var(--text-color-light);
+    margin: 0 15px; /* Increased margin */
+    font-size: 1.6em; /* Increased icon size */
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--button-bg-color);
 }
 
 @media (max-width: 768px) {
@@ -245,6 +256,6 @@ button:hover {
     }
 
     .header .logo img {
-        width: 150px;
+        width: 170px; /* Adjusted logo size */
     }
 }
