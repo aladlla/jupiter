@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-    <div id="particles-js"></div>
     <header class="header">
         <div class="container">
             <h1><i class="fas fa-gavel"></i> العدالة للمحاماة</h1>
@@ -31,28 +30,29 @@
             <div class="container">
                 <h2><i class="fas fa-info-circle"></i> من نحن</h2>
                 <div class="about-content">
-                    <img src="https://via.placeholder.com/600x400" alt="About Us">
-                    <p>العدالة للمحامات هي مؤسسة قانونية متخصصة تقدم مجموعة متنوعة من الخدمات القانونية للقطاعين الخاص والعام. تأسست الشركة على مبادئ النزاهة والمهنية والالتزام بخدمة العملاء. لدينا فريق من المحامين المتخصصين الذين يتمتعون بخبرة واسعة في مختلف مجالات القانون.</p>
+                    <img src="https://via.placeholder.com/600x400" alt="About Us" class="about-image">
+                    <p>العدالة للمحامات هي مؤسسة قانونية متخصصة تقدم مجموعة متنوعة من الخدمات القانونية للقطاعين الخاص والعام. تأسست الشركة على مبادئ النزاهة والمهنية والالتزام بخدمة العملاء.</p>
+                    <p>نحن نؤمن بأهمية تقديم استشارات قانونية شاملة ومحدثة لعملائنا، مع التركيز على تحقيق أفضل النتائج بأعلى مستوى من الاحترافية.</p>
                 </div>
             </div>
         </section>
 
-        <section id="services" class="services-section">
+        <section id="services" class="services-section" data-aos="fade-up">
             <div class="container">
                 <h2><i class="fas fa-gavel"></i> الخدمات</h2>
                 <div class="services-grid">
                     <div class="service" data-aos="fade-right">
-                        <img src="https://via.placeholder.com/300" alt="استشارات قانونية">
+                        <img src="https://via.placeholder.com/300" alt="استشارات قانونية" class="service-image">
                         <h3>الاستشارات القانونية</h3>
                         <p>نقدم خدمات الاستشارات القانونية المتخصصة في مختلف المجالات مثل الشركات والعقارات والعمل.</p>
                     </div>
                     <div class="service" data-aos="fade-left">
-                        <img src="https://via.placeholder.com/300" alt="تقاضي">
+                        <img src="https://via.placeholder.com/300" alt="تقاضي" class="service-image">
                         <h3>التقاضي</h3>
                         <p>نمثل عملائنا في المحاكم والقضايا المختلفة لضمان حقوقهم والدفاع عن مصالحهم.</p>
                     </div>
                     <div class="service" data-aos="fade-right">
-                        <img src="https://via.placeholder.com/300" alt="وساطة وتحكيم">
+                        <img src="https://via.placeholder.com/300" alt="وساطة وتحكيم" class="service-image">
                         <h3>الوساطة والتحكيم</h3>
                         <p>نوفر حلولاً بديلة للنزاعات من خلال الوساطة والتحكيم لتجنب النزاعات القضائية الطويلة.</p>
                     </div>
@@ -98,6 +98,7 @@
         document.addEventListener('DOMContentLoaded', function () {
             // Initialize AOS
             AOS.init({ duration: 1200 });
+
             // Initialize particles.js
             particlesJS('particles-js', {
                 particles: {
