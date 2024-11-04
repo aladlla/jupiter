@@ -76,7 +76,7 @@
         <section id="contact" class="contact-section" data-aos="fade-up">
             <div class="container">
                 <h2>اتصل بنا</h2>
-                <form>
+                <form id="contact-form">
                     <label for="name">الاسم:</label>
                     <input type="text" id="name" name="name" required>
                     <label for="email">البريد الإلكتروني:</label>
@@ -118,12 +118,14 @@
                 }
             });
 
+            // Initialize AOS (Animate on Scroll) for smooth animations
             AOS.init({
                 duration: 1200,
                 once: true,
                 mirror: false,
             });
 
+            // Initialize Particles.js for subtle background particles effect
             particlesJS('particles-js', {
                 particles: {
                     number: {
@@ -133,7 +135,7 @@
                     color: { value: "#BDC3C7" },
                     shape: {
                         type: "circle",
-                        stroke: { width: 0, color: "#000000" },
+                        stroke: { width: 0 },
                     },
                     opacity: {
                         value: 0.5,
@@ -173,6 +175,7 @@
                 retina_detect: true
             });
 
+            // Smooth Scroll for navigation links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
@@ -180,6 +183,13 @@
                         behavior: 'smooth'
                     });
                 });
+            });
+
+            // Handle form submission
+            document.getElementById('contact-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('تم إرسال رسالتك بنجاح! شكراً لتواصلكم معنا.');
+                this.reset(); // Reset form fields
             });
         });
     </script>
