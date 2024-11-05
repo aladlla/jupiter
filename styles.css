@@ -1,11 +1,11 @@
-/* Root Variables for a Luxurious Legal Theme */
+/* Root Variables for Dark Navy and Gold Theme */
 :root {
     --main-bg-color: #001f3f; /* Dark navy background */
-    --section-bg-color: #003366; /* Slightly lighter navy for sections */
-    --highlight-color: #64ffda; /* Light teal for highlights */
+    --section-bg-color: #002b5c; /* Slightly lighter navy for sections */
+    --highlight-color: #FFD700; /* Gold for highlights */
     --text-color-light: #ffffff; /* Light color for text */
-    --button-bg-color: #64ffda; /* Bright teal for buttons */
-    --button-hover-bg: #52c5b3; /* Darker teal on hover */
+    --button-bg-color: #FFD700; /* Gold for buttons */
+    --button-hover-bg: #e0c200; /* Darker gold on hover */
     --border-color: #1d3f72; /* Subtle dark border */
     --title-font: 'Merriweather', serif; /* Serif font for titles */
     --content-font: 'Open Sans', sans-serif; /* Sans-serif font for body text */
