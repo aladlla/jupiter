@@ -237,7 +237,33 @@ button:hover {
     margin-bottom: 10px; /* Space between icon and username */
 }
 
-/* Contact Section - Removed */
+/* Testimonials Section */
+.testimonials-section {
+    padding: 60px 0;
+    background: var(--secondary-background);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+
+.testimonial-carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center testimonials */
+}
+
+.testimonial {
+    max-width: 500px; /* Set max width for testimonial */
+    text-align: center;
+    margin: 20px 0; /* Space between testimonials */
+    padding: 15px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    transition: transform 0.3s; /* Animation on hover */
+}
+
+.testimonial:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
 
 /* Footer Styles */
 .footer {
