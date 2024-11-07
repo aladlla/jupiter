@@ -7,184 +7,155 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
+    <div id="particles-js"></div>
     <header class="header">
         <div class="container">
-            <div class="logo">
-                <img src="Adalla'slogo.png" alt="العدالة للمحاماة">
-            </div>
-            <h1 class="animate__animated animate__fadeInDown">العدالة للمحاماة</h1>
-            <nav class="navbar">
+            <h1 data-aos="fade-down"><i class="fas fa-balance-scale-left"></i> العدالة للمحاماة</h1>
+            <nav class="navbar" data-aos="fade-up">
                 <ul>
-                    <li><a href="#hero">الصفحة الرئيسية</a></li>
                     <li><a href="#about">من نحن</a></li>
                     <li><a href="#services">الخدمات</a></li>
-                    <li><a href="#team">فريقنا</a></li>
-                    <li><a href="#testimonials">شهادات العملاء</a></li>
                     <li><a href="#contact">اتصل بنا</a></li>
                 </ul>
             </nav>
+            <div class="logo">
+                <img src="Adalla'slogo.png" alt="العدالة للمحاماة">
+            </div>
         </div>
     </header>
 
-    <main>
-        <section id="hero" class="hero-section">
-            <div class="hero-content animate__animated animate__fadeIn">
-                <h2>استشارات قانونية رائدة</h2>
-                <p>تقدم العدالة للمحاماة مجموعة شاملة من الخدمات القانونية مع التزام عميق بالنزاهة والاحترافية.</p>
-                <a href="#services" class="cta-button">استكشف خدماتنا</a>
-            </div>
-        </section>
+    <section id="about" class="about-section" data-aos="fade-up">
+        <div class="container">
+            <h2><i class="fas fa-info-circle"></i> من نحن</h2>
+            <p>العدالة للمحامات هي مؤسسة قانونية متخصصة تقدم مجموعة متنوعة من الخدمات القانونية للقطاعين الخاص والعام. تأسست الشركة على مبادئ النزاهة والمهنية والالتزام بخدمة العملاء. لدينا فريق من المحامين المتخصصين الذين يتمتعون بخبرة واسعة في مختلف مجالات القانون.</p>
+            <p>نحن نؤمن بأهمية تقديم استشارات قانونية شاملة ومحدثة لعملائنا، مع التركيز على تحقيق أفضل النتائج بأعلى مستوى من الاحترافية. تشمل مجالات خبرتنا القانون الجنائي، القانون التجاري، قانون العقارات، قانون العمل، قانون الملكية الفكرية، والعديد من المجالات الأخرى.</p>
+        </div>
+    </section>
 
-        <section id="about" class="about-section" data-aos="fade-up">
-            <div class="container">
-                <h2><i class="fas fa-info-circle"></i> من نحن</h2>
-                <div class="about-content">
-                    <img src="https://via.placeholder.com/600x400" alt="About Us" class="about-image">
-                    <p>العدالة للمحامات هي مؤسسة قانونية متخصصة تقدم مجموعة متنوعة من الخدمات القانونية للقطاعين الخاص والعام. تأسست الشركة على مبادئ النزاهة والمهنية والالتزام بخدمة العملاء. لدينا فريق من المحامين المتخصصين الذين يتمتعون بخبرة واسعة في مختلف مجالات القانون.</p>
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 data-aos="fade-up"><i class="fas fa-gavel"></i> الخدمات</h2>
+            <div class="services-grid">
+                <div class="service" data-aos="fade-right">
+                    <i class="fas fa-gavel"></i>
+                    <h3>الاستشارات القانونية</h3>
+                    <p>نقدم خدمات الاستشارات القانونية المتخصصة في مختلف المجالات مثل الشركات والعقارات والعمل.</p>
+                </div>
+                <div class="service" data-aos="fade-left">
+                    <i class="fas fa-balance-scale"></i>
+                    <h3>التقاضي</h3>
+                    <p>نمثل عملائنا في المحاكم والقضايا المختلفة لضمان حقوقهم والدفاع عن مصالحهم.</p>
+                </div>
+                <div class="service" data-aos="fade-right">
+                    <i class="fas fa-university"></i>
+                    <h3>الوساطة والتحكيم</h3>
+                    <p>نوفر حلولاً بديلة للنزاعات من خلال الوساطة والتحكيم لتجنب النزاعات القضائية الطويلة.</p>
+                </div>
+                <div class="service" data-aos="fade-left">
+                    <i class="fas fa-file-contract"></i>
+                    <h3>إعداد العقود</h3>
+                    <p>نقوم بإعداد ومراجعة العقود القانونية لضمان وضوح الشروط وحماية حقوق الأطراف.</p>
+                </div>
+                <div class="service" data-aos="fade-right">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>الملكية الفكرية</h3>
+                    <p>نقدم خدمات حماية الملكية الفكرية وتسجيل العلامات التجارية وبراءات الاختراع.</p>
+                </div>
+                <div class="service" data-aos="fade-left">
+                    <i class="fas fa-globe"></i>
+                    <h3>الاستثمارات الأجنبية</h3>
+                    <p>نساعد الشركات الأجنبية في تأسيس الأعمال في المنطقة وتقديم الاستشارات القانونية اللازمة.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="services" class="services-section" data-aos="fade-up">
-            <div class="container">
-                <h2><i class="fas fa-gavel"></i> خدماتنا</h2>
-                <div class="services-grid">
-                    <div class="service animate__animated animate__fadeInLeft" data-aos="fade-right">
-                        <div class="service-image-wrapper">
-                            <img src="https://via.placeholder.com/300" alt="استشارات قانونية" class="service-image">
-                        </div>
-                        <h3>الاستشارات القانونية</h3>
-                        <p>نقدم خدمات الاستشارات القانونية المتخصصة في مختلف المجالات مثل الشركات والعقارات والعمل.</p>
-                    </div>
-                    <div class="service animate__animated animate__fadeInUp" data-aos="fade-left">
-                        <div class="service-image-wrapper">
-                            <img src="https://via.placeholder.com/300" alt="تقاضي" class="service-image">
-                        </div>
-                        <h3>التقاضي</h3>
-                        <p>نمثل عملائنا في المحاكم والقضايا المختلفة لضمان حقوقهم والدفاع عن مصالحهم.</p>
-                    </div>
-                    <div class="service animate__animated animate__fadeInRight" data-aos="fade-right">
-                        <div class="service-image-wrapper">
-                            <img src="https://via.placeholder.com/300" alt="وساطة وتحكيم" class="service-image">
-                        </div>
-                        <h3>الوساطة والتحكيم</h3>
-                        <p>نوفر حلولاً بديلة للنزاعات من خلال الوساطة والتحكيم لتجنب النزاعات القضائية الطويلة.</p>
-                    </div>
-                    <div class="service animate__animated animate__fadeInLeft" data-aos="fade-left">
-                        <div class="service-image-wrapper">
-                            <img src="https://via.placeholder.com/300" alt="إعداد العقود" class="service-image">
-                        </div>
-                        <h3>إعداد العقود</h3>
-                        <p>نقوم بإعداد ومراجعة العقود القانونية لضمان وضوح الشروط وحماية حقوق الأطراف.</p>
-                    </div>
-                    <div class="service animate__animated animate__fadeInUp" data-aos="fade-right">
-                        <div class="service-image-wrapper">
-                            <img src="https://via.placeholder.com/300" alt="الملكية الفكرية" class="service-image">
-                        </div>
-                        <h3>الملكية الفكرية</h3>
-                        <p>نقدم خدمات حماية الملكية الفكرية وتسجيل العلامات التجارية وبراءات الاختراع.</p>
-                    </div>
-                    <div class="service animate__animated animate__fadeInRight" data-aos="fade-left">
-                        <div class="service-image-wrapper">
-                            <img src="https://via.placeholder.com/300" alt="الاستثمارات الأجنبية" class="service-image">
-                        </div>
-                        <h3>الاستثمارات الأجنبية</h3>
-                        <p>نساعد الشركات الأجنبية في تأسيس الأعمال في المنطقة وتقديم الاستشارات القانونية اللازمة.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="team" class="team-section" data-aos="fade-up">
-            <div class="container">
-                <h2>فريقنا المحترف</h2>
-                <div class="team-grid">
-                    <div class="team-member animate__animated animate__fadeIn" data-aos="fade-right">
-                        <img src="https://via.placeholder.com/200" alt="فريق 1">
-                        <h3>اسم المحامي</h3>
-                        <p>تخصص: قانون الشركات</p>
-                    </div>
-                    <div class="team-member animate__animated animate__fadeIn" data-aos="fade-left">
-                        <img src="https://via.placeholder.com/200" alt="فريق 2">
-                        <h3>اسم المحامي</h3>
-                        <p>تخصص: قانون الملكية الفكرية</p>
-                    </div>
-                    <div class="team-member animate__animated animate__fadeIn" data-aos="fade-right">
-                        <img src="https://via.placeholder.com/200" alt="فريق 3">
-                        <h3>اسم المحامي</h3>
-                        <p>تخصص: القانون الجنائي</p>
-                    </div>
-                    <div class="team-member animate__animated animate__fadeIn" data-aos="fade-left">
-                        <img src="https://via.placeholder.com/200" alt="فريق 4">
-                        <h3>اسم المحامي</h3>
-                        <p>تخصص: قانون الأسرة</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="testimonials" class="testimonials-section" data-aos="fade-up">
-            <div class="container">
-                <h2>شهادات العملاء</h2>
-                <div class="testimonials-grid">
-                    <div class="testimonial animate__animated animate__fadeIn" data-aos="fade-right">
-                        <p>"خدمات رائعة! الفريق محترف واستجاب بسرعة لمتطلباتي القانونية."</p>
-                        <h4>- عميل 1</h4>
-                    </div>
-                    <div class="testimonial animate__animated animate__fadeIn" data-aos="fade-left">
-                        <p>"أفضل تجربة قانونية مررت بها. شكرًا للعدالة للمحاماة!"</p>
-                        <h4>- عميل 2</h4>
-                    </div>
-                    <div class="testimonial animate__animated animate__fadeIn" data-aos="fade-right">
-                        <p>"نصحوني بحكمة وأظهروا احترافية كبيرة في التعامل مع قضيتي."</p>
-                        <h4>- عميل 3</h4>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact-section" data-aos="fade-up">
-            <div class="container">
-                <h2>اتصل بنا</h2>
-                <form id="contact-form">
-                    <label for="name">الاسم:</label>
-                    <input type="text" id="name" name="name" required>
-                    <label for="email">البريد الإلكتروني:</label>
-                    <input type="email" id="email" name="email" required>
-                    <label for="message">الرسالة:</label>
-                    <textarea id="message" name="message" required></textarea>
-                    <button type="submit">إرسال</button>
-                </form>
-                <div class="contact-info">
-                    <p>الهاتف: 07725559926</p>
-                    <p>الهاتف: 07712533365</p>
-                </div>
-            </div>
-        </section>
-    </main>
+    <section id="contact" class="contact-section" data-aos="fade-up">
+        <div class="container">
+            <h2>اتصل بنا</h2>
+            <form>
+                <label for="name">الاسم:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">البريد الإلكتروني:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">الرسالة:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">إرسال</button>
+            </form>
+            <p>07725559926</p>
+            <p>07712533365</p>
+        </div>
+    </section>
 
     <footer class="footer" data-aos="fade-up">
         <div class="container">
             <p>جميع الحقوق محفوظة &copy; 2024 العدالة للمحاماة</p>
-            <div class="social-icons">
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            </div>
         </div>
     </footer>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            AOS.init({ duration: 1200 });
+            // Initialize AOS (Animate on Scroll)
+            AOS.init({
+                duration: 1200,
+                once: true,
+                mirror: false,
+            });
 
-            // Smooth Scroll for navigation links
+            // Initialize Particles.js with enhanced settings
+            particlesJS('particles-js', {
+                particles: {
+                    number: {
+                        value: 80,
+                        density: { enable: true, value_area: 800 }
+                    },
+                    color: { value: "#BDC3C7" },
+                    shape: {
+                        type: "circle",
+                        stroke: { width: 0, color: "#000000" },
+                    },
+                    opacity: {
+                        value: 0.5,
+                        random: false,
+                    },
+                    size: {
+                        value: 3,
+                        random: true,
+                    },
+                    line_linked: {
+                        enable: true,
+                        distance: 150,
+                        color: "#BDC3C7",
+                        opacity: 0.2,
+                        width: 1
+                    },
+                    move: {
+                        enable: true,
+                        speed: 2,
+                        direction: "none",
+                        random: true,
+                    }
+                },
+                interactivity: {
+                    detect_on: "canvas",
+                    events: {
+                        onhover: { enable: true, mode: "grab" },
+                        onclick: { enable: true, mode: "push" },
+                        resize: true
+                    },
+                    modes: {
+                        grab: { distance: 200, line_linked: { opacity: 0.5 } },
+                        repulse: { distance: 200, duration: 0.4 },
+                        push: { particles_nb: 4 },
+                    }
+                },
+                retina_detect: true
+            });
+
+            // Smooth Scroll
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
@@ -192,12 +163,6 @@
                         behavior: 'smooth'
                     });
                 });
-            });
-
-            document.getElementById('contact-form').addEventListener('submit', function(e) {
-                e.preventDefault();
-                alert('تم إرسال رسالتك بنجاح! شكراً لتواصلكم معنا.');
-                this.reset();
             });
         });
     </script>
