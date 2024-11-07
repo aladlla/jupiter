@@ -1,287 +1,246 @@
-/* Root Variables for Dark Navy and Gold Theme */
+/* Root Variables for the Dark Navy Legal Theme */
 :root {
-    --main-bg-color: #001f3f; /* Dark navy background */
-    --section-bg-color: #002b5c; /* Slightly lighter navy for sections */
-    --highlight-color: #FFD700; /* Gold for highlights */
-    --text-color-light: #ffffff; /* Light color for text */
-    --button-bg-color: #FFD700; /* Gold for buttons */
-    --button-hover-bg: #e0c200; /* Darker gold on hover */
-    --border-color: #1d3f72; /* Subtle dark border */
-    --title-font: 'Merriweather', serif; /* Serif font for titles */
-    --content-font: 'Open Sans', sans-serif; /* Sans-serif font for body text */
+    --primary-background: #2C3E50; /* Dark navy blue background */
+    --secondary-background: #34495E; /* Slightly lighter navy blue for sections */
+    --accent-color: #FFD700; /* Warm yellow-gold for accents */
+    --text-color: #BDC3C7; /* Soft silver-gray for text */
+    --button-color: #FFD700; /* Warm yellow-gold for buttons */
+    --button-text-color: #2C3E50; /* Dark navy blue for button text */
+    --button-hover-color: #FFA500; /* Darker gold on hover */
+    --border-color: #1B2B3A; /* Subtle dark border */
+    --heading-font: 'Merriweather', serif; /* Serif font for headings */
+    --body-font: 'Arial', sans-serif; /* Sans-serif font for body */
 }
 
 /* General Styles */
 body {
-    font-family: var(--content-font);
+    font-family: var(--body-font);
     line-height: 1.6;
-    background-color: var(--main-bg-color);
-    color: var(--text-color-light);
+    background-color: var(--primary-background);
+    color: var(--text-color);
     direction: rtl;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+    position: relative;
+    transition: background 0.3s, color 0.3s;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: var(--primary-background);
 }
 
 .container {
-    width: 90%;
-    max-width: 1200px; /* Max width for larger screens */
+    width: 80%;
     margin: auto;
+    overflow: hidden;
     padding: 20px;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+    font-family: var(--heading-font);
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+p {
+    font-family: var(--body-font);
+    font-weight: normal;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: var(--text-color);
 }
 
 /* Header Styles */
 .header {
-    background: var(--main-bg-color);
-    color: var(--text-color-light);
-    padding: 40px 0; /* Increased padding */
+    background: var(--primary-background);
+    color: var(--text-color);
+    padding: 30px 0;
     text-align: center;
     border-bottom: 1px solid var(--border-color);
+    position: relative;
+}
+
+.header .logo {
+    position: absolute;
+    top: 15px;
+    right: 15px;
 }
 
 .header .logo img {
-    width: 200px; /* Logo size */
+    width: 180px;
     height: auto;
 }
 
-/* Navigation Styles */
 .navbar ul {
     padding: 0;
     list-style: none;
+    text-align: center;
     margin: 0;
 }
 
 .navbar ul li {
-    display: inline-block; /* Inline-block for spacing */
-    margin: 0 15px; /* Adjusted margin */
+    display: inline;
+    margin: 0 20px;
 }
 
 .navbar ul li a {
-    color: var(--highlight-color);
+    color: var(--accent-color);
     text-decoration: none;
     font-size: 1.1em;
-    transition: color 0.3s ease, transform 0.3s ease;
+    transition: color 0.3s ease;
+    border-bottom: 2px solid transparent;
 }
 
 .navbar ul li a:hover {
-    color: var(--button-hover-bg);
-    transform: scale(1.05); /* Scale effect on hover */
-}
-
-/* Hero Section */
-.hero-section {
-    background: url('https://via.placeholder.com/1200x600') no-repeat center center/cover; /* Background image */
-    color: var(--text-color-light);
-    padding: 100px 0; /* Padding for hero section */
-    text-align: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Shadow for hero section */
-}
-
-.hero-section h2 {
-    font-size: 3em; /* Large font for hero title */
-    margin-bottom: 20px;
-    animation: fadeIn 1s ease-in-out; /* Fade-in animation */
-}
-
-.hero-section p {
-    font-size: 1.2em; /* Size of the hero description */
-    margin-bottom: 30px;
-}
-
-.cta-button {
-    background: var(--button-bg-color);
-    color: var(--text-color-light);
-    padding: 15px 30px; /* Padding for button */
-    border: none;
-    border-radius: 5px;
-    font-size: 1.1em;
-    cursor: pointer;
-    text-decoration: none; /* Remove underline */
-    transition: background 0.3s, transform 0.3s;
-}
-
-.cta-button:hover {
-    background: var(--button-hover-bg);
-    transform: scale(1.05); /* Scale effect on hover */
+    color: var(--button-color);
+    border-bottom: 2px solid var(--button-color);
 }
 
 /* Section Styles */
 section {
-    padding: 60px 0; /* Uniform padding */
-    background: var(--section-bg-color);
+    padding: 60px 0;
+    background: var(--secondary-background);
+    border: 1px solid var(--border-color);
     margin-top: 20px;
-    border-radius: 10px; /* Increased rounding */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    border-radius: 5px;
 }
 
 section h2 {
-    font-size: 2.5em; /* Increased size */
+    font-size: 2.2em;
     text-align: center;
-    color: var(--highlight-color);
-    margin-bottom: 30px; /* Increased bottom margin */
+    color: var(--accent-color);
+    margin-bottom: 30px;
 }
 
-.about-content {
-    display: flex; /* Flex for image and text */
-    align-items: center;
-    justify-content: space-between;
-    margin: 20px 0;
+section h2:after {
+    content: '';
+    width: 80px;
+    height: 3px;
+    background: var(--accent-color);
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
 }
 
-.about-image {
-    width: 100%; /* Responsive image */
-    max-width: 600px; /* Limit max width */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+section p {
+    font-size: 1.1em;
+    color: var(--text-color);
 }
 
+/* Button Styles */
+button {
+    background: var(--button-color);
+    color: var(--button-text-color);
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background 0.3s ease, transform 0.3s;
+    font-weight: bold;
+}
+
+button:hover {
+    background: var(--button-hover-color);
+    transform: translateY(-2px);
+}
+
+/* Services Section */
 .services-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Centering service cards */
+    justify-content: space-between;
 }
 
 .service {
-    flex: 1 1 calc(30% - 20px); /* Responsive service cards */
-    background: var(--section-bg-color);
-    margin: 10px; /* Margin for spacing */
+    flex: 1 1 calc(33.333% - 40px);
+    background: var(--secondary-background);
     padding: 20px;
-    border-radius: 50%; /* Circular frames */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    border: 1px solid var(--border-color);
+    border-radius: 50%; /* Makes the container circular */
+    margin-bottom: 20px;
     text-align: center;
     transition: transform 0.3s ease, background 0.3s;
+    height: 200px; /* Set height for the circle */
+    width: 200px; /* Set width for the circle */
+    display: flex; /* Flexbox for centering */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center children vertically */
+    align-items: center; /* Center children horizontally */
+    overflow: hidden; /* Hide overflow text */
 }
 
 .service:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
-    background: var(--highlight-color); /* Change background color on hover */
+    transform: translateY(-5px);
+    background: var(--primary-background);
 }
 
-.service-image-wrapper {
-    width: 100px; /* Fixed size for circular image */
-    height: 100px; /* Fixed size for circular image */
-    overflow: hidden; /* Ensure no overflow */
-    border-radius: 50%; /* Circular frames */
-    margin: 0 auto 15px; /* Centering the image */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for service images */
+.service i {
+    font-size: 2.5em;
+    color: var(--accent-color);
+    margin-bottom: 15px;
 }
 
-.service-image {
-    width: 100%; /* Responsive image for services */
-    max-width: none; /* Remove max width */
-    border-radius: 50%; /* Rounded corners */
+.service h3 {
+    font-size: 1.2em; /* Reduced font size for better fit */
+    color: var(--accent-color);
+    margin: 10px 0; /* Adjust margin for spacing */
 }
 
-.team-section {
-    background: var(--main-bg-color);
-    padding: 40px 0; /* Padding for team section */
-}
-
-.team-member {
-    text-align: center;
-    margin: 20px; /* Margin for team members */
-}
-
-.team-member img {
-    width: 100%; /* Responsive image */
-    max-width: 200px; /* Limit max width */
-    border-radius: 50%; /* Circular frames */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
-}
-
-.testimonials-section {
-    background: var(--section-bg-color);
-    padding: 40px 0; /* Padding for testimonials section */
-}
-
-.testimonials-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Centering testimonials */
-}
-
-.testimonial {
-    flex: 1 1 calc(30% - 20px); /* Responsive testimonial cards */
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Shadow for testimonials */
-    margin: 10px; /* Margin for spacing */
-    text-align: center;
-    transition: transform 0.3s ease; /* Transition for hover */
-}
-
-.testimonial:hover {
-    transform: translateY(-3px); /* Lift effect on hover */
-}
-
-.testimonial h4 {
-    margin-top: 10px;
+.service p {
+    font-size: 0.9em; /* Reduced font size for better fit */
     font-weight: normal;
-    color: var(--main-bg-color);
+    color: var(--text-color);
+    text-align: center; /* Center-align the text */
 }
 
 /* Contact Section */
-.contact-section {
-    background: var(--main-bg-color);
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-}
-
 .contact-section form {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
 }
 
 .contact-section label {
-    font-size: 1.2em; /* Increased label size */
-    color: var(--highlight-color);
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    color: var(--accent-color);
 }
 
 .contact-section input,
 .contact-section textarea {
     width: 100%;
-    padding: 12px; /* Increased padding */
+    padding: 10px;
     margin-bottom: 15px;
     border: 1px solid var(--border-color);
-    border-radius: 5px;
-    background: #fff; /* White background for inputs */
-    color: var(--main-bg-color);
+    border-radius: 3px;
+    background: var(--primary-background);
+    color: var(--text-color);
+    transition: border 0.3s;
 }
 
-.contact-section button {
-    background: var(--button-bg-color);
-    color: var(--text-color-light);
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.3s;
-}
-
-.contact-section button:hover {
-    background: var(--button-hover-bg);
-    transform: scale(1.05); /* Scale effect on hover */
+.contact-section input:focus,
+.contact-section textarea:focus {
+    border-color: var(--accent-color);
 }
 
 /* Footer Styles */
 .footer {
-    background: var(--main-bg-color);
-    color: var(--text-color-light);
+    background: var(--primary-background);
+    color: var(--text-color);
     text-align: center;
     padding: 20px 0;
     border-top: 1px solid var(--border-color);
 }
 
-.footer .social-icons a {
-    color: var(--text-color-light);
-    margin: 0 10px;
-    font-size: 1.5em;
-    transition: color 0.3s;
-}
-
-.footer .social-icons a:hover {
-    color: var(--button-hover-bg);
+.footer p {
+    margin: 0;
 }
 
 @media (max-width: 768px) {
@@ -290,14 +249,10 @@ section h2 {
     }
 
     .service {
-        flex: 1 1 100%; /* Full width on small screens */
+        flex: 1 1 100%;
     }
 
-    .about-content {
-        flex-direction: column; /* Stack on small screens */
-    }
-
-    .about-image {
-        margin-bottom: 20px; /* Margin for bottom on small screens */
+    .header .logo img {
+        width: 150px;
     }
 }
