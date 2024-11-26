@@ -2,12 +2,12 @@
 body {
     font-family: 'Roboto, sans-serif';
     line-height: 1.6;
-    background: linear-gradient(to right, #141e30, #243b55);
+    background: #f5f5f5;
     margin: 0;
     padding: 0;
     direction: rtl;
     text-align: right;
-    color: #fff;
+    color: #333;
     overflow-x: hidden;
 }
 
@@ -20,12 +20,11 @@ body {
 
 /* Header Styles */
 .header {
-    background: transparent;
+    background: #002147;
     color: #fff;
     padding: 80px 0;
     position: relative;
     text-align: center;
-    animation: fadeIn 2s ease-in-out;
 }
 
 .header .header-content {
@@ -33,35 +32,30 @@ body {
 }
 
 .header h1 {
-    font-size: 3.5em;
+    font-size: 3em;
     margin: 0;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    animation: slideInFromLeft 1.5s ease-in-out;
+    letter-spacing: 2px;
 }
 
 .header p {
-    font-size: 1.5em;
+    font-size: 1.2em;
     margin-top: 10px;
-    animation: fadeIn 2s ease-in-out;
 }
 
 .cta-button {
     display: inline-block;
-    margin-top: 30px;
-    padding: 15px 30px;
+    margin-top: 20px;
+    padding: 10px 25px;
     background: #ff9800;
     color: #fff;
     text-decoration: none;
-    border-radius: 30px;
+    border-radius: 5px;
     font-weight: bold;
-    transition: background 0.5s ease, transform 0.3s ease;
-    animation: bounceIn 2.5s ease;
+    transition: background 0.3s ease;
 }
 
 .cta-button:hover {
-    background: #ff5722;
-    transform: scale(1.1);
+    background: #e67e22;
 }
 
 /* Navbar Styles */
@@ -69,10 +63,9 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: #002147;
     padding: 15px 0;
     z-index: 100;
-    transition: background 0.5s ease;
 }
 
 .navbar ul {
@@ -82,7 +75,7 @@ body {
     margin: 0;
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
 }
 
 .navbar ul li {
@@ -93,7 +86,7 @@ body {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1.1em;
     transition: color 0.3s ease;
 }
 
@@ -103,57 +96,55 @@ body {
 
 /* Highlights Section */
 .highlights-section {
-    background: #1e2a38;
+    background: #ffffff;
     padding: 60px 0;
 }
 
 .highlight {
     text-align: center;
-    padding: 30px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    padding: 25px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .highlight:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .highlight i {
-    font-size: 3em;
-    color: #ff9800;
-    margin-bottom: 20px;
-    animation: spin 2s linear infinite;
+    font-size: 2.5em;
+    color: #002147;
+    margin-bottom: 15px;
 }
 
 .highlight h3 {
-    margin-bottom: 15px;
-    color: #fff;
-    font-size: 1.8em;
-    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #002147;
+    font-size: 1.6em;
 }
 
 .highlight-link {
     display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background: #ff9800;
+    margin-top: 10px;
+    padding: 8px 20px;
+    background: #002147;
     color: #fff;
     text-decoration: none;
-    border-radius: 20px;
+    border-radius: 5px;
     transition: background 0.3s ease;
 }
 
 .highlight-link:hover {
-    background: #ff5722;
+    background: #004080;
 }
 
 /* Footer Styles */
 .footer {
-    background: #0b0c10;
+    background: #002147;
     color: #fff;
     padding: 30px 0;
     text-align: center;
@@ -167,13 +158,12 @@ body {
 .social-media a {
     color: #fff;
     margin: 0 15px;
-    font-size: 1.8em;
-    transition: color 0.3s ease, transform 0.3s ease;
+    font-size: 1.5em;
+    transition: color 0.3s ease;
 }
 
 .social-media a:hover {
     color: #ff9800;
-    transform: scale(1.2);
 }
 
 /* Animations */
@@ -187,13 +177,7 @@ body {
     to { transform: translateX(0); }
 }
 
-@keyframes bounceIn {
-    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-    40% { transform: translateY(-30px); }
-    60% { transform: translateY(-15px); }
-}
-
-@keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+/* Simplified Animation Settings */
+[data-aos] {
+    transition: all 0.5s ease;
 }
