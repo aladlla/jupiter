@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
+    <!-- Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>العدالة للمحاماة - مرحبًا بكم</title>
@@ -13,76 +14,167 @@
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="شركة العدالة القانونية للمحاماة">
     <meta property="og:description" content="شركة العدالة القانونية للمحاماة هي شركة عراقية مختصة بكافة الشؤون القانونية، وتسعى لتقديم خدمة مميزة لعملائها">
-    <meta property="og:image" content="Adalla'slogo.png">
+    <meta property="og:image" content="images/Adalla'slogo.png">
     <meta property="og:url" content="https://al-adalla.com/">
     <meta property="og:type" content="website">
 
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- AOS Library for Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- Swiper CSS for Sliders -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
+    <!-- Back to Top Button -->
+    <button id="back-to-top" title="العودة إلى الأعلى">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
         <div class="container">
-            <div class="header-content" data-aos="fade-down">
-                <h1><i class="fas fa-balance-scale-left"></i> العدالة للمحاماة</h1>
-                <p>نقدم خدمات قانونية شاملة تركز على حماية حقوق عملائنا وضمان مصالحهم.</p>
-                <a href="#highlights" class="cta-button">اكتشف المزيد</a>
+            <div class="logo">
+                <a href="#"><i class="fas fa-balance-scale-left"></i> العدالة للمحاماة</a>
             </div>
-            <nav class="navbar">
-                <ul>
-                    <li><a href="/whoareus">من نحن</a></li>
-                    <li><a href="/services">الخدمات</a></li>
-                    <li><a href="/contact">اتصل بنا</a></li>
-                </ul>
-            </nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#about">من نحن</a></li>
+                <li><a href="#services">الخدمات</a></li>
+                <li><a href="#gallery">معرض الصور</a></li>
+                <li><a href="#testimonials">آراء العملاء</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero-section">
+        <div class="overlay"></div>
+        <div class="container">
+            <h1 data-aos="fade-down">مرحبًا بكم في العدالة للمحاماة</h1>
+            <p data-aos="fade-up">نقدم خدمات قانونية شاملة تركز على حماية حقوق عملائنا وضمان مصالحهم.</p>
+            <a href="#services" class="btn" data-aos="zoom-in">استكشف خدماتنا</a>
         </div>
     </header>
 
-    <section id="highlights" class="highlights-section" data-aos="fade-up">
+    <!-- About Us Section -->
+    <section id="about" class="about-section">
         <div class="container">
-            <div class="highlight">
-                <i class="fas fa-info-circle"></i>
-                <h3>من نحن</h3>
-                <p>تعرف على فريق المحامين ذوي الخبرة الذين يقفون خلف نجاح العدالة للمحاماة.</p>
-                <a href="/whoareus" class="highlight-link">المزيد</a>
-            </div>
-            <div class="highlight">
-                <i class="fas fa-gavel"></i>
-                <h3>الخدمات</h3>
-                <p>استكشف الخدمات القانونية المتنوعة التي نقدمها لحماية حقوقك وضمان مصالحك.</p>
-                <a href="/services" class="highlight-link">المزيد</a>
-            </div>
-            <div class="highlight">
-                <i class="fas fa-envelope"></i>
-                <h3>اتصل بنا</h3>
-                <p>تواصل معنا للحصول على استشارة قانونية أو لمعرفة المزيد عن خدماتنا.</p>
-                <a href="/contact" class="highlight-link">المزيد</a>
+            <h2 data-aos="fade-right">من نحن</h2>
+            <p data-aos="fade-left">تعرف على فريق المحامين ذوي الخبرة الذين يقفون خلف نجاح العدالة للمحاماة.</p>
+            <!-- يمكنك إضافة صور الفريق أو محتوى إضافي هنا -->
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 data-aos="fade-up">خدماتنا</h2>
+            <div class="services-grid">
+                <!-- Service Item 1 -->
+                <div class="service-item" data-aos="flip-left">
+                    <i class="fas fa-balance-scale"></i>
+                    <h3>الاستشارات القانونية</h3>
+                    <p>نقدم استشارات قانونية متخصصة في مختلف المجالات لضمان حقوقك.</p>
+                </div>
+                <!-- Service Item 2 -->
+                <div class="service-item" data-aos="flip-left" data-aos-delay="100">
+                    <i class="fas fa-gavel"></i>
+                    <h3>التقاضي والتمثيل القانوني</h3>
+                    <p>نمتلك خبرة واسعة في تمثيل العملاء أمام المحاكم والهيئات القضائية.</p>
+                </div>
+                <!-- Service Item 3 -->
+                <div class="service-item" data-aos="flip-left" data-aos-delay="200">
+                    <i class="fas fa-handshake"></i>
+                    <h3>الوساطة والتحكيم</h3>
+                    <p>نساعد في حل النزاعات بطرق بديلة كالتفاوض والوساطة والتحكيم.</p>
+                </div>
+                <!-- يمكنك إضافة المزيد من الخدمات حسب الحاجة -->
             </div>
         </div>
     </section>
 
+    <!-- Image Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2 data-aos="fade-up">معرض الصور</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-aos="zoom-in">
+                    <img src="images/image1.jpg" alt="صورة 1" loading="lazy">
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="images/image2.jpg" alt="صورة 2" loading="lazy">
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="images/image3.jpg" alt="صورة 3" loading="lazy">
+                </div>
+                <!-- يمكنك إضافة المزيد من الصور حسب الحاجة -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <h2 data-aos="fade-up">آراء العملاء</h2>
+            <div class="swiper-container" data-aos="fade-up">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide testimonial-item">
+                        <p>"خدمة ممتازة وفريق عمل محترف. أوصي بهم بشدة!"</p>
+                        <h4>- أحمد خالد</h4>
+                    </div>
+                    <div class="swiper-slide testimonial-item">
+                        <p>"قدموا لي المساعدة القانونية التي احتجتها بفاعلية وكفاءة."</p>
+                        <h4>- سارة محمد</h4>
+                    </div>
+                    <!-- يمكنك إضافة المزيد من الآراء حسب الحاجة -->
+                </div>
+                <!-- Pagination for Swiper -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 data-aos="fade-down">اتصل بنا</h2>
+            <p data-aos="fade-up">تواصل معنا للحصول على استشارة قانونية أو لمعرفة المزيد عن خدماتنا.</p>
+            <form action="#" method="POST" class="contact-form" data-aos="zoom-in">
+                <input type="text" name="name" placeholder="الاسم الكامل" required>
+                <input type="email" name="email" placeholder="البريد الإلكتروني" required>
+                <textarea name="message" rows="5" placeholder="رسالتك" required></textarea>
+                <button type="submit" class="btn">إرسال</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer" data-aos="fade-up">
         <div class="container">
             <p>جميع الحقوق محفوظة &copy; 2024 العدالة للمحاماة</p>
             <div class="social-media">
-                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
+                <!-- يمكنك إضافة روابط وسائل التواصل الاجتماعي الأخرى -->
             </div>
         </div>
     </footer>
 
+    <!-- Scripts -->
+    <!-- AOS Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Initialize AOS (Animate on Scroll)
-            AOS.init({
-                duration: 1200,
-                once: true,
-                mirror: false,
-            });
-        });
-    </script>
+    <!-- Swiper JS for Sliders -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- Your Custom JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
