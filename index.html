@@ -1,161 +1,1923 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-    <!-- Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>العدالة للمحاماة - مرحبًا بكم</title>
+    <title>العدالة القانونية | التميز في الخدمات القانونية</title>
+    <meta name="description" content="العدالة القانونية تقدم خدمات قانونية متميزة في القانون الجنائي، القانون التجاري، قانون الأسرة، الإصابات الشخصية، والمزيد. اتصل بنا للحصول على استشارة مجانية.">
+    <meta name="keywords" content="مكتب محاماة، خدمات قانونية، قانون جنائي، قانون تجاري، قانون الأسرة، إصابات شخصية، عدالة قانونية، نصائح قانونية، محامون">
+    <meta property="og:title" content="العدالة القانونية | التميز في الخدمات القانونية">
+    <meta property="og:description" content="تقديم خدمات قانونية متميزة مصممة خصيصًا لتلبية احتياجاتك. اتصل بنا للحصول على استشارة مجانية.">
+    <meta property="og:image" content="https://yourwebsite.com/images/og-image.jpg">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta name="twitter:card" content="summary_large_image">
     
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="شركة العدالة القانونية للمحاماة هي شركة عراقية مختصة بكافة الشؤون القانونية، وتسعى لتقديم خدمة مميزة لعملائها">
-    <meta name="keywords" content="محاماة, العدالة, خدمات قانونية, العراق, البصرة">
-    <meta name="author" content="شركة العدالة القانونية">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="شركة العدالة القانونية للمحاماة">
-    <meta property="og:description" content="شركة العدالة القانونية للمحاماة هي شركة عراقية مختصة بكافة الشؤون القانونية، وتسعى لتقديم خدمة مميزة لعملائها">
-    <meta property="og:image" content="images/Adallaslogo.jpg"> <!-- Updated extension to .jpg -->
-    <meta property="og:url" content="https://al-adalla.com/">
-    <meta property="og:type" content="website">
-
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles.css">
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <!-- AOS Library for Animations -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <!-- Swiper CSS for Sliders -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHq6mSAAG7zI6kH35+rBbQv1A1iU6m6Z0V8nZ+5uYvL9BbYkMjHfAe1hZ6QFqkN2mCp6ZgZA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- AOS for Animations on Scroll -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-GxHpvKx4K2zPJvV2J3XDAkE1ozY+fAjPlZd6K3dbiRj1VAF5l0yq0E5cBYkRvGQxwdbtfq/NxE4y/jKK4V+fFw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Swiper.js for Testimonials Slider Removed -->
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA_TRACKING_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'YOUR_GA_TRACKING_ID');
+    </script>
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- CSS Styles -->
+    <style>
+        /* =======================
+           Reset and Base Styles
+        ======================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* =====================
+           Dark Mode Styles
+        ===================== */
+        body.dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode header {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        body.dark-mode header.scrolled {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body.dark-mode .hero {
+            background: linear-gradient(rgba(18, 18, 18, 0.6), rgba(18, 18, 18, 0.6)), url('https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') center center/cover no-repeat;
+        }
+
+        body.dark-mode .about, 
+        body.dark-mode .services, 
+        body.dark-mode .team, 
+        body.dark-mode .cta, 
+        body.dark-mode .contact,
+        body.dark-mode .faq,
+        body.dark-mode .awards,
+        body.dark-mode .newsletter,
+        body.dark-mode .certificate {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .service-card,
+        body.dark-mode .team-member,
+        body.dark-mode .contact-form input,
+        body.dark-mode .contact-form textarea,
+        body.dark-mode .newsletter-form input,
+        body.dark-mode .certificate-content p {
+            background-color: #2c2c2c;
+            color: #e0e0e0;
+            border-color: #444;
+        }
+
+        body.dark-mode .btn, 
+        body.dark-mode .cta .btn,
+        body.dark-mode .newsletter-form button,
+        body.dark-mode .client-portal a.btn {
+            background-color: #FFD700;
+            color: #121212;
+        }
+
+        body.dark-mode footer {
+            background-color: #333;
+            color: #fff;
+        }
+
+        /* =====================
+           Header Styles
+        ===================== */
+        header {
+            background-color: rgba(0, 33, 71, 0.9);
+            color: #fff;
+            padding: 20px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s ease, padding 0.3s ease;
+        }
+
+        header.scrolled {
+            background-color: rgba(0, 19, 45, 0.95);
+            padding: 10px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 28px;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            background-color: #FFD700;
+            left: 0;
+            bottom: -5px;
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover::after,
+        nav ul li a.active::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        .hamburger i {
+            font-size: 24px;
+        }
+
+        /* =====================
+           Dark Mode Toggle
+        ===================== */
+        .dark-mode-toggle {
+            margin-left: 20px;
+            cursor: pointer;
+            font-size: 20px;
+            color: #FFD700;
+            transition: color 0.3s ease;
+        }
+
+        .dark-mode-toggle:hover {
+            color: #fff;
+        }
+
+        /* =====================
+           Hero Section
+        ===================== */
+        .hero {
+            background: linear-gradient(rgba(0, 33, 71, 0.6), rgba(0, 33, 71, 0.6)), url('https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') center center/cover no-repeat;
+            /* Removed fixed height to allow content to determine height */
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            color: #fff;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            animation: fadeInUp 1s ease-out forwards;
+            opacity: 0;
+            position: relative; /* Ensure video stays within the content */
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+        }
+
+        .hero-content h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 48px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            transition: text-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .hero-content h2:hover {
+            text-shadow: 0 0 10px #FFD700;
+            transform: scale(1.05);
+        }
+
+        .hero-content p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            transition: color 0.3s ease;
+        }
+
+        .hero-content p:hover {
+            color: #FFD700;
+        }
+
+        .btn {
+            background-color: #FFD700;
+            color: #002147;
+            padding: 14px 35px;
+            border: none;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: #e6c200;
+            transform: translateY(-5px);
+            box-shadow: 0 0 10px #FFD700;
+        }
+
+        /* Introductory Video with Floating Effect */
+        .intro-video {
+            margin-top: 30px;
+            max-width: 800px;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .intro-video video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Floating Animation */
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        /* =====================
+           About Us Section
+        ===================== */
+        .about {
+            padding: 80px 0;
+            background-color: #fff;
+            text-align: center;
+            position: relative;
+        }
+
+        .about h3 {
+            font-family: 'Merriweather', serif;
+            font-size: 36px;
+            margin-bottom: 40px;
+            position: relative;
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+
+        .about h3::after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background-color: #FFD700;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .about h3:hover {
+            color: #FFD700;
+            text-shadow: 0 0 5px #FFD700;
+        }
+
+        .about-content {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .about-content img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            loading="lazy"
+        }
+
+        .about-content img:hover {
+            transform: scale(1.05);
+        }
+
+        .about-text {
+            flex: 1;
+            text-align: left;
+            transition: color 0.3s ease;
+        }
+
+        .about-text:hover {
+            color: #FFD700;
+        }
+
+        .about-text p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        /* =====================
+           Services Section
+        ===================== */
+        .services {
+            padding: 80px 0;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        .services h3 {
+            font-family: 'Merriweather', serif;
+            font-size: 36px;
+            margin-bottom: 40px;
+            position: relative;
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+
+        .services h3::after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background-color: #FFD700;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .services h3:hover {
+            color: #FFD700;
+            text-shadow: 0 0 5px #FFD700;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: #fff;
+            padding: 30px 20px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: #FFD700;
+            transition: left 0.5s ease;
+            z-index: 0;
+        }
+
+        .service-card:hover::before {
+            left: 0;
+        }
+
+        .service-card i {
+            font-size: 50px;
+            color: #002147;
+            margin-bottom: 20px;
+            transition: color 0.3s ease;
+            z-index: 1;
+            position: relative;
+        }
+
+        .service-card:hover i {
+            color: #fff;
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .service-card h4 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            z-index: 1;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .service-card h4:hover {
+            color: #FFD700;
+            text-shadow: 0 0 5px #FFD700;
+        }
+
+        .service-card p {
+            font-size: 16px;
+            color: #666;
+            z-index: 1;
+            position: relative;
+        }
+
+        /* =====================
+           Our Team Section
+        ===================== */
+        .team {
+            padding: 80px 0;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .team h3 {
+            font-family: 'Merriweather', serif;
+            font-size: 36px;
+            margin-bottom: 40px;
+            position: relative;
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+
+        .team h3::after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background-color: #FFD700;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .team h3:hover {
+            color: #FFD700;
+            text-shadow: 0 0 5px #FFD700;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .team-member {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .team-member img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            loading="lazy"
+            transition: transform 0.3s ease;
+        }
+
+        .team-member img:hover {
+            transform: scale(1.05);
+        }
+
+        .team-member h4 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #002147;
+            transition: color 0.3s ease;
+        }
+
+        .team-member h4:hover {
+            color: #FFD700;
+            text-shadow: 0 0 5px #FFD700;
+        }
+
+        .team-member p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .team-member .social-icons {
+            margin-top: 15px;
+        }
+
+        .team-member .social-icons a {
+            color: #555;
+            margin: 0 8px;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .team-member .social-icons a:hover {
+            color: #FFD700;
+        }
+
+        /* =====================
+           Call to Action Section
+        ===================== */
+        .cta {
+            padding: 80px 0;
+            background-color: #f1f1f1;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 32px;
+            margin-bottom: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .cta h2:hover {
+            color: #FFD700;
+            text-shadow: 0 0 5px #FFD700;
+        }
+
+        .cta p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #555;
+            transition: color 0.3s ease;
+        }
+
+        .cta p:hover {
+            color: #FFD700;
+        }
+
+        .cta .btn {
+            background-color: #002147;
+            color: #fff;
+            padding: 14px 35px;
+            border: none;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta .btn:hover {
+            background-color: #00132d;
+            transform: translateY(-5px);
+            box-shadow: 0 0 10px #FFD700;
+        }
+
+        /* =====================
+           Contact Us Section
+        ===================== */
+        .contact {
+            padding: 80px 0;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .contact h3 {
+            font-family: 'Merriweather', serif;
+            font-size: 36px;
+            margin-bottom: 40px;
+            position: relative;
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+
+        .contact h3::after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background-color: #FFD700;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .contact h3:hover {
+            color: #FFD700;
+            text-shadow: 0 0 5px #FFD700;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #FFD700;
+            outline: none;
+        }
+
+        .contact-form button {
+            background-color: #FFD700;
+            color: #002147;
+            padding: 14px 35px;
+            border: none;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #e6c200;
+            transform: translateY(-5px);
+        }
+
+        /* Appointment Booking Form */
+        .appointment-booking {
+            margin-top: 40px;
+        }
+
+        .appointment-booking h4 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .appointment-booking h4:hover {
+            color: #FFD700;
+            text-shadow: 0 0 5px #FFD700;
+        }
+
+        /* Appointment Form */
+        #appointment-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        #appointment-form input,
+        #appointment-form textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        #appointment-form input:focus,
+        #appointment-form textarea:focus {
+            border-color: #FFD700;
+            outline: none;
+        }
+
+        #appointment-form button {
+            background-color: #FFD700;
+            color: #002147;
+            padding: 14px 35px;
+            border: none;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        #appointment-form button:hover {
+            background-color: #e6c200;
+            transform: translateY(-5px);
+        }
+
+        /* =====================
+           Google Maps Styles
+        ===================== */
+        .google-map iframe {
+            border: 0;
+            border-radius: 10px;
+        }
+
+        /* =====================
+           FAQ Section
+        ===================== */
+        .faq {
+            padding: 80px 0;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .faq h3 {
+            font-family: 'Merriweather', serif;
+            font-size: 36px;
+            margin-bottom: 40px;
+            position: relative;
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+
+        .faq h3::after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background-color: #FFD700;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .faq h3:hover {
+            color: #FFD700;
+            text-shadow: 0 0 5px #FFD700;
+        }
+
+        .faq-accordion {
+            max-width: 800px;
+            margin: auto;
+            text-align: left;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #ddd;
+            padding: 15px 0;
+            cursor: pointer;
+            position: relative;
+            transition: background-color 0.3s ease;
+        }
+
+        .faq-item:hover {
+            background-color: #f1f1f1;
+        }
+
+        .faq-item h4 {
+            font-size: 20px;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .faq-item h4::after {
+            content: '\f107'; /* Font Awesome down arrow */
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active h4::after {
+            transform: rotate(180deg);
+        }
+
+        .faq-item h4:hover {
+            color: #FFD700;
+            text-shadow: 0 0 5px #FFD700;
+        }
+
+        .faq-item p {
+            display: none;
+            font-size: 16px;
+            color: #555;
+            margin-top: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .faq-item.active p {
+            display: block;
+        }
+
+        /* =====================
+           Awards Section
+        ===================== */
+        .awards {
+            padding: 80px 0;
+            background-color: #f1f1f1;
+            text-align: center;
+        }
+
+        .awards h3 {
+            font-family: 'Merriweather', serif;
+            font-size: 36px;
+            margin-bottom: 40px;
+            position: relative;
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+
+        .awards h3::after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background-color: #FFD700;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .awards h3:hover {
+            color: #FFD700;
+            text-shadow: 0 0 5px #FFD700;
+        }
+
+        .awards-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .award-item {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .award-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+        }
+
+        .award-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: contain;
+            margin-bottom: 15px;
+            loading="lazy"
+            transition: transform 0.3s ease;
+        }
+
+        .award-item img:hover {
+            transform: scale(1.05);
+        }
+
+        .award-item p {
+            font-size: 16px;
+            color: #555;
+            transition: color 0.3s ease;
+        }
+
+        .award-item p:hover {
+            color: #FFD700;
+            text-shadow: 0 0 5px #FFD700;
+        }
+
+        /* =====================
+           Certificate of Creation Section
+        ===================== */
+        .certificate {
+            padding: 80px 0;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .certificate h3 {
+            font-family: 'Merriweather', serif;
+            font-size: 36px;
+            margin-bottom: 40px;
+            position: relative;
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+
+        .certificate h3::after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background-color: #FFD700;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .certificate h3:hover {
+            color: #FFD700;
+            text-shadow: 0 0 5px #FFD700;
+        }
+
+        .certificate-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .certificate-content img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            loading="lazy"
+        }
+
+        .certificate-content img:hover {
+            transform: scale(1.05);
+        }
+
+        .certificate-content p {
+            font-size: 18px;
+            color: #555;
+            max-width: 800px;
+            transition: color 0.3s ease;
+        }
+
+        .certificate-content p:hover {
+            color: #FFD700;
+        }
+
+        /* =====================
+           Back to Top Button
+        ===================== */
+        .back-to-top {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            background-color: #FFD700;
+            color: #002147;
+            padding: 10px 15px;
+            border-radius: 50%;
+            font-size: 20px;
+            display: none;
+            cursor: pointer;
+            z-index: 1000;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .back-to-top:hover {
+            background-color: #e6c200;
+            transform: scale(1.1);
+        }
+
+        /* =====================
+           Newsletter Signup Section
+        ===================== */
+        .newsletter {
+            padding: 80px 0;
+            background-color: #002147;
+            color: #fff;
+            text-align: center;
+            position: relative;
+        }
+
+        .newsletter h3 {
+            font-family: 'Merriweather', serif;
+            font-size: 36px;
+            margin-bottom: 20px;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .newsletter h3::after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background-color: #FFD700;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .newsletter h3:hover {
+            color: #FFD700;
+            text-shadow: 0 0 5px #FFD700;
+        }
+
+        .newsletter p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            transition: color 0.3s ease;
+        }
+
+        .newsletter p:hover {
+            color: #FFD700;
+        }
+
+        .newsletter-form {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .newsletter-form input {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            width: 250px;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .newsletter-form input:focus {
+            box-shadow: 0 0 10px #FFD700;
+        }
+
+        .newsletter-form button {
+            padding: 10px 25px;
+            border: none;
+            border-radius: 30px;
+            background-color: #FFD700;
+            color: #002147;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .newsletter-form button:hover {
+            background-color: #e6c200;
+            transform: translateY(-3px);
+            box-shadow: 0 0 10px #FFD700;
+        }
+
+        /* =====================
+           Footer Styles
+        ===================== */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .footer-logo h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 28px;
+            margin-bottom: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-logo h1:hover {
+            color: #FFD700;
+            text-shadow: 0 0 5px #FFD700;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .footer-links ul li {
+            margin: 10px 15px;
+        }
+
+        .footer-links ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links ul li a:hover {
+            color: #FFD700;
+        }
+
+        .social-media a {
+            color: #fff;
+            margin: 0 10px;
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .social-media a:hover {
+            color: #FFD700;
+        }
+
+        .footer-bottom p {
+            font-size: 14px;
+            color: #bbb;
+            margin-top: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-bottom p:hover {
+            color: #FFD700;
+        }
+
+        /* =====================
+           Responsive Styles
+        ===================== */
+        @media (max-width: 992px) {
+            .about-content {
+                flex-direction: column;
+            }
+
+            .about-text {
+                text-align: center;
+            }
+
+            .team-grid,
+            .services-grid,
+            .awards-grid,
+            .certificate-content {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                right: 0;
+                background-color: rgba(0, 33, 71, 0.95);
+                width: 100%;
+                display: none;
+                padding: 20px 0;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 15px 0;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .hero-content h2 {
+                font-size: 32px;
+            }
+
+            .services-grid,
+            .team-grid,
+            .awards-grid,
+            .certificate-content {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-form,
+            #appointment-form {
+                width: 100%;
+                padding: 0 20px;
+            }
+
+            .faq-accordion {
+                padding: 0 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h2 {
+                font-size: 28px;
+            }
+
+            .service-card i {
+                font-size: 40px;
+            }
+
+            .team-member img {
+                height: 250px;
+            }
+
+            .certificate-content img {
+                max-width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-consent" id="cookie-consent" role="dialog" aria-live="polite">
+        <p>نستخدم ملفات تعريف الارتباط لضمان حصولك على أفضل تجربة على موقعنا. <a href="#">تعرف على المزيد</a>.</p>
+        <button id="accept-cookies">قبول</button>
+    </div>
+
     <!-- Back to Top Button -->
-    <button id="back-to-top" title="العودة إلى الأعلى">
-        <i class="fas fa-chevron-up"></i>
-    </button>
+    <div class="back-to-top" id="back-to-top" aria-label="العودة إلى الأعلى">
+        <i class="fas fa-arrow-up"></i>
+    </div>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar">
+    <!-- Header Section -->
+    <header id="header">
         <div class="container">
-            <div class="logo">
-                <a href="#"><i class="fas fa-balance-scale-left"></i> العدالة للمحاماة</a>
-            </div>
-            <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home">الرئيسية</a></li>
-                <li><a href="#about">من نحن</a></li>
-                <li><a href="#services">الخدمات</a></li>
-                <li><a href="#gallery">معرض الصور</a></li>
-                <li><a href="#testimonials">آراء العملاء</a></li>
-                <li><a href="#contact">اتصل بنا</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header id="home" class="hero-section">
-        <div class="overlay"></div>
-        <div class="container">
-            <h1 data-aos="fade-down">مرحبًا بكم في العدالة للمحاماة</h1>
-            <p data-aos="fade-up">نقدم خدمات قانونية شاملة تركز على حماية حقوق عملائنا وضمان مصالحهم.</p>
-            <a href="#services" class="btn" data-aos="zoom-in">استكشف خدماتنا</a>
+            <nav>
+                <div class="logo">
+                    <h1>العدالة القانونية</h1>
+                </div>
+                <ul id="nav-links">
+                    <li><a href="#home" class="active">الرئيسية</a></li>
+                    <li><a href="#about">من نحن</a></li>
+                    <li><a href="#services">الخدمات</a></li>
+                    <li><a href="#team">فريقنا</a></li>
+                    <!-- Removed Testimonials and Blog Links -->
+                    <li><a href="#faq">الأسئلة الشائعة</a></li>
+                    <li><a href="#awards">الجوائز</a></li>
+                    <li><a href="#certificate">شهادة</a></li>
+                    <li><a href="#contact">اتصل بنا</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger" aria-label="تبديل التنقل" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <!-- Dark Mode Toggle -->
+                <div class="dark-mode-toggle" id="dark-mode-toggle" aria-label="تبديل الوضع الداكن" role="button" tabindex="0">
+                    <i class="fas fa-moon"></i>
+                </div>
+                <!-- Language Selector -->
+                <div class="language-selector">
+                    <select aria-label="اختر اللغة">
+                        <option value="ar">AR</option>
+                        <option value="es">ES</option>
+                        <option value="fr">FR</option>
+                        <!-- Add more languages as needed -->
+                    </select>
+                </div>
+            </nav>
         </div>
     </header>
 
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content" data-aos="fade-up">
+            <h2>حماية حقوقك بالتميز</h2>
+            <p>تقديم خدمات قانونية متميزة مصممة خصيصًا لتلبية احتياجاتك.</p>
+            <a href="#contact" class="btn">احصل على استشارة</a>
+            <!-- Introductory Video with Floating Effect -->
+            <div class="intro-video">
+                <video controls muted>
+                    <source src="https://yourwebsite.com/videos/intro.mp4" type="video/mp4">
+                    متصفحك لا يدعم عنصر الفيديو.
+                </video>
+            </div>
+        </div>
+    </section>
+
     <!-- About Us Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <h2 data-aos="fade-right">من نحن</h2>
-            <p data-aos="fade-left">تعرف على فريق المحامين ذوي الخبرة الذين يقفون خلف نجاح العدالة للمحاماة.</p>
-            <!-- يمكنك إضافة صور الفريق أو محتوى إضافي هنا -->
+    <section class="about" id="about">
+        <div class="container" data-aos="fade-up">
+            <h3>من نحن</h3>
+            <div class="about-content">
+                <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="مكتب العدالة القانونية">
+                <div class="about-text">
+                    <p>في العدالة القانونية، نحن ملتزمون بتقديم خدمات قانونية استثنائية لعملائنا. مع فريق من المحامين ذوي الخبرة، نتخصص في مجالات قانونية متعددة، لضمان حماية حقوقك وتمثيل مصالحك بأقصى درجات التفاني.</p>
+                    <p>مهمتنا هي تقديم حلول قانونية شخصية تكون فعالة وكفء، وإرشادك خلال المسارات القانونية المعقدة بوضوح وثقة.</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="services-section">
-        <div class="container">
-            <h2 data-aos="fade-up">خدماتنا</h2>
+    <section class="services" id="services">
+        <div class="container" data-aos="fade-up">
+            <h3>خبراتنا</h3>
             <div class="services-grid">
-                <!-- Service Item 1 -->
-                <div class="service-item" data-aos="flip-left">
-                    <i class="fas fa-balance-scale"></i>
-                    <h3>الاستشارات القانونية</h3>
-                    <p>نقدم استشارات قانونية متخصصة في مختلف المجالات لضمان حقوقك.</p>
-                </div>
-                <!-- Service Item 2 -->
-                <div class="service-item" data-aos="flip-left" data-aos-delay="100">
+                <div class="service-card" tabindex="0" role="button" aria-pressed="false">
                     <i class="fas fa-gavel"></i>
-                    <h3>التقاضي والتمثيل القانوني</h3>
-                    <p>نمتلك خبرة واسعة في تمثيل العملاء أمام المحاكم والهيئات القضائية.</p>
+                    <h4>القانون الجنائي</h4>
+                    <p>الدفاع عن حقوقك بالتزام لا يتزعزع.</p>
                 </div>
-                <!-- Service Item 3 -->
-                <div class="service-item" data-aos="flip-left" data-aos-delay="200">
+                <div class="service-card" tabindex="0" role="button" aria-pressed="false">
                     <i class="fas fa-handshake"></i>
-                    <h3>الوساطة والتحكيم</h3>
-                    <p>نساعد في حل النزاعات بطرق بديلة كالتفاوض والوساطة والتحكيم.</p>
+                    <h4>القانون التجاري</h4>
+                    <p>تقديم حلول قانونية استراتيجية للأعمال.</p>
                 </div>
-                <!-- يمكنك إضافة المزيد من الخدمات حسب الحاجة -->
+                <div class="service-card" tabindex="0" role="button" aria-pressed="false">
+                    <i class="fas fa-file-alt"></i>
+                    <h4>قانون الأسرة</h4>
+                    <p>دعمك خلال أهم لحظات حياتك.</p>
+                </div>
+                <div class="service-card" tabindex="0" role="button" aria-pressed="false">
+                    <i class="fas fa-balance-scale"></i>
+                    <h4>الإصابات الشخصية</h4>
+                    <p>السعي لتحقيق العدالة والتعويض عن إصاباتك.</p>
+                </div>
+                <div class="service-card" tabindex="0" role="button" aria-pressed="false">
+                    <i class="fas fa-landmark"></i>
+                    <h4>قانون العقارات</h4>
+                    <p>المساعدة في معاملات العقارات والنزاعات.</p>
+                </div>
+                <div class="service-card" tabindex="0" role="button" aria-pressed="false">
+                    <i class="fas fa-users"></i>
+                    <h4>قانون العمل</h4>
+                    <p>حماية حقوقك في مكان العمل.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials-section">
-        <div class="container">
-            <h2 data-aos="fade-up">آراء العملاء</h2>
-            <div class="swiper-container" data-aos="fade-up">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide testimonial-item">
-                        <p>"خدمة ممتازة وفريق عمل محترف. أوصي بهم بشدة!"</p>
-                        <h4>- أحمد خالد</h4>
+    <!-- Our Team Section -->
+    <section class="team" id="team">
+        <div class="container" data-aos="fade-up">
+            <h3>فريقنا</h3>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="جون دو - محامي أول">
+                    <h4>جون دو</h4>
+                    <p>محامي أول</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     </div>
-                    <div class="swiper-slide testimonial-item">
-                        <p>"قدموا لي المساعدة القانونية التي احتجتها بفاعلية وكفاءة."</p>
-                        <h4>- سارة محمد</h4>
-                    </div>
-                    <!-- يمكنك إضافة المزيد من الآراء حسب الحاجة -->
                 </div>
-                <!-- Pagination for Swiper -->
-                <div class="swiper-pagination"></div>
+                <div class="team-member">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="جين سميث - محامية تجارية">
+                    <h4>جين سميث</h4>
+                    <p>محامية تجارية</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="مايكل براون - متخصص في قانون الأسرة">
+                    <h4>مايكل براون</h4>
+                    <p>متخصص في قانون الأسرة</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="إميلي جونسون - محامية إصابات شخصية">
+                    <h4>إميلي جونسون</h4>
+                    <p>محامية إصابات شخصية</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Us Section -->
-    <section id="contact" class="contact-section">
+    <!-- Awards Section -->
+    <section class="awards" id="awards">
+        <div class="container" data-aos="fade-up">
+            <h3>إنجازاتنا</h3>
+            <div class="awards-grid">
+                <div class="award-item">
+                    <img src="https://via.placeholder.com/150x100" alt="جائزة أفضل مكتب محاماة">
+                    <p>أفضل مكتب محاماة 2023</p>
+                </div>
+                <div class="award-item">
+                    <img src="https://via.placeholder.com/150x100" alt="تميز في الخدمات القانونية">
+                    <p>تميز في الخدمات القانونية</p>
+                </div>
+                <div class="award-item">
+                    <img src="https://via.placeholder.com/150x100" alt="أفضل مكتب قانون جنائي">
+                    <p>أفضل مكتب قانون جنائي</p>
+                </div>
+                <div class="award-item">
+                    <img src="https://via.placeholder.com/150x100" alt="تميز في القانون التجاري">
+                    <p>تميز في القانون التجاري</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificate of Creation Section -->
+    <section class="certificate" id="certificate">
+        <div class="container" data-aos="fade-up">
+            <h3>شهادة الإنشاء</h3>
+            <div class="certificate-content">
+                <img src="https://via.placeholder.com/600x400.png?text=Certificate+of+Creation" alt="شهادة الإنشاء الصادرة عن الحكومة">
+                <p>تم تأسيس العدالة القانونية رسميًا والاعتراف بها من قبل الحكومة في [التاريخ]. تؤكد هذه الشهادة التزامنا بالحفاظ على أعلى معايير الممارسة القانونية والسلوك الأخلاقي. نحن ملتزمون بخدمة عملائنا بنزاهة واحترافية وامتياز.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta">
+        <div class="container" data-aos="fade-up">
+            <h2>تحتاج إلى مساعدة قانونية؟</h2>
+            <p>اتصل بفريقنا المتمرس اليوم للحصول على استشارة مجانية واتخاذ الخطوة الأولى نحو حل مسائلك القانونية بثقة.</p>
+            <a href="#contact" class="btn">اتصل بنا</a>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup Section -->
+    <section class="newsletter" data-aos="fade-up">
         <div class="container">
-            <h2 data-aos="fade-down">اتصل بنا</h2>
-            <p data-aos="fade-up">تواصل معنا للحصول على استشارة قانونية أو لمعرفة المزيد عن خدماتنا.</p>
-            <form action="#" method="POST" class="contact-form" data-aos="zoom-in">
-                <input type="text" name="name" placeholder="الاسم الكامل" required>
-                <input type="email" name="email" placeholder="البريد الإلكتروني" required>
-                <textarea name="message" rows="5" placeholder="رسالتك" required></textarea>
-                <button type="submit" class="btn">إرسال</button>
+            <h3>ابق على اطلاع</h3>
+            <p>اشترك في نشرتنا الإخبارية لتلقي آخر التحديثات القانونية والرؤى.</p>
+            <form class="newsletter-form" action="#" method="POST" aria-label="اشتراك في النشرة الإخبارية">
+                <input type="email" name="newsletter-email" placeholder="بريدك الإلكتروني" required aria-label="بريدك الإلكتروني">
+                <button type="submit">اشترك</button>
             </form>
         </div>
     </section>
 
+    <!-- Contact Us Section -->
+    <section class="contact" id="contact">
+        <div class="container" data-aos="fade-up">
+            <h3>اتصل بنا</h3>
+            <form class="contact-form" action="#" method="POST" aria-label="نموذج الاتصال">
+                <input type="text" name="name" placeholder="اسمك" required aria-label="اسمك">
+                <input type="email" name="email" placeholder="بريدك الإلكتروني" required aria-label="بريدك الإلكتروني">
+                <input type="tel" name="phone" placeholder="رقم هاتفك" aria-label="رقم هاتفك">
+                <textarea name="message" rows="5" placeholder="رسالتك" required aria-label="رسالتك"></textarea>
+                <button type="submit">إرسال رسالة</button>
+            </form>
+            <!-- Appointment Booking Form -->
+            <div class="appointment-booking" data-aos="fade-up" style="margin-top:40px;">
+                <h4>حجز موعد</h4>
+                <form id="appointment-form" class="contact-form" action="#" method="POST" aria-label="نموذج حجز موعد">
+                    <input type="text" name="appointment-name" placeholder="اسمك" required aria-label="اسمك">
+                    <input type="email" name="appointment-email" placeholder="بريدك الإلكتروني" required aria-label="بريدك الإلكتروني">
+                    <input type="tel" name="appointment-phone" placeholder="رقم هاتفك" aria-label="رقم هاتفك">
+                    <input type="datetime-local" name="appointment-date" required aria-label="التاريخ والوقت المفضل">
+                    <textarea name="appointment-message" rows="3" placeholder="رسالتك" aria-label="رسالتك"></textarea>
+                    <button type="submit">حجز موعد</button>
+                </form>
+            </div>
+            <!-- Google Maps Integration -->
+            <div class="google-map" data-aos="fade-up" style="margin-top:40px;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="موقع العدالة القانونية"></iframe>
+            </div>
+            <!-- Client Portal Link -->
+            <div class="client-portal" data-aos="fade-up" style="margin-top:40px;">
+                <a href="#client-portal" class="btn">الوصول إلى بوابة العملاء</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Portal Section (Placeholder) -->
+    <section class="client-portal-section" id="client-portal">
+        <div class="container" data-aos="fade-up">
+            <h3>بوابة العملاء</h3>
+            <p>الوصول الآمن إلى مستندات قضيتك، تتبع التقدم، والتواصل مع محاميك.</p>
+            <a href="#" class="btn">تسجيل الدخول إلى البوابة</a>
+        </div>
+    </section>
+
     <!-- Footer -->
-    <footer class="footer" data-aos="fade-up">
-        <div class="container">
-            <p>جميع الحقوق محفوظة &copy; 2024 العدالة للمحاماة</p>
+    <footer>
+        <div class="container" data-aos="fade-up">
+            <div class="footer-logo">
+                <h1>العدالة القانونية</h1>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#about">من نحن</a></li>
+                    <li><a href="#services">الخدمات</a></li>
+                    <li><a href="#team">فريقنا</a></li>
+                    <!-- Removed Testimonials and Blog Links -->
+                    <li><a href="#faq">الأسئلة الشائعة</a></li>
+                    <li><a href="#awards">الجوائز</a></li>
+                    <li><a href="#certificate">شهادة</a></li>
+                    <li><a href="#contact">اتصل بنا</a></li>
+                </ul>
+            </div>
             <div class="social-media">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <!-- يمكنك إضافة روابط وسائل التواصل الاجتماعي الأخرى -->
+                <a href="#" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="لينكدإن"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="إنستغرام"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="يوتيوب"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 العدالة القانونية. جميع الحقوق محفوظة.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <!-- AOS Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <!-- Swiper JS for Sliders -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <!-- Your Custom JavaScript -->
-    <script src="script.js"></script>
+    <!-- JavaScript -->
+    <!-- Swiper.js for Testimonials Slider Removed -->
+    <!-- AOS.js for Animations on Scroll -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-+X0OSyqJgn6uxM/9MT5NraFTbRl8yvkmN69lR1sGfCjz5qZJcZif5FvRKg5sT8Ivh1h+2FVgU1qHdwH6l6SGlQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- JavaScript -->
+    <script>
+        // =====================
+        // Hamburger Menu Toggle
+        // =====================
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            const isActive = navLinks.classList.toggle('active');
+            hamburger.setAttribute('aria-expanded', isActive);
+        });
+
+        // =====================
+        // Header Background Change on Scroll
+        // =====================
+        const header = document.getElementById('header');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+
+            // Back to Top Button Visibility
+            const backToTop = document.getElementById('back-to-top');
+            if (window.scrollY > 300) {
+                backToTop.style.display = 'block';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        });
+
+        // =====================
+        // Smooth Scroll Active Link Highlight
+        // =====================
+        const sections = document.querySelectorAll('section');
+        const navItems = document.querySelectorAll('nav ul li a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 150;
+                if (window.scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navItems.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // =====================
+        // Back to Top Button Functionality
+        // =====================
+        const backToTopBtn = document.getElementById('back-to-top');
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // =====================
+        // Dark Mode Toggle
+        // =====================
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const darkModeIcon = darkModeToggle.querySelector('i');
+
+        // Check for saved user preference, if any, on load of the website
+        if (localStorage.getItem('dark-mode') === 'enabled') {
+            document.body.classList.add('dark-mode');
+            darkModeIcon.classList.remove('fa-moon');
+            darkModeIcon.classList.add('fa-sun');
+        }
+
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            if (document.body.classList.contains('dark-mode')) {
+                darkModeIcon.classList.remove('fa-moon');
+                darkModeIcon.classList.add('fa-sun');
+                localStorage.setItem('dark-mode', 'enabled');
+            } else {
+                darkModeIcon.classList.remove('fa-sun');
+                darkModeIcon.classList.add('fa-moon');
+                localStorage.setItem('dark-mode', 'disabled');
+            }
+        });
+
+        // Enable toggle via keyboard
+        darkModeToggle.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                darkModeToggle.click();
+            }
+        });
+
+        // =====================
+        // FAQ Accordion Functionality
+        // =====================
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+
+            // Enable toggle via keyboard
+            item.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    item.classList.toggle('active');
+                }
+            });
+        });
+
+        // =====================
+        // AOS Initialization
+        // =====================
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+
+        // =====================
+        // Contact Form Validation (AJAX Example)
+        // =====================
+        const contactForm = document.querySelector('.contact-form');
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // AJAX submission logic can be added here
+            // Example using Fetch API:
+            const formData = new FormData(contactForm);
+            fetch(contactForm.action, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if(response.ok){
+                    alert('شكرًا لتواصلك معنا. سنعود إليك قريبًا!');
+                    contactForm.reset();
+                } else {
+                    alert('حدث خطأ أثناء إرسال رسالتك. يرجى المحاولة مرة أخرى.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('حدث خطأ أثناء إرسال رسالتك. يرجى المحاولة مرة أخرى.');
+            });
+        });
+
+        // =====================
+        // Appointment Form Validation (AJAX Example)
+        // =====================
+        const appointmentForm = document.getElementById('appointment-form');
+
+        appointmentForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // AJAX submission logic can be added here
+            const formData = new FormData(appointmentForm);
+            fetch(appointmentForm.action, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if(response.ok){
+                    alert('تم حجز موعدك بنجاح!');
+                    appointmentForm.reset();
+                } else {
+                    alert('حدث خطأ أثناء حجز موعدك. يرجى المحاولة مرة أخرى.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('حدث خطأ أثناء حجز موعدك. يرجى المحاولة مرة أخرى.');
+            });
+        });
+
+        // =====================
+        // Newsletter Form Validation (AJAX Example)
+        // =====================
+        const newsletterForm = document.querySelector('.newsletter-form');
+
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // AJAX submission logic can be added here
+            const formData = new FormData(newsletterForm);
+            fetch(newsletterForm.action, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if(response.ok){
+                    alert('شكرًا لاشتراكك في نشرتنا الإخبارية!');
+                    newsletterForm.reset();
+                } else {
+                    alert('حدث خطأ أثناء الاشتراك. يرجى المحاولة مرة أخرى.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('حدث خطأ أثناء الاشتراك. يرجى المحاولة مرة أخرى.');
+            });
+        });
+
+        // =====================
+        // Language Selector Functionality (Placeholder)
+        // =====================
+        const languageSelector = document.querySelector('.language-selector select');
+        languageSelector.addEventListener('change', (e) => {
+            // Implement language change functionality or redirect to selected language version
+            alert(`تم تغيير اللغة إلى ${e.target.value.toUpperCase()}.`);
+        });
+
+        // =====================
+        // Cookie Consent Functionality
+        // =====================
+        const cookieConsent = document.getElementById('cookie-consent');
+        const acceptCookiesBtn = document.getElementById('accept-cookies');
+
+        // Show cookie consent banner if not previously accepted
+        window.addEventListener('load', () => {
+            if (!localStorage.getItem('cookies-accepted')) {
+                cookieConsent.classList.add('show');
+            }
+        });
+
+        acceptCookiesBtn.addEventListener('click', () => {
+            localStorage.setItem('cookies-accepted', 'true');
+            cookieConsent.classList.remove('show');
+        });
+
+        // =====================
+        // Client Portal Access (Placeholder)
+        // =====================
+        const clientPortalBtn = document.querySelector('.client-portal a');
+        clientPortalBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            alert('بوابة العملاء قيد التطوير. يرجى العودة لاحقًا.');
+        });
+
+        // =====================
+        // PWA Service Worker Registration (Basic Example)
+        // =====================
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                .then(registration => {
+                    console.log('تم تسجيل خدمة العامل بنجاح مع النطاق: ', registration.scope);
+                })
+                .catch(error => {
+                    console.log('فشل تسجيل خدمة العامل: ', error);
+                });
+            });
+        }
+    </script>
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LawFirm",
+      "name": "العدالة القانونية",
+      "url": "https://yourwebsite.com",
+      "logo": "https://yourwebsite.com/images/logo.png",
+      "image": "https://yourwebsite.com/images/office.jpg",
+      "description": "العدالة القانونية تقدم خدمات قانونية متميزة في مجالات مختلفة بما في ذلك القانون الجنائي، القانون التجاري، قانون الأسرة، الإصابات الشخصية، والمزيد.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1234 شارع القانون",
+        "addressLocality": "لويفيل",
+        "addressRegion": "CA",
+        "postalCode": "90001",
+        "addressCountry": "US"
+      },
+      "telephone": "+1-234-567-8900",
+      "openingHours": "Mo,Tu,We,Th,Fr 09:00-18:00",
+      "sameAs": [
+        "https://www.facebook.com/yourpage",
+        "https://twitter.com/yourprofile",
+        "https://www.linkedin.com/company/yourcompany",
+        "https://www.instagram.com/yourprofile",
+        "https://www.youtube.com/yourchannel"
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "جون دو"
+      },
+      "employee": [
+        {
+          "@type": "Person",
+          "name": "جين سميث",
+          "jobTitle": "محامية تجارية"
+        },
+        {
+          "@type": "Person",
+          "name": "مايكل براون",
+          "jobTitle": "متخصص في قانون الأسرة"
+        },
+        {
+          "@type": "Person",
+          "name": "إميلي جونسون",
+          "jobTitle": "محامية إصابات شخصية"
+        }
+      ],
+      "award": [
+        "أفضل مكتب محاماة 2023",
+        "تميز في الخدمات القانونية",
+        "أفضل مكتب قانون جنائي",
+        "تميز في القانون التجاري"
+      ],
+      "potentialAction": {
+        "@type": "Action",
+        "name": "جدولة استشارة",
+        "target": "https://yourwebsite.com/contact",
+        "description": "جدولة استشارة مجانية مع خبراءنا القانونيين."
+      }
+    }
+    </script>
+
+    <!-- Service Worker Script (Basic Example) -->
+    <script>
+        // service-worker.js content should be placed in a separate file in production
+        // This is a basic example for demonstration purposes
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js')
+            .then(function(registration) {
+                console.log('تم تسجيل خدمة العامل مع النطاق:', registration.scope);
+            })
+            .catch(function(error) {
+                console.log('فشل تسجيل خدمة العامل:', error);
+            });
+        }
+    </script>
 </body>
 </html>
